@@ -41,6 +41,7 @@ GEM
     autoprefixer-rails (6.3.1)
       execjs
       json
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -63,6 +64,12 @@ GEM
     concurrent-ruby (1.0.2)
     daemons (1.2.2)
     debug_inspector (0.0.2)
+    devise (4.0.0)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 5.1)
+      responders
+      warden (~> 1.2.3)
     erubis (2.7.0)
     eventmachine (1.0.8)
     excon (0.49.0)
@@ -108,6 +115,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
@@ -153,6 +161,8 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.1.2)
     ref (2.0.0)
+    responders (2.1.2)
+      railties (>= 4.2.0, < 5.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     ruby-graphviz (1.2.2)
@@ -189,6 +199,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    warden (1.2.6)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -196,10 +208,11 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   binding_of_caller
-  bootstrap-sass (~> 3.3.6)
-  coffee-rails (~> 4.1.0)
+  bootstrap-sass
+  coffee-rails
+  devise
   heroku
-  jbuilder (~> 2.0)
+  jbuilder
   jquery-rails
   pg
   quiet_assets
@@ -207,12 +220,12 @@ DEPENDENCIES
   rails-erd
   rails-i18n
   rails_12factor
-  sass-rails (~> 5.0)
+  sass-rails
   therubyracer
   thin
   traceroute
   turbolinks
-  uglifier (>= 1.3.0)
+  uglifier
 
 BUNDLED WITH
    1.11.2
