@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504180716) do
+ActiveRecord::Schema.define(version: 20160504190339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
   create_table "branches", force: :cascade do |t|
     t.string   "name"
@@ -39,17 +57,24 @@ ActiveRecord::Schema.define(version: 20160504180716) do
 
   add_index "cantons", ["province_id"], name: "index_cantons_on_province_id", using: :btree
 
+  create_table "course_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
+  end
+
+  add_index "course_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "course_anc_desc_idx", unique: true, using: :btree
+  add_index "course_hierarchies", ["descendant_id"], name: "course_desc_idx", using: :btree
+
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.integer  "level"
     t.integer  "quota"
-    t.string   "ancestry"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "parent_id"
   end
-
-  add_index "courses", ["ancestry"], name: "index_courses_on_ancestry", using: :btree
 
   create_table "districts", force: :cascade do |t|
     t.string   "name"

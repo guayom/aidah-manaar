@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'ancestry'
 gem 'bootstrap-sass'
+gem 'cancancan'
+gem 'closure_tree'
 gem 'coffee-rails'
 gem 'devise'
 gem 'jbuilder'
@@ -9,6 +10,8 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rails', '4.2.6'
 gem 'rails-i18n'
+gem 'rails_admin'
+gem 'rails_admin_nestable'
 gem 'sass-rails'
 gem 'therubyracer', platforms: :ruby
 gem 'thin'
