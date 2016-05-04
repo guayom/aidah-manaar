@@ -18,4 +18,10 @@ class Course < ActiveRecord::Base
   def parent_name
     parent.try(:name)
   end
+
+  def to_builder
+    JBuilder.new do |course|
+      course.id id
+    end
+  end
 end

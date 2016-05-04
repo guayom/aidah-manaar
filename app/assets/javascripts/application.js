@@ -13,5 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
+//= require bootstrap/modal
+//= require bootstrap/transition
+//= require bootstrap/tooltip
+//= require underscore
+//= require moment
+//= require bootstrap-calendar
 //= require_tree .

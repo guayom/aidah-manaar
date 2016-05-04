@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :students
 
   resources :courses, only: [:index]
+  resources :lessons, only: [:index, :show]
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
