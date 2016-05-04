@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   devise_for :instructors
   devise_for :students
 
+  resources :courses, only: [:index]
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  root to: 'home#index'
+  root to: 'courses#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
