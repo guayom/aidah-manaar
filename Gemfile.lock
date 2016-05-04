@@ -37,6 +37,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    ancestry (2.1.0)
+      activerecord (>= 3.0.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.1)
       execjs
@@ -206,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   better_errors
   binding_of_caller
   bootstrap-sass

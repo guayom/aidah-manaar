@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'ancestry'
 gem 'bootstrap-sass'
 gem 'coffee-rails'
 gem 'devise'
