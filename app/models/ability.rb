@@ -6,7 +6,7 @@ class Ability
     can :index, Lesson
     can :show, Lesson
 
-    if user.persisted?
+    if user.present?
       can :create, CourseStudent
       can :create, LessonStudent
     end
