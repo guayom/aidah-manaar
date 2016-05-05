@@ -5,7 +5,7 @@ class LessonStudentsController < ApplicationController
     respond_to do |format|
       format.js do
         if @lesson_student.save
-          render inline: 'alert("You are successfully enrolled!"); $("#lesson_modal").modal("hide");'
+          render inline: 'alert("You are successfully enrolled!"); calendar.view(); $("#lesson_modal").modal("hide");'
         else
           render inline: 'alert("Something bad happened! Please contact administrator.");'
         end

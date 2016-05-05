@@ -20,11 +20,13 @@
     </div>
 
     <script>
-      $('#calendar').calendar({
+      calendar = $('#calendar').calendar({
         events_source: '<%= lessons_path(format: :json) %>',
+        first_day: 1,
         modal: "#lesson_modal",
         modal_type: 'ajax',
-        tmpl_cache: false
+        tmpl_cache: false,
+        view: 'week'
       });
 
       $('#lesson_modal').on('show.bs.modal', function() {
