@@ -5,12 +5,17 @@ class AdminAbility
     can :access, :rails_admin
     can :dashboard
 
-    can :index, Admin
-    can :manage, Admin, id: admin.id
+    if admin.present?
+      can :manage, :all
+    end
 
-    can :manage, Instructor
-    can :manage, Student
-    can :manage, Course
-    can :manage, Lesson
+    # can :index, Admin
+    # can :manage, Admin, id: admin.id
+    #
+    # can :manage, Branch
+    # can :manage, Instructor
+    # can :manage, Student
+    # can :manage, Course
+    # can :manage, Lesson
   end
 end
