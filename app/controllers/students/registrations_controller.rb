@@ -12,7 +12,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
 
     # ConfirmRegistrationJob.perform_later(resource)
 
-    if :yes == params[:student][:start_now]
+    if 'yes' == params[:student][:start_now]
       Course.base.students << resource
       # ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
