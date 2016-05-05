@@ -23,9 +23,9 @@
 
     <script>
       $('#calendar').calendar({
-        tmpl_cache: false,
         events_source: '<%= lessons_path(format: :json) %>',
         modal: "#lesson_modal",
+        tmpl_cache: false
       });
 
       $('#lesson_modal').on('show.bs.modal', function() {

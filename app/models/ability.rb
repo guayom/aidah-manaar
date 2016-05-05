@@ -1,17 +1,24 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(admin)
-    can :access, :rails_admin
-    can :dashboard
+  def initialize(user)
+    case user.class
+    when Admin
+      can :access, :rails_admin
+      can :dashboard
 
-    can :index, Admin
-    can :manage, Admin, id: admin.id
+      can :index, Admin
+      can :manage, Admin, id: admin.id
 
-    can :manage, Instructor
-    can :manage, Student
-    can :manage, Course
-    can :manage, Lesson
+      can :manage, Instructor
+      can :manage, Student
+      can :manage, Course
+      can :manage, Lesson
+    # when Student
+    end
+
+    can :index, Course
+    can :index, Lesson
 
     # Define abilities for the passed in user here. For example:
     #
