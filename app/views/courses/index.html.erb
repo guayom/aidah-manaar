@@ -25,6 +25,7 @@
       $('#calendar').calendar({
         events_source: '<%= lessons_path(format: :json) %>',
         modal: "#lesson_modal",
+        modal_type: 'ajax',
         tmpl_cache: false
       });
 

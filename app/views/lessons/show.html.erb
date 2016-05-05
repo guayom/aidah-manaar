@@ -7,3 +7,15 @@
   <dt>End time:</dt>
   <dd><%= l(@lesson.end_time) %></dd>
 </dl>
+
+<% if student_signed_in? %>
+  <% if @lesson.students.include?(current_student) %>
+    <p>You are already enrolled to this lesson. We will be glad to see you soon.</p>
+  <% else %>
+    <%= link_to lesson_students_path(
+                    lesson_student: { lesson_id: @lesson, student_id: current_student }
+                ), method: :post, remote: true, class: 'btn btn-success' do %>
+      Apply for that <%= @lesson.course.name %> lesson
+    <% end %>
+  <% end %>
+<% end %>

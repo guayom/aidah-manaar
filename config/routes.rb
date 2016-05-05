@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :lessons, only: [:index, :show]
 
   resources :course_students, only: [:create]
+  resources :lesson_students, only: [:create]
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 

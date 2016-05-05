@@ -9,6 +9,8 @@ class Student < ActiveRecord::Base
 
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy
   has_many :courses, through: :courses_students
+  has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
+  has_many :lessons, through: :lessons_students
 
   rails_admin do
     edit do

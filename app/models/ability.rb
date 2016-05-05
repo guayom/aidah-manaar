@@ -6,7 +6,10 @@ class Ability
     can :index, Lesson
     can :show, Lesson
 
-    can :create, CourseStudent
+    if user.persisted?
+      can :create, CourseStudent
+      can :create, LessonStudent
+    end
 
     # Define abilities for the passed in user here. For example:
     #
