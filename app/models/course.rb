@@ -24,4 +24,12 @@ class Course < ActiveRecord::Base
   def parent_name
     parent.try(:name)
   end
+
+  def available_places
+    quota - students.count
+  end
+
+  def has_available_places?
+    available_places > 0
+  end
 end

@@ -6,9 +6,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_ability
-    @current_ability = if admin_signed_in?
-                         AdminAbility.new(current_admin)
-                       elsif instructor_signed_in?
+    @current_ability = if instructor_signed_in?
                          Ability.new(current_instructor)
                        else
                          Ability.new(current_student)
