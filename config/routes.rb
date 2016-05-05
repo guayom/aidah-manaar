@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admins
-  devise_for :instructors
+  devise_scope :student do
+    root to: 'students/registrations#new'
+  end
+
   devise_for :students, controllers: { registrations: 'students/registrations' }
+  devise_for :instructors
+  devise_for :admins
 
   resources :courses, only: [:index]
   resources :lessons, only: [:index, :show]
@@ -10,8 +14,6 @@ Rails.application.routes.draw do
   resources :lesson_students, only: [:create]
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-
-  root to: 'courses#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

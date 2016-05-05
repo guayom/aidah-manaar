@@ -12,19 +12,21 @@ class Students::RegistrationsController < Devise::RegistrationsController
 
     # TODO ConfirmRegistrationJob.perform_later(resource)
 
-    if 'yes' == params[:student][:start_now]
-      Course.base.students << resource
-      # TODO ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
+    if resource.persisted?
+      if 'yes' == params[:student][:start_now]
+        Course.base.students << resource
+        # TODO ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
-      set_flash_message!(
-        :notice,
-        'Welcome! You have signed up and successfully enrolled to your first course.'
-      )
-    else
-      set_flash_message!(
-        :notice,
-        %q(Welcome! You have signed up successfully. We'll contact you soon.)
-      )
+        set_flash_message!(
+          :notice,
+          'Welcome! You have signed up and successfully enrolled to your first course.'
+        )
+      else
+        set_flash_message!(
+          :notice,
+          %q(Welcome! You have signed up successfully. We'll contact you soon.)
+        )
+      end
     end
   end
 
@@ -71,4 +73,8 @@ class Students::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  def after_sign_in_path_for(resource)
+    courses_path
+  end
 end
