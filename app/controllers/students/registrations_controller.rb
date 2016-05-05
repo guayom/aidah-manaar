@@ -9,11 +9,16 @@ class Students::RegistrationsController < Devise::RegistrationsController
 
   def create
     super do |resource|
-      # Send registration letter.
+      ConfirmRegistrationJob.perform_later(resource)
 
       if params[:student][:start_now]
         Course.base.students << resource
-        ConfirmCourseEnrollmentJob.perform_later resource, Course.base
+        ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
+
+        set_flash_message!(
+          :notice,
+          'Welcome! You have signed up and successfully enrolled to your first course.'
+        )
       end
     end
   end
