@@ -8,23 +8,23 @@ class Students::RegistrationsController < Devise::RegistrationsController
   # end
 
   def create
-    super do |resource|
-      # ConfirmRegistrationJob.perform_later(resource)
+    super
 
-      if params[:student][:start_now]
-        Course.base.students << resource
-        # ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
+    # ConfirmRegistrationJob.perform_later(resource)
 
-        set_flash_message!(
-          :notice,
-          'Welcome! You have signed up and successfully enrolled to your first course.'
-        )
-      else
-        set_flash_message!(
-          :notice,
-          %q(Welcome! You have signed up successfully. We'll contact you soon.)
-        )
-      end
+    if :yes == params[:student][:start_now]
+      Course.base.students << resource
+      # ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
+
+      set_flash_message!(
+        :notice,
+        'Welcome! You have signed up and successfully enrolled to your first course.'
+      )
+    else
+      set_flash_message!(
+        :notice,
+        %q(Welcome! You have signed up successfully. We'll contact you soon.)
+      )
     end
   end
 
