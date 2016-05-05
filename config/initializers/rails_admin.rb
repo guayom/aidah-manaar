@@ -8,7 +8,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_admin)
 
   ## == Cancan ==
-  config.authorize_with :cancan
+  config.authorize_with :cancan, AdminAbility
 
   ## == Pundit ==
   # config.authorize_with :pundit
@@ -32,7 +32,5 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
-
-    nestable
   end
 end

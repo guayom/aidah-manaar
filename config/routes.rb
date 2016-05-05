@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :instructors
-  devise_for :students
+  devise_for :students, controllers: { registrations: 'students/registrations' }
 
   resources :courses, only: [:index]
   resources :lessons, only: [:index, :show]

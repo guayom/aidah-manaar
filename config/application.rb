@@ -24,5 +24,8 @@ module AidahManaar
     config.active_record.raise_in_transactional_callbacks = true
 
     config.assets.initialize_on_precompile = false
+
+    config.autoload_paths << Rails.root.join('lib')
+    config.autoload_once_paths << Rails.root.join('lib')
   end
 end

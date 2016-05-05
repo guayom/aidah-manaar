@@ -12,7 +12,6 @@ source 'https://rubygems.org' do
   gem 'rails', '4.2.6'
   gem 'rails-i18n'
   gem 'rails_admin'
-  gem 'rails_admin_nestable'
   gem 'sass-rails'
   gem 'therubyracer', platforms: :ruby
   gem 'thin'
@@ -23,6 +22,7 @@ source 'https://rubygems.org' do
     gem 'better_errors'
     gem 'binding_of_caller'
     gem 'heroku'
+    gem 'letter_opener'
     gem 'quiet_assets'
     gem 'rails-erd'
     gem 'traceroute'
