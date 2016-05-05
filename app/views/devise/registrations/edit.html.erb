@@ -42,7 +42,7 @@
     <div class="form-group">
       <%= f.label :branch_id %>
       <%= f.select :branch_id, options_from_collection_for_select(Branch.all, :id, :name),
-                   class: 'form-control' %>
+                   {}, class: 'form-control' %>
     </div>
   <% end %>
 
