@@ -75,6 +75,8 @@ class Students::RegistrationsController < Devise::RegistrationsController
   # end
 
   def after_sign_in_path_for(resource)
+    flash[:alert] = nil
+
     courses_path
   end
 end
