@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160505203705) do
+ActiveRecord::Schema.define(version: 20160505214311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20160505203705) do
     t.string   "name"
     t.text     "description"
     t.integer  "level"
-    t.integer  "quota"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "parent_id"
@@ -129,6 +128,7 @@ ActiveRecord::Schema.define(version: 20160505203705) do
     t.time     "start_time",                null: false
     t.time     "end_time",                  null: false
     t.integer  "day_of_week",   default: 1, null: false
+    t.integer  "quota",         default: 0, null: false
   end
 
   add_index "lessons", ["branch_id"], name: "index_lessons_on_branch_id", using: :btree

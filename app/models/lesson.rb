@@ -14,4 +14,12 @@ class Lesson < ActiveRecord::Base
   def time_interval
     "#{start_time.strftime('%H:%M')}–#{end_time.strftime('%H:%M')}"
   end
+
+  def available_places
+    quota - students.count
+  end
+
+  def has_available_places?
+    available_places > 0
+  end
 end
