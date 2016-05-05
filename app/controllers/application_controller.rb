@@ -3,5 +3,13 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  alias_method :current_user, :current_admin
+  def current_ability
+    @current_ability = if admin_signed_in?
+                         Ability.new(current_admin)
+                       elsif instructor_signed_in?
+                         Ability.new(current_instructor)
+                       else
+                         Ability.new(current_student)
+                       end
+  end
 end

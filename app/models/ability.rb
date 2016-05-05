@@ -1,7 +1,7 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user)
+  def initialize(user = Student.new)
     case user.class
     when Admin
       can :access, :rails_admin
@@ -14,7 +14,6 @@ class Ability
       can :manage, Student
       can :manage, Course
       can :manage, Lesson
-    # when Student
     end
 
     can :index, Course
