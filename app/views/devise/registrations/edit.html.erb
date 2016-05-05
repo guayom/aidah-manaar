@@ -38,6 +38,11 @@
       <%= f.label :phone %>
       <%= f.phone_field :phone, class: 'form-control' %>
     </div>
+
+    <div class="form-group">
+      <%= f.label :branch_id %>
+      <%= f.select :branch_id, options_from_collection_for_select(Branch, :id, :name) %>
+    </div>
   <% end %>
 
   <div class="form-group">
