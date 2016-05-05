@@ -19,6 +19,7 @@ class Ability
 
     can :index, Course
     can :index, Lesson
+    can :show, Lesson
 
     # Define abilities for the passed in user here. For example:
     #
