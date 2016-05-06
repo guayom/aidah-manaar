@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AidahManaar</title>
+  <title>Aidah Manaar</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="container">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-    <%= render partial: "header" %>
+      <%= render partial: "header" %>
 
-    <% if student_signed_in? %>
-      <%= link_to current_student.email, edit_registration_path(:student) %>
-      <br><br>
-    <% end %>
+      <% if student_signed_in? %>
+        <%= link_to current_student.email, edit_registration_path(:student) %>
+        <br><br>
+      <% end %>
 
-    <% if alert.present? %>
-      <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <% if alert.present? %>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+          </button>
 
-        <%= alert %>
-      </div>
-    <% end %>
+          <%= alert %>
+        </div>
+      <% end %>
 
-    <% if notice.present? %>
-      <div class="alert alert-info alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert">
-          <span aria-hidden="true">&times;</span>
-          <span class="sr-only">Close</span>
-        </button>
+      <% if notice.present? %>
+        <div class="alert alert-info alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
 
-        <%= notice %>
-      </div>
-    <% end %>
+          <%= notice %>
+        </div>
+      <% end %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </div>
 </div>
 <%= render partial: "footer" %>
