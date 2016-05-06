@@ -22,12 +22,12 @@
 es:
   activerecord:
     models:
-      lesson: '[[[LESSON]]]'
-      student: 'Student'
+      lesson: 'Lección'
+      student: 'Estudiante'
     attributes:
       lesson:
-        available_places: '[[[AVAILABLE PLACES]]]'
-        time: '[[[TIME]]]'
+        available_places: 'Cupos disponibles'
+        time: 'Horario'
       student:
         email: 'Correo electrónico'
         password: 'Password'
@@ -35,19 +35,20 @@ es:
         first_name: 'Nombre'
         last_name: 'Apellido'
         phone: 'Número telefónico'
-        branch_id: '[[[BRANCH]]]'
-        current_password: '[[[CURRENT PASSWORD]]]'
+        branch_id: 'Sede'
+        current_password: 'Password actual'
 
   devise:
     registrations:
-      edit: '[[[EDIT PROFILE]]]'
+      edit: 'Editar perfil'
       student:
-        signed_up_and_basic_course: '[[[WELCOME! YOU HAVE SIGNED UP AND SUCCESSFULLY ENROLLED TO YOUR FIRST COURSE.]]]'
-        signed_up_and_advanced_course: '[[[YOU HAVE SIGNED UP SUCCESSFULLY. WE WILL CONTACT YOU SOON.]]]'
+        signed_up_and_basic_course: 'Bienvenido, te has registrado en la Academia de baile Aidah Manaar y te has registrado en el primer curso.'
+        signed_up_and_advanced_course: 'Hemos recibido us datos. Estaremos en contacto contigo a la brevedad posible'
       thank_you:
-        title: '[[[THANK YOU FOR YOUR REGISTRATION]]]'
-        text: '[[[THANK YOU FOR YOUR REGISTRATION. WE GLAD TO SEE YOU AND SO ON...]]]'
-    sign_up: '[[[SIGN UP]]]'
+        title: 'Gracias por registrate'
+        text: 'Estamos muy felices de que formés parte de nuestra academia.'
+    sign_up: 'Registro en línea'
+    sign_up_description: "Regístrate en línea para nuestro cursos.<br/>Toda tu información será almacenada en nuestra base de datos."
 
   errors:
     messages:
@@ -58,25 +59,25 @@ es:
   helpers:
     lesson:
       places_available:
-        one: '[[[LAST PLACES AVAILABLE. HURRY UP.]]]'
-        other: '[[[%{count} PLACES AVAILABLE]]]'
-      sold_out: '[[[SORRY, ALL PLACES ARE SOLD OUT.]]]'
-      title: '[[[LESSON FOR %{course_name}]]]'
+        one: '¡Últimos cupos disponibles!'
+        other: '%{count} cupos disponibles'
+      sold_out: 'Lo sentimos, todos los cupos de este curso han sido ocupados'
+      title: 'Lección de %{course_name}'
     student:
       password:
-        enter_current: '[[[WE NEED YOUR CURRENT PASSWORD TO CONFIRM YOUR CHANGES]]]'
-        leave_blank: "[[[LEAVE BLANK IF YOU DON'T WANT TO CHANGE IT]]]"
+        enter_current: 'Necesitamos su password actual para poder cambiar su password'
+        leave_blank: "Dejar en blanco si no desea cambiarlo"
         minimum_password_length: 'mínimo %{minimum_password_length} caracteres'
       start:
         basic: 'Me gustaría empezar desde el curso más básico.'
         advanced: 'Me gustaría que evaluén mi conocimeinto y me ubiquen en el curso más apropiado para mí.'
-      apply_for_lesson: '[[[APPLY FOR LESSON]]]'
-      you_are_enrolled_to_course: '[[[YOU ARE ENROLLED TO %{course_name}]]]'
-      select_your_schedule: '[[[PLEASE, SELECT YOUR SCHEDULE]]]'
-      we_will_call_you: '[[[WE WILL CALL YOU SOON]]]'
-      you_are_enrolled: '[[[YOU ARE ALREADY ENROLLED TO THIS LESSON. WE WILL BE GLAD TO SEE YOU SOON.]]]'
-    close: '[[[CLOSE]]]'
+      apply_for_lesson: 'Aplicar para esta lección'
+      you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
+      select_your_schedule: 'Por favor selecciona un horario'
+      we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
+      you_are_enrolled: 'Te has inscrito en esta lección con éxito.  ¡Nos vemos pronto!'
+    close: 'Cerrar'
     submit:
       student:
         create: 'Registrarme'
-        update: '[[[UPDATE PROFILE]]]'
+        update: 'Editar mi perfil'

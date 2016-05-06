@@ -1,14 +1,31 @@
+@import 'variables';
 @import 'bootstrap-sprockets';
 @import '_bootstrap';
 @import 'bootstrap-calendar';
+@import 'forms';
 
+html{
+  padding: 0;
+  margin: 0;
+}
 body {
-  padding-top: 15px;
-  margin-bottom: 15px;
+  padding: 0;
+  margin: 0;
 }
 
 .panel-body {
   p:last-child {
     margin-bottom: 0;
   }
+}
+
+.header{
+  padding: 40px;
+}
+
+.footer{
+  background: $morado;
+  color: white;
+  padding: 40px;
+  margin-top: 40px;
 }
