@@ -7,34 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="container-fluid">
-  <% if student_signed_in? %>
-    <%= link_to current_student.email, edit_registration_path(:student) %>
-    <br><br>
-  <% end %>
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+    <% if student_signed_in? %>
+      <%= link_to current_student.email, edit_registration_path(:student) %>
+      <br><br>
+    <% end %>
 
-  <% if alert.present? %>
-    <div class="alert alert-warning alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-      </button>
+    <% if alert.present? %>
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
 
-      <%= alert %>
-    </div>
-  <% end %>
+        <%= alert %>
+      </div>
+    <% end %>
 
-  <% if notice.present? %>
-    <div class="alert alert-info alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-      </button>
+    <% if notice.present? %>
+      <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
 
-      <%= notice %>
-    </div>
-  <% end %>
+        <%= notice %>
+      </div>
+    <% end %>
 
-  <%= yield %>
+    <%= yield %>
+  </div>
 </div>
 </body>
 </html>
