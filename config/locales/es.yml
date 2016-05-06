@@ -71,6 +71,7 @@ es:
         basic: 'Me gustaría empezar desde el curso más básico.'
         advanced: 'Me gustaría que evaluén mi conocimeinto y me ubiquen en el curso más apropiado para mí.'
       apply_for_lesson: '[[[APPLY FOR LESSON]]]'
+      you_are_enrolled_to_course: '[[[YOU ARE ENROLLED TO %{course_name}]]]'
       select_your_schedule: '[[[PLEASE, SELECT YOUR SCHEDULE]]]'
       we_will_call_you: '[[[WE WILL CALL YOU SOON]]]'
       you_are_enrolled: '[[[YOU ARE ALREADY ENROLLED TO THIS LESSON. WE WILL BE GLAD TO SEE YOU SOON.]]]'

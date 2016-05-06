@@ -10,12 +10,12 @@ class Students::RegistrationsController < Devise::RegistrationsController
   def create
     super
 
-    # TODO ConfirmRegistrationJob.perform_later(resource)
+    ConfirmRegistrationJob.perform_later(resource)
 
     if resource.persisted?
       if 'yes' == params[:student][:start_now]
         Course.base.students << resource
-        # TODO ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
+        ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
         set_flash_message!(:notice, 'signed_up_and_basic_course')
       else
