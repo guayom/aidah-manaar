@@ -1,28 +1,31 @@
-<h2>Lesson for <%= @lesson.course.name %></h2>
+<h2>
+  <%= t('helpers.lesson.title', course_name: @lesson.course.name) %>
+</h2>
 
 <dl>
-  <dt>Start time:</dt>
-  <dd><%= l(@lesson.start_time) %></dd>
+  <dt><%= t('activerecord.attributes.lesson.time') %>:</dt>
+  <dd><%= @lesson.start_time.strftime('%H:%M') %>–<%= @lesson.end_time.strftime('%H:%M') %></dd>
 
-  <dt>End time:</dt>
-  <dd><%= l(@lesson.end_time) %></dd>
+  <dt><%= t('activerecord.attributes.lesson.available_places') %>:</dt>
+  <dd>
+    <% if @lesson.has_available_places? %>
+      <%= t('helpers.lesson.places_available', count: @lesson.available_places) %>
+    <% else %>
+      <%= t('helpers.lesson.sold_out') %>
+    <% end %>
+  </dd>
 </dl>
 
 <% if student_signed_in? %>
   <% if @lesson.students.include?(current_student) %>
-    <p>You are already enrolled to this lesson. We will be glad to see you soon.</p>
+    <p><%= t('helpers.student.you_are_enrolled') %></p>
   <% else %>
     <% if @lesson.has_available_places? %>
-      <strong><%= @lesson.available_places %> places available</strong>
-      <br><br>
-
       <%= link_to lesson_students_path(
                       lesson_student: { lesson_id: @lesson, student_id: current_student }
                   ), method: :post, remote: true, class: 'btn btn-success' do %>
-        Apply for that <%= @lesson.course.name %> lesson
+        <%= t('helpers.student.apply_for_lesson') %>
       <% end %>
-    <% else %>
-      <p>Sorry, all places are sold out.</p>
     <% end %>
   <% end %>
 <% end %>

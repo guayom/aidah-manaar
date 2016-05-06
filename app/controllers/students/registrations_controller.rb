@@ -17,15 +17,9 @@ class Students::RegistrationsController < Devise::RegistrationsController
         Course.base.students << resource
         # TODO ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
-        set_flash_message!(
-          :notice,
-          'Welcome! You have signed up and successfully enrolled to your first course.'
-        )
+        set_flash_message!(:notice, 'signed_up_and_basic_course')
       else
-        set_flash_message!(
-          :notice,
-          %q(Welcome! You have signed up successfully. We'll contact you soon.)
-        )
+        set_flash_message!(:notice, 'signed_up_and_advanced_course')
       end
     end
   end

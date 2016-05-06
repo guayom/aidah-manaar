@@ -4,4 +4,11 @@
 
 body {
   padding-top: 15px;
+  margin-bottom: 15px;
+}
+
+.panel-body {
+  p:last-child {
+    margin-bottom: 0;
+  }
 }

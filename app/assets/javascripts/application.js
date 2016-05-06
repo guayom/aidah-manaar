@@ -19,4 +19,5 @@
 //= require underscore
 //= require moment
 //= require bootstrap-calendar
+//= require bootstrap-calendar/language/es-ES
 //= require_tree .

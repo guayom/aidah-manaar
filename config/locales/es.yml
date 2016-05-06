@@ -19,18 +19,63 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hola Mundo"
-student:
-  sign_up:
-    first_name: "Nombre"
-    last_name: "Apellido"
-    email: "Correo electrónico"
-    password: "Password"
-    password_confirmation: "Confirmación de password"
-    phone: "Número telefónico"
-    start_basic: "Me gustaría empezar desde el curso más básico"
-    start_advanced: "Me gustaría que evaluén mi conocimeinto y me ubiquen en el curso más apropiado para mí."
-    submit: "Registrarme"
-    minimum_password_length: "mínimo %{minimum_password_length} caracteres"
-    login: "Iniciar Sesión"
+es:
+  activerecord:
+    models:
+      lesson: '[[[LESSON]]]'
+      student: 'Student'
+    attributes:
+      lesson:
+        available_places: '[[[AVAILABLE PLACES]]]'
+        time: '[[[TIME]]]'
+      student:
+        email: 'Correo electrónico'
+        password: 'Password'
+        password_confirmation: 'Confirmación de password'
+        first_name: 'Nombre'
+        last_name: 'Apellido'
+        phone: 'Número telefónico'
+        branch_id: '[[[BRANCH]]]'
+        current_password: '[[[CURRENT PASSWORD]]]'
+
+  devise:
+    registrations:
+      edit: '[[[EDIT PROFILE]]]'
+      student:
+        signed_up_and_basic_course: '[[[WELCOME! YOU HAVE SIGNED UP AND SUCCESSFULLY ENROLLED TO YOUR FIRST COURSE.]]]'
+        signed_up_and_advanced_course: '[[[YOU HAVE SIGNED UP SUCCESSFULLY. WE WILL CONTACT YOU SOON.]]]'
+      thank_you:
+        title: '[[[THANK YOU FOR YOUR REGISTRATION]]]'
+        text: '[[[THANK YOU FOR YOUR REGISTRATION. WE GLAD TO SEE YOU AND SO ON...]]]'
+    sign_up: '[[[SIGN UP]]]'
+
+  errors:
+    messages:
+      not_saved:
+        one: '1 error evitó guardar este %{resource}:'
+        other: '%{count} errores evitaron guardar este %{resource}:'
+
+  helpers:
+    lesson:
+      places_available:
+        one: '[[[LAST PLACES AVAILABLE. HUURY UP.]]]'
+        other: '[[[%{count} PLACES AVAILABLE]]]'
+      sold_out: '[[[SORRY, ALL PLACES ARE SOLD OUT.]]]'
+      title: '[[[LESSON FOR %{course_name}]]]'
+    student:
+      password:
+        enter_current: '[[[WE NEED YOUR CURRENT PASSWORD TO CONFIRM YOUR CHANGES]]]'
+        leave_blank: "[[[LEAVE BLANK IF YOU DON'T WANT TO CHANGE IT]]]"
+        minimum_password_length: 'mínimo %{minimum_password_length} caracteres'
+      start:
+        basic: 'Me gustaría empezar desde el curso más básico.'
+        advanced: 'Me gustaría que evaluén mi conocimeinto y me ubiquen en el curso más apropiado para mí.'
+      apply_for_lesson: '[[[APPLY FOR LESSON]]]'
+      select_your_schedule: '[[[PLEASE, SELECT YOUR SCHEDULE]]]'
+      we_will_call_you: '[[[WE WILL CALL YOU SOON]]]'
+      you_are_enrolled: '[[[YOU ARE ALREADY ENROLLED TO THIS LESSON. WE WILL BE GLAD TO SEE YOU SOON.]]]'
+    close: '[[[CLOSE]]]'
+    submit:
+      student:
+        create: 'Registrarme'
+        update: '[[[UPDATE PROFILE]]]'
