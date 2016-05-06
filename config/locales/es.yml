@@ -58,7 +58,7 @@ es:
   helpers:
     lesson:
       places_available:
-        one: '[[[LAST PLACES AVAILABLE. HUURY UP.]]]'
+        one: '[[[LAST PLACES AVAILABLE. HURRY UP.]]]'
         other: '[[[%{count} PLACES AVAILABLE]]]'
       sold_out: '[[[SORRY, ALL PLACES ARE SOLD OUT.]]]'
       title: '[[[LESSON FOR %{course_name}]]]'
