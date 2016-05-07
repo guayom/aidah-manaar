@@ -26,7 +26,7 @@ body {
 .footer{
   background: $morado;
   color: white;
-  padding: 40px;
+  padding-top: 40px;
   margin-top: 40px;
   .social{
     font-size: 2.5em;
@@ -38,5 +38,14 @@ body {
         }
       }
     }
+  }
+  .copyright{
+    background:darken($morado, 20%);
+    padding: 10px 0;
+    font-size: 0.8em;
+    margin-top: 40px;
+  }
+  a{
+    color: white;
   }
 }
