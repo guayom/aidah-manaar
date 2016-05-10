@@ -5,7 +5,12 @@
 
   <div class="form-group">
     <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    <%= f.email_field :email, autofocus: true,
+                      class: "form-control #{'invalid' if resource.errors[:email].present?}",
+                      required: true %>
+    <p class="error-block">
+      <%= t('errors.messages.invalid') %>
+    </p>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -26,12 +31,18 @@
   <% if :student == resource_name %>
     <div class="form-group">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name, class: 'form-control' %>
+      <%= f.text_field :first_name, class: 'form-control', required: true %>
+      <p class="error-block">
+        <%= t('errors.messages.blank') %>
+      </p>
     </div>
 
     <div class="form-group">
       <%= f.label :last_name %>
-      <%= f.text_field :last_name, class: 'form-control' %>
+      <%= f.text_field :last_name, class: 'form-control', required: true %>
+      <p class="error-block">
+        <%= t('errors.messages.blank') %>
+      </p>
     </div>
 
     <div class="form-group">
@@ -48,7 +59,8 @@
 
   <div class="form-group">
     <%= f.label :current_password %>
-    <%= f.password_field :current_password, autocomplete: 'off', class: 'form-control' %>
+    <%= f.password_field :current_password, autocomplete: 'off', class: 'form-control',
+                         required: true %>
     <p class="help-block"><%= t('helpers.student.password.enter_current') %></p>
   </div>
 
