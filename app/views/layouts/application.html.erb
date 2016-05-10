@@ -15,12 +15,7 @@
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-      <%= render partial: "header" %>
-
-      <% if student_signed_in? %>
-        <%= link_to current_student.email, edit_registration_path(:student) %>
-        <br><br>
-      <% end %>
+      <%= render 'application/header' %>
 
       <% if alert.present? %>
         <div class="alert alert-warning alert-dismissible" role="alert">
@@ -36,7 +31,6 @@
         <div class="alert alert-info alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert">
             <span aria-hidden="true">&times;</span>
-            <span class="sr-only">Close</span>
           </button>
 
           <%= notice %>
@@ -44,9 +38,16 @@
       <% end %>
 
       <%= yield %>
+
+      <% if student_signed_in? %>
+        <br><br>
+        <%= link_to t('helpers.student.edit_profile'), edit_registration_path(:student),
+                    class: 'btn btn-default' %>
+      <% end %>
     </div>
   </div>
 </div>
-<%= render partial: "footer" %>
+
+<%= render 'application/footer' %>
 </body>
 </html>

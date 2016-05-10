@@ -4,7 +4,7 @@
 @import 'bootstrap-calendar';
 @import 'forms';
 
-html{
+html {
   padding: 0;
   margin: 0;
 }
@@ -19,33 +19,38 @@ body {
   }
 }
 
-.header{
+.header {
   padding: 40px;
 }
 
-.footer{
+.footer {
   background: $morado;
   color: white;
   padding-top: 40px;
   margin-top: 40px;
-  .social{
+
+  .social {
     font-size: 2.5em;
-    li{
-      a{
+
+    li {
+      a {
         color: white;
-        &:hover{
+
+        &:hover {
           color: $naranja;
         }
       }
     }
   }
-  .copyright{
-    background:darken($morado, 20%);
+
+  .copyright {
+    background: darken($morado, 20%);
     padding: 10px 0;
     font-size: 0.8em;
     margin-top: 40px;
   }
-  a{
+
+  a {
     color: white;
   }
 }

@@ -76,6 +76,7 @@ es:
       select_your_schedule: 'Por favor selecciona un horario'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
       you_are_enrolled: 'Te has inscrito en esta lección con éxito.  ¡Nos vemos pronto!'
+      edit_profile: 'Editar mi información'
     close: 'Cerrar'
     submit:
       student:
