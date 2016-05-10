@@ -6,3 +6,19 @@
     font-size: 1.3em;
   }
 }
+
+input:required:invalid, input:focus:invalid,
+input.invalid:required, input.invalid:focus {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
+}
+
+input:required:invalid + .error-text, input:required:invalid + .error-block,
+input.invalid:required + .error-text, input.invalid:required + .error-block {
+  display: block;
+}
+
+input:valid + .error-text, input:valid + .error-block {
+  display: none;
+}
