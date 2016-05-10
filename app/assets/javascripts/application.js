@@ -11,8 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap/alert
 //= require bootstrap/modal
 //= require bootstrap/transition
 //= require bootstrap/tooltip
@@ -21,3 +22,4 @@
 //= require bootstrap-calendar
 //= require bootstrap-calendar/language/es-ES
 //= require_tree .
+//= require turbolinks

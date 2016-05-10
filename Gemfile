@@ -8,6 +8,7 @@ source 'https://rubygems.org' do
   gem 'devise'
   gem 'jbuilder'
   gem 'jquery-rails'
+  gem 'jquery-turbolinks'
   gem 'pg'
   gem 'rails', '4.2.6'
   gem 'rails-i18n'
