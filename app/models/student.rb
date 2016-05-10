@@ -13,9 +13,17 @@ class Student < ActiveRecord::Base
   has_many :lessons, through: :lessons_students
 
   rails_admin do
+    object_label_method do
+      :label
+    end
+
     edit do
       exclude_fields :courses_students
     end
+  end
+
+  def label
+    "##{id} #{first_name} #{last_name}"
   end
 
   def address
