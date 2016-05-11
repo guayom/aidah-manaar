@@ -12,6 +12,9 @@ class Student < ActiveRecord::Base
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :lessons, through: :lessons_students
 
+  validates_presence_of :id_number
+  validates_uniqueness_of :id_number
+
   rails_admin do
     object_label_method do
       :label
