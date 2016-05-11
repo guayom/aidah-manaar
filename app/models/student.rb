@@ -23,7 +23,7 @@ class Student < ActiveRecord::Base
   end
 
   def label
-    "##{id} #{first_name} #{last_name}"
+    "#{id_number} #{first_name} #{last_name}"
   end
 
   def address

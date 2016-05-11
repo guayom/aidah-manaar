@@ -30,6 +30,14 @@
 
   <% if :student == resource_name %>
     <div class="form-group">
+      <%= f.label :id_number %>
+      <%= f.text_field :id_number, class: 'form-control', required: true %>
+      <p class="error-block">
+        <%= t('errors.messages.blank') %>
+      </p>
+    </div>
+
+    <div class="form-group">
       <%= f.label :first_name %>
       <%= f.text_field :first_name, class: 'form-control', required: true %>
       <p class="error-block">

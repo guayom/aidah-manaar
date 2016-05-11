@@ -29,7 +29,7 @@ es:
         available_places: 'Cupos disponibles'
         time: 'Horario'
       student:
-        id: 'Cédula'
+        id_number: 'Cédula'
         email: 'Correo electrónico'
         password: 'Password'
         password_confirmation: 'Confirmación de password'
