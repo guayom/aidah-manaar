@@ -11,7 +11,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
     super
 
     if resource.persisted?
-      if 'yes' == params[:student][:start_now]
+      if resource.beginner?
         Course.base.students << resource
         ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
@@ -52,7 +52,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
 
   def configure_sign_up_params
     devise_parameter_sanitizer.
-      permit(:sign_up, keys: [:id_number, :first_name, :last_name, :phone, :branch_id])
+      permit(:sign_up, keys: [:id_number, :first_name, :last_name, :phone, :branch_id, :beginner])
   end
 
   def configure_account_update_params
@@ -73,6 +73,6 @@ class Students::RegistrationsController < Devise::RegistrationsController
   def after_sign_in_path_for(resource)
     flash[:alert] = nil
 
-    courses_path
+    select_schedule_path
   end
 end

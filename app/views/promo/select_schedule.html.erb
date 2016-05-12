@@ -1,0 +1,44 @@
+<h2>
+  <%= t('helpers.student.select_your_schedule') %>
+</h2>
+
+<p><%= t('helpers.student.you_are_enrolled_to_course', course_name: @course.name) %></p>
+
+<br>
+
+<table id="calendar" class="table">
+  <tr>
+    <% @days.sort.each do |_, v| %>
+      <th><%= v.capitalize %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @lessons_by_week.each do |_, lessons| %>
+    <td>
+      <ul class="list-unstyled">
+        <% lessons.sort_by(&:start_time).each do |lesson| %>
+          <li style="margin-bottom: 10px;">
+            <button class="btn btn-default">
+              <%= lesson.time_interval %>
+            </button>
+          </li>
+        <% end %>
+      </ul>
+    </td>
+  <% end %>
+  </tr>
+</table>
+
+<script>
+  $('#calendar button').click(function() {
+    $(this).toggleClass('btn-default');
+    $(this).toggleClass('btn-primary');
+  });
+</script>
+
+<button id="apply_for_lesson" class="btn btn-primary">
+  <%= t('helpers.student.apply_for_lesson') %>
+</button>
+
+<br>
+<br>

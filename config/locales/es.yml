@@ -48,6 +48,7 @@ es:
       thank_you:
         title: 'Gracias por registrate'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
+    sign_in: '[[[SIGN IN]]]'
     sign_up: 'Registro en línea'
     sign_up_description: "Regístrate en línea para nuestro cursos.<br/>Toda tu información será almacenada en nuestra base de datos."
 
@@ -76,7 +77,7 @@ es:
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
       select_your_schedule: 'Por favor selecciona un horario'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
-      you_are_enrolled: 'Te has inscrito en esta lección con éxito.  ¡Nos vemos pronto!'
+      you_are_enrolled: 'Te has inscrito en esta lección con éxito. ¡Nos vemos pronto!'
       edit_profile: 'Editar mi información'
     close: 'Cerrar'
     submit:

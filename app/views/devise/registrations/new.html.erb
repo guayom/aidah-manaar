@@ -74,14 +74,14 @@
 
     <div class="radio">
       <label>
-        <input type="radio" name="student[start_now]" id="student_start_now" value="yes" checked>
+        <%= f.radio_button :beginner, 1, checked: true %>
         <%= t('helpers.student.start.basic') %>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <input type="radio" name="student[start_now]" id="student_start_now" value="no">
+        <%= f.radio_button :beginner, 0, checked: false %>
         <%= t('helpers.student.start.advanced') %>
       </label>
     </div>
