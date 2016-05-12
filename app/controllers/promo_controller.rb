@@ -11,6 +11,11 @@ class PromoController < ApplicationController
 
   def select_schedule
     @student = current_student
+
+    if params[:lesson_ids].try(:any?)
+      @student.lessons.concat(Lesson.where(id: params[:lesson_ids]))
+    end
+
     if @student.lessons.any? || !@student.beginner?
       redirect_to thank_you_path
     end
@@ -57,5 +62,9 @@ class PromoController < ApplicationController
 
   def thank_you
     @student = current_student
+
+    if @student.beginner? && @student.lessons.empty?
+      redirect_to select_schedule_path
+    end
   end
 end
