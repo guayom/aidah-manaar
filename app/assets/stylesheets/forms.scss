@@ -11,8 +11,8 @@ span.required {
   color: #f00;
 }
 
-input:required:invalid, input:focus:invalid,
-input.invalid:required, input.invalid:focus {
+input.touched:required:invalid, input.touched:focus:invalid,
+input.touched.invalid:required, input.touched.invalid:focus {
   border-color: #f00;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
@@ -23,11 +23,11 @@ input:required + .error-text, input:required + .error-block {
   color: #f00;
 }
 
-input:required:invalid + .error-text, input:required:invalid + .error-block,
-input.invalid:required + .error-text, input.invalid:required + .error-block {
-  display: block;
+input + .error-text, input + .error-block {
+  display: none;
 }
 
-input:valid + .error-text, input:valid + .error-block {
-  display: none;
+input.touched:required:invalid + .error-text, input.touched:required:invalid + .error-block,
+input.touched.invalid:required + .error-text, input.touched.invalid:required + .error-block {
+  display: block;
 }
