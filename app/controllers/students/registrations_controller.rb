@@ -19,7 +19,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
         ConfirmRegistrationJob.perform_later(resource)
         NotifyAdminJob.perform_later(resource)
 
-        set_flash_message!(:notice, 'signed_up_and_advanced_course')
+        flash[:notice] = nil
       end
     end
   end

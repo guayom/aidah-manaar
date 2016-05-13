@@ -88,14 +88,14 @@
 
     <div class="radio">
       <label>
-        <%= f.radio_button :beginner, 1, checked: true %>
+        <%= f.radio_button :beginner, 1, checked: ((params[:student] && '1' == params[:student][:beginner]) || params[:student].blank?) %>
         <%= t('helpers.student.start.basic') %>
       </label>
     </div>
 
     <div class="radio">
       <label>
-        <%= f.radio_button :beginner, 0, checked: false %>
+        <%= f.radio_button :beginner, 0, checked: (params[:student] && '0' == params[:student][:beginner]) %>
         <%= t('helpers.student.start.advanced') %>
       </label>
     </div>
