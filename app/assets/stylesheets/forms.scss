@@ -14,6 +14,11 @@ input.invalid:required, input.invalid:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075)
 }
 
+input:required + .error-text, input:required + .error-block,
+input:required + .error-text, input:required + .error-block {
+  color: #f00;
+}
+
 input:required:invalid + .error-text, input:required:invalid + .error-block,
 input.invalid:required + .error-text, input.invalid:required + .error-block {
   display: block;
