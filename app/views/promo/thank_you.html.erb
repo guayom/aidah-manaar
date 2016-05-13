@@ -9,3 +9,9 @@
 <% else %>
   <p><%= t('devise.registrations.student.signed_up_and_advanced_course') %></p>
 <% end %>
+
+<% if student_signed_in? %>
+  <br><br>
+  <%= link_to t('helpers.student.edit_profile'), edit_registration_path(:student),
+              class: 'btn btn-default' %>
+<% end %>
