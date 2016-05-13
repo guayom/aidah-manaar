@@ -163,6 +163,8 @@ GEM
       rails-assets-jquery (~> 1.10.2)
       rails-assets-moment (~> 2.0.0)
       rails-assets-underscore (~> 1.4.4)
+    rails-assets-bootstrap-select (1.10.0)
+      rails-assets-jquery (>= 1.8)
     rails-assets-jquery (1.10.2)
     rails-assets-moment (2.0.0)
     rails-assets-underscore (1.4.4)
@@ -274,6 +276,7 @@ DEPENDENCIES
   quiet_assets!
   rails (= 4.2.6)!
   rails-assets-bootstrap-calendar!
+  rails-assets-bootstrap-select!
   rails-erd!
   rails-i18n!
   rails_12factor!

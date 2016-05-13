@@ -1,0 +1,35 @@
+<h1><%= t('helpers.admin.new_student_added') %></h1>
+
+<p><%= @student.full_name %></p>
+
+<dl>
+  <dt><%= t('activerecord.attributes.student.id_number') %></dt>
+  <dd><%= @student.id_number %></dd>
+
+  <dt><%= t('activerecord.attributes.student.birthdate') %></dt>
+  <dd><%= l(@student.birthdate) %></dd>
+
+  <dt><%= t('activerecord.attributes.student.email') %></dt>
+  <dd><%= @student.email %></dd>
+
+  <dt><%= t('activerecord.attributes.student.phone') %></dt>
+  <dd><%= @student.phone %></dd>
+
+  <dt><%= t('activerecord.attributes.student.branch_id') %></dt>
+  <dd><%= @student.branch.name %></dd>
+</dl>
+
+<% if @student.beginner? %>
+  <p><%= t('helpers.admin.new_beginner_student') %></p>
+
+  <ul>
+    <% @student.lessons.sort_by { |l| [l[:day_of_week], l.start_time] }.each do |lesson| %>
+      <li>
+        <%= lesson.day_of_week.capitalize %>, <%= lesson.time_interval %>
+        — <%= t('helpers.lesson.places_available', count: lesson.available_places) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><%= t('helpers.admin.new_advanced_student') %></p>
+<% end %>

@@ -12,7 +12,7 @@ class Student < ActiveRecord::Base
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :lessons, through: :lessons_students
 
-  validates_presence_of :id_number
+  validates_presence_of :first_name, :last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number
 
   rails_admin do
@@ -25,8 +25,12 @@ class Student < ActiveRecord::Base
     end
   end
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   def label
-    "#{id_number} #{first_name} #{last_name}"
+    "#{id_number} #{full_name}"
   end
 
   def address

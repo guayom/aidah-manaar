@@ -30,6 +30,7 @@ es:
         time: 'Horario'
       student:
         id_number: 'Cédula'
+        birthdate: '[[[BIRTHDATE]]]'
         email: 'Correo electrónico'
         password: 'Password'
         password_confirmation: 'Confirmación de password'
@@ -59,6 +60,10 @@ es:
         other: '%{count} errores evitaron guardar este %{resource}:'
 
   helpers:
+    admin:
+      new_student_added: '[[[NEW STUDENT ADDED]]]'
+      new_advanced_student: '[[[IT IS ADVANCED STUDENT. WE NEED TO CALL HIM.]]]'
+      new_beginner_student: '[[[IT IS BEGINNER STUDENT. HIS SELECTED SCHEDULE IS BELOW.]]]'
     lesson:
       places_available:
         one: '¡Últimos cupos disponibles!'

@@ -16,7 +16,8 @@ class PromoController < ApplicationController
       lessons = Lesson.where(id: params[:lesson_ids])
       @student.lessons.concat(lessons)
 
-      ConfirmScheduleEnrollmentJob.perform_later(student, lessons)
+      ConfirmScheduleEnrollmentJob.perform_later(@student)
+      NotifyAdminJob.perform_later(@student)
     end
 
     if @student.lessons.any? || !@student.beginner?

@@ -17,6 +17,7 @@ class Students::RegistrationsController < Devise::RegistrationsController
         set_flash_message!(:notice, 'signed_up_and_basic_course')
       else
         ConfirmRegistrationJob.perform_later(resource)
+        NotifyAdminJob.perform_later(resource)
 
         set_flash_message!(:notice, 'signed_up_and_advanced_course')
       end
@@ -51,12 +52,14 @@ class Students::RegistrationsController < Devise::RegistrationsController
 
   def configure_sign_up_params
     devise_parameter_sanitizer.
-      permit(:sign_up, keys: [:id_number, :first_name, :last_name, :phone, :branch_id, :beginner])
+      permit(:sign_up,
+             keys: [:first_name, :last_name, :id_number, :birthdate, :phone, :branch_id, :beginner])
   end
 
   def configure_account_update_params
     devise_parameter_sanitizer.
-      permit(:account_update, keys: [:id_number, :first_name, :last_name, :phone, :branch_id])
+      permit(:account_update,
+             keys: [:first_name, :last_name, :id_number, :birthdate, :phone, :branch_id])
   end
 
   # The path used after sign up.

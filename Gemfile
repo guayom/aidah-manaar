@@ -36,4 +36,5 @@ end
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-calendar'
+  gem 'rails-assets-bootstrap-select'
 end

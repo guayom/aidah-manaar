@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap/alert
+//= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap/transition
 //= require bootstrap/tooltip
@@ -21,5 +22,10 @@
 //= require moment
 //= require bootstrap-calendar
 //= require bootstrap-calendar/language/es-ES
+//= require bootstrap-select
 //= require_tree .
 //= require turbolinks
+
+$(function() {
+  $('.selectpicker').selectpicker();
+});
