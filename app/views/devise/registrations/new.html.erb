@@ -8,7 +8,7 @@
 
   <% if :student == resource_name %>
     <div class="form-group">
-      <%= f.label :first_name %>
+      <%= f.label :first_name %> <span class="required">*</span>
       <%= f.text_field :first_name, class: 'form-control', required: true %>
       <p class="error-block">
         <%= t('errors.messages.blank') %>
@@ -16,7 +16,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :last_name %>
+      <%= f.label :last_name %> <span class="required">*</span>
       <%= f.text_field :last_name, class: 'form-control', required: true %>
       <p class="error-block">
         <%= t('errors.messages.blank') %>
@@ -25,7 +25,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :id_number %>
+    <%= f.label :id_number %> <span class="required">*</span>
     <%= f.text_field :id_number, class: 'form-control', required: true %>
     <p class="error-block">
       <%= t('errors.messages.blank') %>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :birthdate %>
+    <%= f.label :birthdate %> <span class="required">*</span>
     <br>
     <%= f.date_select :birthdate, { start_year: 1900 },
                       class: 'selectpicker', data: { 'live-search' => true }, required: true %>
@@ -43,7 +43,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :email %>
+    <%= f.label :email %> <span class="required">*</span>
     <%= f.email_field :email,
                       class: "form-control #{'invalid' if resource.errors[:email].present?}",
                       required: true %>
@@ -53,7 +53,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :password %>
+    <%= f.label :password %> <span class="required">*</span>
     <%= f.password_field :password, autocomplete: 'off', class: 'form-control', required: true %>
     <% if @minimum_password_length %>
       <p class="help-block">
@@ -67,13 +67,13 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation %> <span class="required">*</span>
     <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control' %>
   </div>
 
   <% if :student == resource_name %>
     <div class="form-group">
-      <%= f.label :phone %>
+      <%= f.label :phone %> <span class="required">*</span>
       <%= f.phone_field :phone, class: 'form-control', required: true %>
       <p class="error-block">
         <%= t('errors.messages.blank') %>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :branch_id %>
+      <%= f.label :branch_id %> <span class="required">*</span>
       <%= f.select :branch_id, options_from_collection_for_select(Branch.all, :id, :name),
                    {}, class: 'form-control' %>
     </div>
