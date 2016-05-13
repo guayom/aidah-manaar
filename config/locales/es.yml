@@ -50,6 +50,7 @@ es:
         title: 'Gracias por matricularte'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
     sign_in: '[[[SIGN IN]]]'
+    sign_out: '[[[SIGN OUT]]]'
     sign_up: 'Matrícula en línea'
     sign_up_description: "Matriculate en línea para nuestro cursos.<br/>Toda tu información será almacenada en nuestra base de datos."
 

@@ -14,4 +14,7 @@
   <br><br>
   <%= link_to t('helpers.student.edit_profile'), edit_registration_path(:student),
               class: 'btn btn-default' %>
+
+  <%= link_to t('devise.sign_out'), destroy_student_session_path,
+              method: :delete, class: 'btn btn-danger' %>
 <% end %>
