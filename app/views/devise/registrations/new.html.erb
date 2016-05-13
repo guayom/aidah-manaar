@@ -44,7 +44,7 @@
 
   <div class="form-group">
     <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true,
+    <%= f.email_field :email,
                       class: "form-control #{'invalid' if resource.errors[:email].present?}",
                       required: true %>
     <p class="error-block">
