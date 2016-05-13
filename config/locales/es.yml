@@ -43,14 +43,14 @@ es:
     registrations:
       edit: 'Editar perfil'
       student:
-        signed_up_and_basic_course: 'Bienvenido, te has registrado en la Academia de baile Aidah Manaar y te has registrado en el primer curso.'
-        signed_up_and_advanced_course: 'Hemos recibido us datos. Estaremos en contacto contigo a la brevedad posible'
+        signed_up_and_basic_course: 'Bienvenido, te has Matriculado en la Academia de baile Aidah Manaar y te has matriculado en el primer curso.'
+        signed_up_and_advanced_course: 'Hemos recibido tus datos. Estaremos en contacto contigo a la brevedad posible'
       thank_you:
-        title: 'Gracias por registrate'
+        title: 'Gracias por matricularte'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
     sign_in: '[[[SIGN IN]]]'
-    sign_up: 'Registro en línea'
-    sign_up_description: "Regístrate en línea para nuestro cursos.<br/>Toda tu información será almacenada en nuestra base de datos."
+    sign_up: 'Matrícula en línea'
+    sign_up_description: "Matriculate en línea para nuestro cursos.<br/>Toda tu información será almacenada en nuestra base de datos."
 
   errors:
     messages:
@@ -82,5 +82,5 @@ es:
     close: 'Cerrar'
     submit:
       student:
-        create: 'Registrarme'
+        create: 'Matricularme'
         update: 'Editar mi perfil'
