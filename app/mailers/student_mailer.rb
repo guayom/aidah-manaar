@@ -4,10 +4,10 @@ class StudentMailer < ApplicationMailer
     mail(to: student.email, subject: t('devise.registrations.thank_you.title'))
   end
 
-  def confirm_course_enrollment(student, course)
+  def confirm_schedule_enrollment(student, lessons)
     @student = student
-    @course = course
+    @lessons = lessons
     mail(to: student.email,
-         subject: t('helpers.student.you_are_enrolled_to_course', course_name: course.name))
+         subject: t('helpers.student.you_are_enrolled'))
   end
 end

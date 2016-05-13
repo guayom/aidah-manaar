@@ -13,7 +13,6 @@ class Students::RegistrationsController < Devise::RegistrationsController
     if resource.persisted?
       if resource.beginner?
         Course.base.students << resource
-        ConfirmCourseEnrollmentJob.perform_later(resource, Course.base)
 
         set_flash_message!(:notice, 'signed_up_and_basic_course')
       else
