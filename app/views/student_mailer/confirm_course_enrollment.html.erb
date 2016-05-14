@@ -1,0 +1,5 @@
+<h1><%= t('helpers.student.you_are_enrolled_to_course', course_name: @course.name) %></h1>
+
+<p>[[[Te has matriculado en el curso <%= @course.name %>]]]</p>
+
+<p><%= t('helpers.student.select_your_schedule') %> <%= link_to courses_url, courses_url %></p>
