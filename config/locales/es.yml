@@ -30,7 +30,7 @@ es:
         time: 'Horario'
       student:
         id_number: 'Cédula'
-        birthdate: '[[[BIRTHDATE]]]'
+        birthdate: 'Fecha de nacimiento'
         email: 'Correo electrónico'
         password: 'Password'
         password_confirmation: 'Confirmación de password'
@@ -49,8 +49,8 @@ es:
       thank_you:
         title: 'Gracias por matricularte'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
-    sign_in: '[[[SIGN IN]]]'
-    sign_out: '[[[SIGN OUT]]]'
+    sign_in: 'Ingresar'
+    sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
     sign_up_description: "Matriculate en línea para nuestro curso"
 
@@ -62,9 +62,9 @@ es:
 
   helpers:
     admin:
-      new_student_added: '[[[NEW STUDENT ADDED]]]'
-      new_advanced_student: '[[[IT IS ADVANCED STUDENT. WE NEED TO CALL HIM.]]]'
-      new_beginner_student: '[[[IT IS BEGINNER STUDENT. HIS SELECTED SCHEDULE IS BELOW.]]]'
+      new_student_added: 'Se ha matriculado un nuevo estudiante'
+      new_advanced_student: 'Estudiante avanzada. Necesita programar una cita para evaluación'
+      new_beginner_student: 'Es una estudiante de primer nivel. Su horario se encuentra a continuación'
     lesson:
       places_available:
         one: '¡Últimos cupos disponibles!'
