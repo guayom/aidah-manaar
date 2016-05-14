@@ -49,7 +49,7 @@ es:
       thank_you:
         title: 'Gracias por matricularte'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
-    sign_in: 'Ingresar'
+    sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
     sign_up_description: "Matriculate en línea para nuestro curso"
@@ -79,6 +79,7 @@ es:
       start:
         basic: 'Me gustaría empezar desde el curso más básico.'
         advanced: 'Me gustaría que evaluén mi conocimiento y me ubiquen en el curso más apropiado para mí.'
+      already_have_an_account: ¿Ya estás matriculad@?
       apply_for_lesson: 'Aplicar para esta lección'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
       select_your_schedule: 'Por favor selecciona un horario'
