@@ -53,7 +53,7 @@ es:
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
-    sign_up_description: "Matriculate en línea para nuestro curso"
+    sign_up_description: "Matriculate en línea para nuestros cursos"
 
   errors:
     messages:
@@ -79,7 +79,7 @@ es:
         minimum_password_length: 'mínimo %{minimum_password_length} caracteres'
       start:
         basic: 'Me gustaría empezar desde el nivel básico.'
-        advanced: 'Me gustaría que evaluén mi conocimiento y me ubiquen en el curso más apropiado para mí.'
+        advanced: 'Me gustaría que evaluén mi conocimiento y me ubiquen en el nivel más apropiado para mí.'
       already_have_an_account: ¿Ya estás matriculad@?
       apply_for_lesson: 'Aplicar para esta lección'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
