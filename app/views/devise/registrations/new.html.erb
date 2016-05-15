@@ -34,7 +34,7 @@
 
   <div class="form-group">
     <%= f.label :id_number %> <span class="required">*</span>
-    <%= f.text_field :id_number, class: 'form-control', required: true %>
+    <%= f.text_field :id_number, class: 'form-control', required: true, placeholder: "Sin guinoes ni espacios. Ej: 112334455" %>
     <p class="error-block">
       <%= t('errors.messages.blank') %>
     </p>
