@@ -36,6 +36,7 @@ es:
         password_confirmation: 'Confirmación de password'
         first_name: 'Nombre'
         last_name: 'Apellido'
+        second_last_name: 'Segundo Apellido'
         phone: 'Número telefónico'
         branch_id: 'Sede'
         current_password: 'Password actual'
@@ -77,7 +78,7 @@ es:
         leave_blank: "Dejar en blanco si no desea cambiarlo"
         minimum_password_length: 'mínimo %{minimum_password_length} caracteres'
       start:
-        basic: 'Me gustaría empezar desde el curso más básico.'
+        basic: 'Me gustaría empezar desde el nivel básico.'
         advanced: 'Me gustaría que evaluén mi conocimiento y me ubiquen en el curso más apropiado para mí.'
       already_have_an_account: ¿Ya estás matriculad@?
       apply_for_lesson: 'Aplicar para esta lección'
