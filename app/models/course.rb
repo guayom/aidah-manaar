@@ -18,6 +18,8 @@ class Course < ActiveRecord::Base
 
   # TODO Add validation to control that there is only one base course (course without parent).
 
+  default_scope { order(:name) }
+
   scope :base, -> { find_by(parent_id: nil) }
 
   def parent_name

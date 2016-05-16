@@ -1,21 +1,7 @@
-<div>
+<div class="course">
   <h1>
     <%= course.name %>
   </h1>
 
   <p><%= course.description %></p>
-
-  <% if student_signed_in? %>
-    <% if course.students.exclude?(current_student) && course.has_available_places? %>
-      <%= link_to course_students_path(
-                    course_student: { course_id: course, student_id: current_student }
-                  ), method: :post, class: 'btn btn-success' do %>
-        Apply for <%= course.name %>
-      <% end %>
-    <% end %>
-
-    <% if course.students.include?(current_student) %>
-      <p class="lead">You are already enrolled to this course!</p>
-    <% end %>
-  <% end %>
 </div>
