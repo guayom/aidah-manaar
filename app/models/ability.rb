@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user = Student.new)
-    can :index, Course
+    can [:index, :show], Course
 
     if user.present?
       can :index, Lesson

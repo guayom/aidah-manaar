@@ -1,0 +1,6 @@
+<h2><%= @course.name %></h2>
+
+<% if student_signed_in? %>
+<% else %>
+  <%= @course.public_description %>
+<% end %>
