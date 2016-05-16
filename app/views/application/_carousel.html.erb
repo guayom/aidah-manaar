@@ -10,8 +10,10 @@
     <% Slide.all.each_with_index do |slide, index| %>
       <div class="item <%= 'active' if index.zero? %>">
         <%= image_tag slide.image.url(:homepage), alt: slide.title %>
+
         <div class="carousel-caption">
-          <%= slide.title %>
+          <h3><%= slide.title %></h3>
+          <p><%= slide.description %></p>
         </div>
       </div>
     <% end %>

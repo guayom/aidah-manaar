@@ -8,6 +8,7 @@
 
 .navbar {
   border-radius: 0;
+  margin-bottom: 0;
   z-index: 1030;
 
   &.affix {
@@ -15,7 +16,13 @@
     width: 100%;
 
     + .affix-margin {
-      height: 75px;
+      height: 52px;
     }
+  }
+}
+
+.carousel {
+  .item {
+    height: 500px;
   }
 }
