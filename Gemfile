@@ -27,6 +27,7 @@ source 'https://rubygems.org' do
   group :development do
     gem 'better_errors'
     gem 'binding_of_caller'
+    gem 'heroku'
     gem 'letter_opener'
     gem 'quiet_assets'
     gem 'rails-erd'
