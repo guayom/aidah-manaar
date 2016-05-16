@@ -55,6 +55,10 @@ es:
     sign_up: 'Matrícula en línea'
     sign_up_description: "Matriculate en línea para nuestros cursos"
 
+    failure:
+      admin:
+        unauthenticated: "No has iniciado sesión"
+
   errors:
     messages:
       not_saved:
