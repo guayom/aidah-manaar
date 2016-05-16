@@ -7,6 +7,7 @@ source 'https://rubygems.org' do
   gem 'closure_tree'
   gem 'coffee-rails'
   gem 'devise'
+  gem 'friendly_id'
   gem 'jbuilder'
   gem 'jquery-rails'
   gem 'jquery-turbolinks'

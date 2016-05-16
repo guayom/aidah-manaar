@@ -1,4 +1,6 @@
 class Course < ActiveRecord::Base
+  extend FriendlyId
+
   has_closure_tree
   has_many :lessons
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy
@@ -21,6 +23,12 @@ class Course < ActiveRecord::Base
   default_scope { order(:name) }
 
   scope :base, -> { find_by(parent_id: nil) }
+
+  friendly_id :name, use: :slugged
+
+  def to_s
+    name
+  end
 
   def parent_name
     parent.try(:name)
