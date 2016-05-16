@@ -1,5 +1,5 @@
-<p>Welcome <%= @email %>!</p>
+<p>Bienvenido a Belly Dance Costa Rica Academia Aidah Manaar <%= @email %>!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Puede confirmar su correo haciendo click en el siguiente link:</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+<p><%= link_to 'Confirmar mi correo electrónico', confirmation_url(@resource, confirmation_token: @token) %></p>

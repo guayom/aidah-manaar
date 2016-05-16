@@ -1,6 +1,6 @@
 <h1><%= t('helpers.student.you_are_enrolled') %></h1>
 
-<p>[[[YOUR SCHEDULE]]]:</p>
+<p>Tu horario:</p>
 
 <ul>
   <% @lessons.sort_by { |l| [l[:day_of_week], l.start_time] }.each do |lesson| %>
