@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootstrap/affix
 //= require bootstrap/alert
+//= require bootstrap/carousel
+//= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap/transition

@@ -10,6 +10,7 @@ source 'https://rubygems.org' do
   gem 'jbuilder'
   gem 'jquery-rails'
   gem 'jquery-turbolinks'
+  gem 'kaminari'
   gem 'paperclip'
   gem 'paperclip-meta'
   gem 'pg'
@@ -17,6 +18,7 @@ source 'https://rubygems.org' do
   gem 'rails-i18n'
   gem 'rails_admin'
   gem 'sass-rails'
+  gem 'simple-navigation'
   gem 'therubyracer', platforms: :ruby
   gem 'thin'
   gem 'turbolinks'
