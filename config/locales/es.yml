@@ -58,7 +58,12 @@ es:
     failure:
       admin:
         unauthenticated: "No has iniciado sesión"
-
+        invalid: "Usuario inválido"
+        signed_in: Has iniciado sesión
+    sessions:
+      admin:
+        signed_in: Iniciaste sesión correctamente
+        signed_out: Cerraste sesión correctamente
   errors:
     messages:
       not_saved:
