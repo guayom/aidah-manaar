@@ -29,7 +29,3 @@
 //= require forms
 //= require_tree .
 //= require turbolinks
-
-$(function() {
-  $('.selectpicker').selectpicker();
-});
