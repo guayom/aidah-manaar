@@ -1,6 +1,7 @@
 ruby '2.3.0'
 
 source 'https://rubygems.org' do
+  gem 'aws-sdk'
   gem 'bootstrap-sass'
   gem 'cancancan'
   gem 'closure_tree'
@@ -9,6 +10,8 @@ source 'https://rubygems.org' do
   gem 'jbuilder'
   gem 'jquery-rails'
   gem 'jquery-turbolinks'
+  gem 'paperclip'
+  gem 'paperclip-meta'
   gem 'pg'
   gem 'rails', '4.2.6'
   gem 'rails-i18n'

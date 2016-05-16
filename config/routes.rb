@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  root 'promo#registration'
-
-  get 'select-schedule', to: 'promo#select_schedule'
-  get 'thank-you', to: 'promo#thank_you'
-
-  # devise_scope :student do
-  #   root to: 'students/registrations#new'
-  # end
+  root 'home#index'
 
   devise_for :students, controllers: { registrations: 'students/registrations' }
   devise_for :instructors
