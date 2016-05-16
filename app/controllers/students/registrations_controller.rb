@@ -53,13 +53,15 @@ class Students::RegistrationsController < Devise::RegistrationsController
   def configure_sign_up_params
     devise_parameter_sanitizer.
       permit(:sign_up,
-             keys: [:first_name, :last_name, :id_number, :birthdate, :phone, :branch_id, :beginner])
+             keys: [:first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone,
+                    :branch_id, :beginner])
   end
 
   def configure_account_update_params
     devise_parameter_sanitizer.
       permit(:account_update,
-             keys: [:first_name, :last_name, :id_number, :birthdate, :phone, :branch_id])
+             keys: [:first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone,
+                    :branch_id])
   end
 
   # The path used after sign up.
