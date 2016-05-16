@@ -12,22 +12,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="#">Link <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
+      <%= render_navigation %>
     </div>
   </div>
 </nav>
 <div class="affix-margin"></div>
-
-<script>
-  $('.navbar').affix({
-    offset: {
-      top: function() {
-        return $('.header').outerHeight(true);
-      }
-    }
-  });
-</script>

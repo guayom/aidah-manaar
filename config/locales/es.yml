@@ -101,3 +101,6 @@ es:
       student:
         create: 'Matricularme'
         update: 'Editar mi perfil'
+
+  navigation:
+    courses: '[[[COURSES]]]'

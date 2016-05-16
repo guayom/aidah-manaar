@@ -6,5 +6,5 @@ $ ->
     $(this).find('input').addClass('touched')
     $('input:invalid').eq(0).focus()
 
-  $('.selectpicker').selectPicker()
+  $('.selectpicker').selectpicker()
 

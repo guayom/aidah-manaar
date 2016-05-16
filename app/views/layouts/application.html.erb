@@ -16,7 +16,7 @@
 
 <%= render 'application/navigation' %>
 
-<%= render 'application/carousel' %>
+<%= render 'application/carousel' if current_page?(root_path) %>
 
 <div class="container">
   <div class="row">

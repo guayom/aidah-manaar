@@ -27,5 +27,6 @@
 //= require bootstrap-calendar/language/es-ES
 //= require bootstrap-select
 //= require forms
-//= require_tree .
+//= require header
+
 //= require turbolinks
