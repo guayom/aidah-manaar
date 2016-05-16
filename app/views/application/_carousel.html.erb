@@ -9,7 +9,7 @@
   <div class="carousel-inner" role="listbox">
     <% Slide.all.each_with_index do |slide, index| %>
       <div class="item <%= 'active' if index.zero? %>">
-        <%= image_tag slide.image.url, alt: slide.title %>
+        <%= image_tag slide.image.url(:homepage), alt: slide.title %>
         <div class="carousel-caption">
           <%= slide.title %>
         </div>
