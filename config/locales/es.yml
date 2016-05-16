@@ -35,7 +35,7 @@ es:
         password: 'Password'
         password_confirmation: 'Confirmación de password'
         first_name: 'Nombre'
-        last_name: 'Apellido'
+        last_name: 'Primer Apellido'
         second_last_name: 'Segundo Apellido'
         phone: 'Número telefónico'
         branch_id: 'Sede'
