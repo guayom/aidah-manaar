@@ -26,7 +26,11 @@ RailsAdmin.config do |config|
     end
   end
 
-  # RailsAdmin::Config::Fields::Types::register(:bootsy, RailsAdmin::Config::Fields::Types::Text)
+  class RailsAdmin::Config::Fields::Types::Date
+    register_instance_option :date_format do
+      :default
+    end
+  end
 
   config.actions do
     dashboard

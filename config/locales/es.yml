@@ -94,10 +94,12 @@ es:
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
       select_your_schedule: 'Por favor selecciona un horario'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
-      you_are_enrolled: 'Te has inscrito en esta lección con éxito. ¡Nos vemos pronto!'
+      you_are_enrolled: '[[[YOU ARE ENROLLED TO THIS COURSE]]]'
       edit_profile: 'Editar mi información'
     close: 'Cerrar'
     submit:
+      course_student:
+        create: '[[[APPLY FOR COURSE]]]'
       student:
         create: 'Matricularme'
         update: 'Editar mi perfil'
