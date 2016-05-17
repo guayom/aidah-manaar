@@ -5,14 +5,13 @@ class Ability
     can :read, Course
 
     if user.present?
-      can :read_full_description, Course
-
       if user.instance_of?(Student)
+        can [:read_full_description, :select_schedule], Course do |course|
+          user.courses.include?(course)
+        end
+
         can :enroll, Course do |course|
           user.courses.exclude?(course)
-        end
-        can :select_schedule, Course do |course|
-          user.courses.include?(course)
         end
 
         can :create, CourseStudent, student_id: user.id
