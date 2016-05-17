@@ -15,6 +15,8 @@ class Course < ActiveRecord::Base
 
     edit do
       exclude_fields :children, :self_and_ancestors, :self_and_descendants
+
+      field :public_description, :bootsy
     end
   end
 

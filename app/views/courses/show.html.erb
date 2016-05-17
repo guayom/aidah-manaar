@@ -2,5 +2,5 @@
 
 <% if student_signed_in? %>
 <% else %>
-  <%= @course.public_description %>
+  <%= @course.public_description.html_safe %>
 <% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Bootsy::Engine => '/bootsy', as: 'bootsy'
   root 'home#index'
 
   devise_for :students, controllers: { registrations: 'students/registrations' }

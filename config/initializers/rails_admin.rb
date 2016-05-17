@@ -18,6 +18,16 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
+    RailsAdmin::Config::Fields::Types::register(self)
+
+    register_instance_option :partial do
+      :form_bootsy
+    end
+  end
+
+  # RailsAdmin::Config::Fields::Types::register(:bootsy, RailsAdmin::Config::Fields::Types::Text)
+
   config.actions do
     dashboard
 

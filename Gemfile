@@ -3,6 +3,7 @@ ruby '2.3.0'
 source 'https://rubygems.org' do
   gem 'aws-sdk'
   gem 'bootstrap-sass'
+  gem 'bootsy'
   gem 'cancancan'
   gem 'closure_tree'
   gem 'coffee-rails'
