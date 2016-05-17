@@ -1,6 +1,7 @@
 <h2><%= @course.name %></h2>
 
-<% if student_signed_in? %>
+<% if can?(:read_full_description, @course) %>
+  <%= @course.full_description.html_safe %>
 <% else %>
   <%= @course.public_description.html_safe %>
 <% end %>

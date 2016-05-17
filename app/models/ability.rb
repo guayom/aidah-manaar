@@ -1,16 +1,20 @@
 class Ability
   include CanCan::Ability
 
-  def initialize(user = Student.new)
-    can [:index, :show], Course
+  def initialize(user)
+    can :read, Course
 
     if user.present?
-      can :index, Lesson
-      can :show, Lesson
+      can :read_full_description, Course
 
-      can :create, CourseStudent
-      can :create, LessonStudent
     end
+
+    # if user.present?
+    #   can :read, Lesson
+    #
+    #   can :create, CourseStudent
+    #   can :create, LessonStudent
+    # end
 
     # Define abilities for the passed in user here. For example:
     #
