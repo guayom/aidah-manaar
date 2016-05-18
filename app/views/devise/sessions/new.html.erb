@@ -19,6 +19,9 @@
     <p class="error-block">
       <%= t('errors.messages.blank') %>
     </p>
+    <p class="help-block">
+      <%= link_to t('devise.forgot_your_password'), new_password_path(resource_name) %><br />
+    </p>
   </div>
 
   <% if devise_mapping.rememberable? %>
