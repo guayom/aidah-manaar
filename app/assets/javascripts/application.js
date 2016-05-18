@@ -18,15 +18,28 @@
 //= require bootstrap/modal
 //= require bootstrap/transition
 //= require bootstrap/tooltip
-//= require underscore
-//= require moment
-//= require bootstrap-calendar
-//= require bootstrap-calendar/language/es-ES
+// require underscore
+// require moment
 //= require bootstrap-select
+//= require jquery.maskedinput
 //= require forms
 //= require_tree .
 //= require turbolinks
 
 $(function() {
+  $('form').submit(function() {
+    $('#student_id_number').val($('#student_id_number').mask());
+  });
+
   $('.selectpicker').selectpicker();
+  $('#student_id_number').mask('9-9999-9999');
+});
+
+$(document).on('pjax:complete', function() {
+  $('form').submit(function() {
+    $('#student_id_number').val($('#student_id_number').mask());
+  });
+
+  $('.selectpicker').selectpicker();
+  $('#student_id_number').mask('9-9999-9999');
 });
