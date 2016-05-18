@@ -99,5 +99,6 @@ es:
     close: 'Cerrar'
     submit:
       student:
-        create: 'Matricularme'
+#        create: 'Matricularme'
+#        create: 'Iniciar sesión'
         update: 'Editar mi perfil'
