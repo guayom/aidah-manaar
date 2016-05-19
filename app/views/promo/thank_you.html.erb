@@ -1,0 +1,20 @@
+<h2>
+  <%= t('devise.registrations.thank_you.title') %>
+</h2>
+
+<p class="lead"><%= t('devise.registrations.thank_you.text') %></p>
+
+<% if @student.beginner? %>
+  <p><%= t('devise.registrations.student.signed_up_and_basic_course') %></p>
+<% else %>
+  <p><%= t('devise.registrations.student.signed_up_and_advanced_course') %></p>
+<% end %>
+
+<% if student_signed_in? %>
+  <br><br>
+  <%= link_to t('helpers.student.edit_profile'), edit_registration_path(:student),
+              class: 'btn btn-default' %>
+
+  <%= link_to t('devise.sign_out'), destroy_student_session_path,
+              method: :delete, class: 'btn btn-danger' %>
+<% end %>
