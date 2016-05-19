@@ -15,16 +15,6 @@ class Student < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number
 
-  rails_admin do
-    object_label_method do
-      :label
-    end
-
-    edit do
-      exclude_fields :courses_students
-    end
-  end
-
   def full_name
     "#{first_name} #{last_name}"
   end

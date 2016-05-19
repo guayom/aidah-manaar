@@ -19,9 +19,9 @@ body {
   }
 }
 
-.header {
-  padding: 40px;
-}
+@import 'header';
+
+@import 'courses';
 
 .footer {
   background: $morado;

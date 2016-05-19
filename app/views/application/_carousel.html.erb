@@ -1,0 +1,30 @@
+<div id="home-carousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+  <ol class="carousel-indicators">
+    <% Slide.all.each_with_index do |slide, index| %>
+      <li data-target="#home-carousel" data-slide-to="<%= index %>"
+          class="<%= 'active' if index.zero? %>"></li>
+    <% end %>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+    <% Slide.all.each_with_index do |slide, index| %>
+      <div class="item <%= 'active' if index.zero? %>">
+        <%= image_tag slide.image.url(:homepage), alt: slide.title %>
+
+        <div class="carousel-caption">
+          <h3><%= slide.title %></h3>
+          <p><%= slide.description %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only"><%= t('admin.pagination.previous') %></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only"><%= t('admin.pagination.next') %></span>
+  </a>
+</div>

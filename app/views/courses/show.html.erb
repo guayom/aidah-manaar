@@ -1,0 +1,23 @@
+<h2><%= @course.name %></h2>
+
+<% if can?(:read_full_description, @course) %>
+  <%= @course.full_description.html_safe %>
+<% else %>
+  <%= @course.public_description.html_safe %>
+<% end %>
+
+<br>
+<br>
+
+<% if can?(:enroll, @course) %>
+  <%= form_for current_student.courses_students.build(course_id: @course.id) do |f| %>
+    <%= f.hidden_field :course_id %>
+    <%= f.hidden_field :student_id %>
+
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+<% end %>
+
+<% if can?(:select_schedule, @course) %>
+  <p class="lead"><%= t('helpers.student.you_are_enrolled') %></p>
+<% end %>

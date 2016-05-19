@@ -13,7 +13,10 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require bootstrap/affix
 //= require bootstrap/alert
+//= require bootstrap/carousel
+//= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap/transition
@@ -23,9 +26,7 @@
 //= require bootstrap-select
 //= require jquery.maskedinput
 //= require forms
-//= require_tree .
-//= require turbolinks
-
+//= require header
 $(function() {
   $('form').submit(function() {
     $('#student_id_number').val($('#student_id_number').mask());
