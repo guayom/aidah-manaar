@@ -32,7 +32,7 @@ class PromoController < ApplicationController
 
     @course = Course.base
 
-    @lessons_by_week = @course.lessons.group_by { |l| l[:day_of_week] }
+    @lessons_by_week = @course.lessons.where(branch_id: current_student.branch_id).group_by { |l| l[:day_of_week] }
     (1..7).each do |day_number|
       unless @lessons_by_week[day_number].present?
         @lessons_by_week[day_number] = []

@@ -14,7 +14,7 @@
       <% end %>
     </tr>
     <tr>
-      <% @lessons_by_week.each do |_, lessons| %>
+      <% @lessons_by_week.sort.to_h.each do |_, lessons| %>
         <td>
           <ul class="list-unstyled">
             <% lessons.sort_by(&:start_time).each do |lesson| %>
