@@ -30,17 +30,21 @@
 $(function() {
   $('form').submit(function() {
     $('#student_id_number').val($('#student_id_number').mask());
+    $('#student_phone').val($('#student_phone').mask());
   });
 
   $('.selectpicker').selectpicker();
   $('#student_id_number').mask('9-9999-9999');
+  $('#student_phone').mask('9999-9999');
 });
 
 $(document).on('pjax:complete', function() {
   $('form').submit(function() {
     $('#student_id_number').val($('#student_id_number').mask());
+    $('#student_phone').val($('#student_phone').mask());
   });
 
   $('.selectpicker').selectpicker();
   $('#student_id_number').mask('9-9999-9999');
+  $('#student_phone').mask('9999-9999');
 });
