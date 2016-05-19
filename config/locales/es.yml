@@ -42,7 +42,7 @@ es:
         current_password: 'Password actual'
 
   devise:
-    forgot_your_password: '[[[FORGOT YOUR PASSWORD?]]]'
+    forgot_your_password: 'Olvidé mi contraseña'
     registrations:
       edit: 'Editar perfil'
       student:
@@ -51,7 +51,7 @@ es:
       thank_you:
         title: 'Gracias por matricularte'
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
-    send_reset_password: '[[[SEND ME RESET PASSWORD INSTRUCTIONS]]]'
+    send_reset_password: 'Envíenme instrucciones para cambiar mi contraseña'
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
