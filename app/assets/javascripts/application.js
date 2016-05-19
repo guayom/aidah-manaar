@@ -27,8 +27,6 @@
 //= require jquery.maskedinput
 //= require forms
 //= require header
-
-<<<<<<< HEAD
 $(function() {
   $('form').submit(function() {
     $('#student_id_number').val($('#student_id_number').mask());
@@ -46,6 +44,3 @@ $(document).on('pjax:complete', function() {
   $('.selectpicker').selectpicker();
   $('#student_id_number').mask('9-9999-9999');
 });
-=======
-//= require turbolinks
->>>>>>> master
