@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  description: MyText
+  public_description: MyText
   level: 1
   quota: 1
 
 two:
   name: MyString
-  description: MyText
+  public_description: MyText
   level: 1
   quota: 1

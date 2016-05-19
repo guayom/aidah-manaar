@@ -18,6 +18,20 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
+    RailsAdmin::Config::Fields::Types::register(self)
+
+    register_instance_option :partial do
+      :form_bootsy
+    end
+  end
+
+  class RailsAdmin::Config::Fields::Types::Date
+    register_instance_option :date_format do
+      :default
+    end
+  end
+
   config.actions do
     dashboard
 
@@ -32,5 +46,43 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
+  end
+  config.model Student do
+    weight 1
+    object_label_method do
+      :label
+    end
+    edit do
+      exclude_fields :courses_students
+    end
+  end
+
+  config.model Course do
+    weight 2
+
+    list do
+      field :name
+      field :parent_name
+      field :level
+    end
+
+    edit do
+      exclude_fields :children, :self_and_ancestors, :self_and_descendants
+
+      field :full_description, :bootsy
+      field :public_description, :bootsy
+    end
+  end
+
+  config.model Lesson do
+    weight 3
+    list do
+      field :id
+      field :branch
+      field :course
+      field :day_of_week
+      field :start_time
+      field :instructor
+    end
   end
 end
