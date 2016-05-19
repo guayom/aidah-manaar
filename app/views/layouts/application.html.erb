@@ -12,15 +12,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'application/header' %>
-
-<%= render 'application/navigation' %>
-
-<%= render 'application/carousel' if current_page?(root_path) %>
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+      <%= render 'application/header' %>
+
       <% if alert.present? %>
         <div class="alert alert-warning alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert">
