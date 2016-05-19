@@ -47,4 +47,42 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
   end
+  config.model Student do
+    weight 1
+    object_label_method do
+      :label
+    end
+    edit do
+      exclude_fields :courses_students
+    end
+  end
+
+  config.model Course do
+    weight 2
+
+    list do
+      field :name
+      field :parent_name
+      field :level
+    end
+
+    edit do
+      exclude_fields :children, :self_and_ancestors, :self_and_descendants
+
+      field :full_description, :bootsy
+      field :public_description, :bootsy
+    end
+  end
+
+  config.model Lesson do
+    weight 3
+    list do
+      field :id
+      field :branch
+      field :course
+      field :day_of_week
+      field :start_time
+      field :instructor
+    end
+  end
 end
