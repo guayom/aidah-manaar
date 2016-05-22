@@ -17,7 +17,7 @@
       <% @lessons_by_week.sort.to_h.each do |_, lessons| %>
         <td>
           <ul class="list-unstyled">
-            <% lessons.sort_by(&:start_time).each do |lesson| %>
+            <% lessons.sort_by(&:time_interval).each do |lesson| %>
               <li style="margin-bottom: 10px;">
                 <button class="btn btn-default" data-lesson="<%= lesson.id %>">
                   <%= lesson.time_interval %>
