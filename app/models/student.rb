@@ -14,6 +14,7 @@ class Student < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number
+  validates_length_of :lessons, maximum: 3
 
   def full_name
     "#{first_name} #{last_name}"
