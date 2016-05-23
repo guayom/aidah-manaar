@@ -32,6 +32,15 @@ RailsAdmin.config do |config|
     end
   end
 
+  class RailsAdmin::Config::Fields::Types::Time
+    def parse_value(value)
+      parent_value = super(value)
+      return unless parent_value
+
+      parent_value.in_time_zone
+    end
+  end
+
   config.actions do
     dashboard
 
@@ -75,7 +84,10 @@ RailsAdmin.config do |config|
   end
 
   config.model Lesson do
+    configure :start_time, :time
+    configure :end_time, :time
     weight 3
+
     list do
       field :id
       field :branch
