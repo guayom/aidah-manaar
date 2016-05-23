@@ -7,6 +7,9 @@
 <br>
 
 <%= form_tag select_schedule_path, method: :get do %>
+  <p id="select_max_3_lessons" style="color: red; display: none;">
+    <%= t('helpers.student.select_max_3_lessons') %>
+  </p>
   <table id="calendar" class="table">
     <tr>
       <% @days.sort.each do |_, v| %>
@@ -37,11 +40,20 @@
     $('#calendar button').click(function(event) {
       if ($(this).hasClass('btn-primary')) {
         $('#lesson_' + $(this).attr('data-lesson')).attr('checked', false);
+        $(this).toggleClass('btn-default');
+        $(this).toggleClass('btn-primary');
+        if ($('#calendar .btn-primary').length < 3) {
+          $('#select_max_3_lessons').hide();
+        }
       } else {
-        $('#lesson_' + $(this).attr('data-lesson')).attr('checked', true);
+        if ($('#calendar .btn-primary').length < 3) {
+          $('#lesson_' + $(this).attr('data-lesson')).attr('checked', true);
+          $(this).toggleClass('btn-default');
+          $(this).toggleClass('btn-primary');
+        } else {
+          $('#select_max_3_lessons').show();
+        }
       }
-      $(this).toggleClass('btn-default');
-      $(this).toggleClass('btn-primary');
       event.preventDefault();
     });
   </script>

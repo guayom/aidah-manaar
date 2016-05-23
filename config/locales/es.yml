@@ -95,6 +95,7 @@ es:
       apply_for_lesson: 'Aplicar para esta lección'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
       select_your_schedule: 'Por favor selecciona un horario'
+      select_max_3_lessons: '[[[SELECT NOT MORE THEN 3 LESSONS]]]'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
       you_are_enrolled: 'Te has matriculado en este curso'
       edit_profile: 'Editar mi información'
