@@ -42,6 +42,7 @@ source 'https://rubygems.org' do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap-calendar'
   gem 'rails-assets-bootstrap-select'
+  gem 'rails-assets-jquery.maskedinput'
+  gem 'rails-assets-video.js'
 end

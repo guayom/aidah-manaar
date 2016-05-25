@@ -21,11 +21,8 @@
 //= require bootstrap/modal
 //= require bootstrap/transition
 //= require bootstrap/tooltip
-//= require underscore
-//= require moment
-//= require bootstrap-calendar
-//= require bootstrap-calendar/language/es-ES
 //= require bootstrap-select
+//= require jquery.maskedinput
 //= require forms
 //= require header
 
