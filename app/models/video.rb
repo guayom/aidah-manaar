@@ -7,4 +7,12 @@ class Video < ActiveRecord::Base
                     default_url: '/videos/:style/missing.png',
                     processors: [:transcoder]
   validates_attachment_content_type :file, content_type: /\Avideo\/.*\Z/
+
+  rails_admin do
+    edit do
+      field :file do
+        partial 'video_uploader_viewer'
+      end
+    end
+  end
 end

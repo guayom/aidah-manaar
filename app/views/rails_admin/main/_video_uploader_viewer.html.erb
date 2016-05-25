@@ -1,0 +1,7 @@
+<%= form.file_field :file, field.html_attributes.reverse_merge(data: { fileupload: true }) %>
+
+<% if form.object.file.present? %>
+  <br>
+  <%= videojs_rails sources: { mp4: form.object.file.url(:mp4) }, setup: '{}',
+                    width: 520, height: 390 %>
+<% end %>
