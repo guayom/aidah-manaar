@@ -13,6 +13,7 @@ source 'https://rubygems.org' do
   gem 'jquery-rails'
   gem 'kaminari'
   gem 'paperclip'
+  gem 'paperclip-av-transcoder'
   gem 'paperclip-meta'
   gem 'pg'
   gem 'rails', '4.2.6'

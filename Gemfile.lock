@@ -41,6 +41,8 @@ GEM
     arel (6.0.3)
     autoprefixer-rails (6.3.6.1)
       execjs
+    av (0.9.0)
+      cocaine (~> 0.5.3)
     aws-sdk (2.3.4)
       aws-sdk-resources (= 2.3.4)
     aws-sdk-core (2.3.4)
@@ -164,6 +166,9 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    paperclip-av-transcoder (0.6.4)
+      av (~> 0.9.0)
+      paperclip (>= 2.5.2)
     paperclip-meta (2.0.1)
       paperclip (>= 3.0.2, < 5.0)
     pg (0.18.4)
@@ -313,6 +318,7 @@ DEPENDENCIES
   kaminari!
   letter_opener!
   paperclip!
+  paperclip-av-transcoder!
   paperclip-meta!
   pg!
   quiet_assets!
