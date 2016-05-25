@@ -23,6 +23,7 @@
 //= require bootstrap/tooltip
 //= require bootstrap-select
 //= require jquery.maskedinput
+//= require video
 //= require forms
 //= require header
 

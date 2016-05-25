@@ -25,6 +25,7 @@ source 'https://rubygems.org' do
   gem 'thin'
   gem 'turbolinks'
   gem 'uglifier'
+  gem 'videojs_rails'
 
   group :development do
     gem 'better_errors'
@@ -44,5 +45,4 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-select'
   gem 'rails-assets-jquery.maskedinput'
-  gem 'rails-assets-video.js'
 end
