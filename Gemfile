@@ -11,7 +11,6 @@ source 'https://rubygems.org' do
   gem 'friendly_id'
   gem 'jbuilder'
   gem 'jquery-rails'
-  gem 'jquery-turbolinks'
   gem 'kaminari'
   gem 'paperclip'
   gem 'paperclip-meta'
@@ -23,7 +22,6 @@ source 'https://rubygems.org' do
   gem 'simple-navigation'
   gem 'therubyracer', platforms: :ruby
   gem 'thin'
-  gem 'turbolinks'
   gem 'uglifier'
   gem 'videojs_rails'
 
@@ -43,6 +41,8 @@ source 'https://rubygems.org' do
 end
 
 source 'https://rails-assets.org' do
+  gem 'rails-assets-blueimp-file-upload'
   gem 'rails-assets-bootstrap-select'
+  gem 'rails-assets-jquery-ui'
   gem 'rails-assets-jquery.maskedinput'
 end

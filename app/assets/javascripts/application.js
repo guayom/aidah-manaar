@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap/affix
 //= require bootstrap/alert
@@ -24,11 +23,11 @@
 //= require bootstrap-select
 //= require jquery.maskedinput
 //= require video
+//= require jquery-ui
+//= require blueimp-file-upload
 //= require forms
 //= require header
 
-//= require turbolinks
-  
 $(function() {
   $('form').submit(function() {
     $('#student_id_number').val($('#student_id_number').mask());
