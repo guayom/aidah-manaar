@@ -42,7 +42,6 @@ source 'https://rubygems.org' do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-blueimp-file-upload'
   gem 'rails-assets-bootstrap-select'
   gem 'rails-assets-jquery-ui'
   gem 'rails-assets-jquery.maskedinput'

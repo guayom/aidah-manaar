@@ -24,7 +24,6 @@
 //= require jquery.maskedinput
 //= require video
 //= require jquery-ui
-//= require blueimp-file-upload
 //= require forms
 //= require header
 
