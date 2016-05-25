@@ -1,4 +1,6 @@
 //= require video
+//= require ckeditor/init
+//= require rails_admin/custom/ckeditor_ajax
 
 $(function() {
   $(document).on('pjax:start', function() {

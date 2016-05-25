@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :course_students, only: [:create]
   resources :lesson_students, only: [:create]
 
+  mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   # The priority is based upon order of creation: first created -> highest priority.

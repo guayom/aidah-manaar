@@ -18,14 +18,6 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
-  class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
-    RailsAdmin::Config::Fields::Types::register(self)
-
-    register_instance_option :partial do
-      :form_bootsy
-    end
-  end
-
   class RailsAdmin::Config::Fields::Types::Date
     register_instance_option :date_format do
       :default
@@ -78,8 +70,8 @@ RailsAdmin.config do |config|
     edit do
       exclude_fields :children, :self_and_ancestors, :self_and_descendants
 
-      field :full_description, :bootsy
-      field :public_description, :bootsy
+      field :full_description, :ckeditor
+      field :public_description, :ckeditor
     end
   end
 
