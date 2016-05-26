@@ -3,8 +3,8 @@ class Lesson < ActiveRecord::Base
   belongs_to :course
   belongs_to :instructor
 
-  enum day_of_week: { monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5, saturday: 6,
-                      sunday: 7 }
+  enum day_of_week: { lunes: 1, martes: 2, miércoles: 3, jueves: 4, viernes: 5, sábado: 6,
+                      domingo: 7 }
 
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :students, through: :lessons_students
