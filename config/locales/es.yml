@@ -32,8 +32,8 @@ es:
         id_number: 'Cédula'
         birthdate: 'Fecha de nacimiento'
         email: 'Correo electrónico'
-        password: 'Password'
-        password_confirmation: 'Confirmación de password'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmación de contraseña'
         first_name: 'Nombre'
         last_name: 'Primer Apellido'
         second_last_name: 'Segundo Apellido'
@@ -42,16 +42,16 @@ es:
         current_password: 'Password actual'
 
   devise:
-    forgot_your_password: '[[[FORGOT YOUR PASSWORD?]]]'
+    forgot_your_password: 'Olvidó su contraseña'
     registrations:
       edit: 'Editar perfil'
       student:
-        signed_up_and_basic_course: 'Bienvenid@!!! te has Matriculado en la Belly Dance Costa Rica, Academia de baile Aidah Manaar'
+        signed_up_and_basic_course: '¡Bienvenid@! Te has Matriculado en la Belly Dance Costa Rica, Academia de baile Aidah Manaar'
         signed_up_and_advanced_course: 'Hemos recibido tus datos. Estaremos en contacto contigo a la brevedad posible'
       thank_you:
         title: 'Gracias por matricularte'
-        text: 'Estamos muy felices de que formés parte de nuestra academia.'
-    send_reset_password: '[[[SEND ME RESET PASSWORD INSTRUCTIONS]]]'
+        text: 'Estamos muy felices de que formés parte de nuestra academia. Recibirás un correo con la información de tu matrícula.'
+    send_reset_password: 'Enviarme instrucciones para restaurar mi contraseña'
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
@@ -94,8 +94,9 @@ es:
       already_have_an_account: ¿Ya estás matriculad@?
       apply_for_lesson: 'Aplicar para esta lección'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
-      select_your_schedule: 'Por favor selecciona un horario'
-      select_max_3_lessons: '[[[SELECT NOT MORE THEN 3 LESSONS]]]'
+      select_your_schedule: 'Por favor seleccioná tu horario.'
+      selec_max_description: 'Podés seleccionar de 1 a 3 lecciones a la semana.'
+      select_max_3_lessons: 'Podés seleccionar un máximo de 3 lecciones a la semana'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
       you_are_enrolled: 'Te has matriculado en este curso'
       edit_profile: 'Editar mi información'
