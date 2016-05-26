@@ -12,15 +12,24 @@ CKEDITOR.plugins.add 'video',
           elements: [
             {
               type: 'text'
-              id: 'abbr'
-              label: 'XXX'
-              validate: CKEDITOR.dialog.validate.notEmpty('XXX')
+              id: 'url'
+              label: 'Url of video file (mp4)'
+              validate: CKEDITOR.dialog.validate.notEmpty('Url field cannot be empty.')
             }
           ]
         }
       ]
       onOk: ->
-        alert('OK!')
+        video = editor.document.createElement('video')
+        video.setAttribute('class', 'video-js vjs-default-skin')
+        video.setAttribute('controls', true)
+        video.setAttribute('data-setup', '{}')
+        video.setAttribute('preload', 'auto')
+        video.setAttribute('src', this.getValueOf('tab-basic', 'url'))
+        video.setAttribute('width', 520)
+        video.setAttribute('height', 390)
+
+        editor.insertElement(video);
 
     editor.addCommand 'video', new CKEDITOR.dialogCommand('video')
     editor.ui.addButton 'Video',

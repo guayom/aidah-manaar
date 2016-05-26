@@ -106,6 +106,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
+      field :title
       field :file do
         partial 'video_uploader_viewer'
       end

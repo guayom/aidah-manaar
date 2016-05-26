@@ -9,6 +9,10 @@ class Video < ActiveRecord::Base
   validates_attachment_content_type :file, content_type: /\Avideo\/.*\Z/
 
   def url
-    file.url(:mp4)
+    result = ''
+    result << title + '<br>'.html_safe if title.present?
+    result << file.url(:mp4)
+
+    "#{(title + '<br>') if title.present?}#{file.url(:mp4)}".html_safe
   end
 end
