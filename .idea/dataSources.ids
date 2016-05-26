@@ -10,8 +10,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>8023</introspection-state-number>
-        <introspection-timestamp>2016-05-26.11:40:34.444</introspection-timestamp>
+        <introspection-state-number>8032</introspection-state-number>
+        <introspection-timestamp>2016-05-26.20:34:23.339</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="admins_id_seq">
         <object-id>20822</object-id>
@@ -65,375 +65,383 @@
         <object-id>20733</object-id>
         <state-number>7626</state-number>
       </sequence>
-      <sequence id="16" parent="2" name="slides_id_seq">
+      <sequence id="16" parent="2" name="requirements_id_seq">
+        <object-id>21029</object-id>
+        <state-number>8032</state-number>
+      </sequence>
+      <sequence id="17" parent="2" name="slides_id_seq">
         <object-id>20916</object-id>
         <state-number>7887</state-number>
       </sequence>
-      <sequence id="17" parent="2" name="students_id_seq">
+      <sequence id="18" parent="2" name="students_id_seq">
         <object-id>20706</object-id>
         <state-number>7624</state-number>
       </sequence>
-      <sequence id="18" parent="2" name="videos_id_seq">
+      <sequence id="19" parent="2" name="videos_id_seq">
         <object-id>21005</object-id>
         <state-number>7992</state-number>
       </sequence>
-      <table id="19" parent="2" name="admins">
+      <table id="20" parent="2" name="admins">
         <object-id>20824</object-id>
         <state-number>7825</state-number>
       </table>
-      <table id="20" parent="2" name="branches">
+      <table id="21" parent="2" name="branches">
         <object-id>20724</object-id>
         <state-number>7625</state-number>
       </table>
-      <table id="21" parent="2" name="branches_instructors">
+      <table id="22" parent="2" name="branches_instructors">
         <object-id>20790</object-id>
         <state-number>7632</state-number>
       </table>
-      <table id="22" parent="2" name="cantons">
+      <table id="23" parent="2" name="cantons">
         <object-id>20746</object-id>
         <state-number>7627</state-number>
       </table>
-      <table id="23" parent="2" name="ckeditor_assets">
+      <table id="24" parent="2" name="ckeditor_assets">
         <object-id>21018</object-id>
         <state-number>8023</state-number>
       </table>
-      <table id="24" parent="2" name="course_hierarchies">
+      <table id="25" parent="2" name="course_hierarchies">
         <object-id>20838</object-id>
         <state-number>7646</state-number>
       </table>
-      <table id="25" parent="2" name="courses">
+      <table id="26" parent="2" name="courses">
         <object-id>20801</object-id>
         <state-number>7921</state-number>
       </table>
-      <table id="26" parent="2" name="courses_students">
+      <table id="27" parent="2" name="courses_students">
         <object-id>20845</object-id>
         <state-number>7653</state-number>
       </table>
-      <table id="27" parent="2" name="districts">
+      <table id="28" parent="2" name="districts">
         <object-id>20758</object-id>
         <state-number>7628</state-number>
       </table>
-      <table id="28" parent="2" name="friendly_id_slugs">
+      <table id="29" parent="2" name="friendly_id_slugs">
         <object-id>20929</object-id>
         <state-number>7903</state-number>
       </table>
-      <table id="29" parent="2" name="instructors">
+      <table id="30" parent="2" name="instructors">
         <object-id>20772</object-id>
         <state-number>7631</state-number>
       </table>
-      <table id="30" parent="2" name="lessons">
+      <table id="31" parent="2" name="lessons">
         <object-id>20813</object-id>
         <state-number>7739</state-number>
       </table>
-      <table id="31" parent="2" name="lessons_students">
+      <table id="32" parent="2" name="lessons_students">
         <object-id>20855</object-id>
         <state-number>7702</state-number>
       </table>
-      <table id="32" parent="2" name="provinces">
+      <table id="33" parent="2" name="provinces">
         <object-id>20735</object-id>
         <state-number>7626</state-number>
       </table>
-      <table id="33" parent="2" name="schema_migrations">
+      <table id="34" parent="2" name="requirements">
+        <object-id>21031</object-id>
+        <state-number>8032</state-number>
+      </table>
+      <table id="35" parent="2" name="schema_migrations">
         <object-id>20699</object-id>
         <state-number>7622</state-number>
       </table>
-      <table id="34" parent="2" name="slides">
+      <table id="36" parent="2" name="slides">
         <object-id>20918</object-id>
         <state-number>7887</state-number>
       </table>
-      <table id="35" parent="2" name="students">
+      <table id="37" parent="2" name="students">
         <object-id>20708</object-id>
         <state-number>7881</state-number>
       </table>
-      <table id="36" parent="2" name="videos">
+      <table id="38" parent="2" name="videos">
         <object-id>21007</object-id>
-        <state-number>7992</state-number>
+        <state-number>8026</state-number>
       </table>
-      <column id="37" parent="19" name="id">
+      <column id="39" parent="20" name="id">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;admins_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="38" parent="19" name="email">
+      <column id="40" parent="20" name="email">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="39" parent="19" name="encrypted_password">
+      <column id="41" parent="20" name="encrypted_password">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="40" parent="19" name="reset_password_token">
+      <column id="42" parent="20" name="reset_password_token">
         <state-number>7638</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="41" parent="19" name="reset_password_sent_at">
+      <column id="43" parent="20" name="reset_password_sent_at">
         <state-number>7638</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="42" parent="19" name="remember_created_at">
+      <column id="44" parent="20" name="remember_created_at">
         <state-number>7638</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="43" parent="19" name="sign_in_count">
+      <column id="45" parent="20" name="sign_in_count">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <column id="44" parent="19" name="current_sign_in_at">
+      <column id="46" parent="20" name="current_sign_in_at">
         <state-number>7638</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="45" parent="19" name="last_sign_in_at">
+      <column id="47" parent="20" name="last_sign_in_at">
         <state-number>7638</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="46" parent="19" name="current_sign_in_ip">
+      <column id="48" parent="20" name="current_sign_in_ip">
         <state-number>7638</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="47" parent="19" name="last_sign_in_ip">
+      <column id="49" parent="20" name="last_sign_in_ip">
         <state-number>7638</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="48" parent="19" name="created_at">
+      <column id="50" parent="20" name="created_at">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="49" parent="19" name="updated_at">
+      <column id="51" parent="20" name="updated_at">
         <state-number>7638</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="50" parent="19" name="main">
+      <column id="52" parent="20" name="main">
         <state-number>7825</state-number>
         <data-type>boolean</data-type>
         <default-expression>false</default-expression>
       </column>
-      <index id="51" parent="19" name="admins_pkey">
+      <index id="53" parent="20" name="admins_pkey">
         <object-id>20834</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="52" parent="19" name="index_admins_on_email">
+      <index id="54" parent="20" name="index_admins_on_email">
         <object-id>20836</object-id>
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="53" parent="19" name="index_admins_on_reset_password_token">
+      <index id="55" parent="20" name="index_admins_on_reset_password_token">
         <object-id>20837</object-id>
         <columns>reset_password_token</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="54" parent="19" name="admins_pkey">
+      <key id="56" parent="20" name="admins_pkey">
         <columns>id</columns>
         <underlying-index>admins_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="55" parent="20" name="id">
+      <column id="57" parent="21" name="id">
         <state-number>7625</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;branches_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="56" parent="20" name="name">
+      <column id="58" parent="21" name="name">
         <state-number>7625</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="57" parent="20" name="created_at">
+      <column id="59" parent="21" name="created_at">
         <state-number>7625</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="58" parent="20" name="updated_at">
+      <column id="60" parent="21" name="updated_at">
         <state-number>7625</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="59" parent="20" name="branches_pkey">
+      <index id="61" parent="21" name="branches_pkey">
         <object-id>20731</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="60" parent="20" name="branches_pkey">
+      <key id="62" parent="21" name="branches_pkey">
         <columns>id</columns>
         <underlying-index>branches_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="61" parent="21" name="id">
+      <column id="63" parent="22" name="id">
         <state-number>7632</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;branches_instructors_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="62" parent="21" name="branch_id">
+      <column id="64" parent="22" name="branch_id">
         <state-number>7632</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="63" parent="21" name="instructor_id">
+      <column id="65" parent="22" name="instructor_id">
         <state-number>7632</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="64" parent="21" name="branches_instructors_pkey">
+      <index id="66" parent="22" name="branches_instructors_pkey">
         <object-id>20794</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="65" parent="21" name="index_branches_instructors_on_branch_id">
+      <index id="67" parent="22" name="index_branches_instructors_on_branch_id">
         <object-id>20796</object-id>
         <columns>branch_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="66" parent="21" name="index_branches_instructors_on_instructor_id">
+      <index id="68" parent="22" name="index_branches_instructors_on_instructor_id">
         <object-id>20797</object-id>
         <columns>instructor_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="67" parent="21" name="branches_instructors_pkey">
+      <key id="69" parent="22" name="branches_instructors_pkey">
         <columns>id</columns>
         <underlying-index>branches_instructors_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="68" parent="22" name="id">
+      <column id="70" parent="23" name="id">
         <state-number>7627</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;cantons_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="69" parent="22" name="name">
+      <column id="71" parent="23" name="name">
         <state-number>7627</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="70" parent="22" name="province_id">
+      <column id="72" parent="23" name="province_id">
         <state-number>7627</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="71" parent="22" name="created_at">
+      <column id="73" parent="23" name="created_at">
         <state-number>7627</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="72" parent="22" name="updated_at">
+      <column id="74" parent="23" name="updated_at">
         <state-number>7627</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="73" parent="22" name="cantons_pkey">
+      <index id="75" parent="23" name="cantons_pkey">
         <object-id>20753</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="74" parent="22" name="index_cantons_on_province_id">
+      <index id="76" parent="23" name="index_cantons_on_province_id">
         <object-id>20755</object-id>
         <columns>province_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="75" parent="22" name="cantons_pkey">
+      <key id="77" parent="23" name="cantons_pkey">
         <columns>id</columns>
         <underlying-index>cantons_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="76" parent="23" name="id">
+      <column id="78" parent="24" name="id">
         <state-number>8023</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;ckeditor_assets_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="77" parent="23" name="data_file_name">
+      <column id="79" parent="24" name="data_file_name">
         <state-number>8023</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
       </column>
-      <column id="78" parent="23" name="data_content_type">
+      <column id="80" parent="24" name="data_content_type">
         <state-number>8023</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="79" parent="23" name="data_file_size">
+      <column id="81" parent="24" name="data_file_size">
         <state-number>8023</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="80" parent="23" name="assetable_id">
+      <column id="82" parent="24" name="assetable_id">
         <state-number>8023</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="81" parent="23" name="assetable_type">
+      <column id="83" parent="24" name="assetable_type">
         <state-number>8023</state-number>
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="82" parent="23" name="type">
+      <column id="84" parent="24" name="type">
         <state-number>8023</state-number>
         <data-type>varchar(30)</data-type>
       </column>
-      <column id="83" parent="23" name="width">
+      <column id="85" parent="24" name="width">
         <state-number>8023</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="84" parent="23" name="height">
+      <column id="86" parent="24" name="height">
         <state-number>8023</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="85" parent="23" name="created_at">
+      <column id="87" parent="24" name="created_at">
         <state-number>8023</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="86" parent="23" name="updated_at">
+      <column id="88" parent="24" name="updated_at">
         <state-number>8023</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="87" parent="23" name="ckeditor_assets_pkey">
+      <index id="89" parent="24" name="ckeditor_assets_pkey">
         <object-id>21025</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="88" parent="23" name="idx_ckeditor_assetable">
+      <index id="90" parent="24" name="idx_ckeditor_assetable">
         <object-id>21028</object-id>
         <columns>assetable_type
 assetable_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="89" parent="23" name="idx_ckeditor_assetable_type">
+      <index id="91" parent="24" name="idx_ckeditor_assetable_type">
         <object-id>21027</object-id>
         <columns>assetable_type
 type
 assetable_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="90" parent="23" name="ckeditor_assets_pkey">
+      <key id="92" parent="24" name="ckeditor_assets_pkey">
         <columns>id</columns>
         <underlying-index>ckeditor_assets_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="91" parent="24" name="ancestor_id">
+      <column id="93" parent="25" name="ancestor_id">
         <state-number>7646</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="92" parent="24" name="descendant_id">
+      <column id="94" parent="25" name="descendant_id">
         <state-number>7646</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="93" parent="24" name="generations">
+      <column id="95" parent="25" name="generations">
         <state-number>7646</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <index id="94" parent="24" name="course_anc_desc_idx">
+      <index id="96" parent="25" name="course_anc_desc_idx">
         <object-id>20841</object-id>
         <columns>ancestor_id
 descendant_id
@@ -441,190 +449,190 @@ generations</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="95" parent="24" name="course_desc_idx">
+      <index id="97" parent="25" name="course_desc_idx">
         <object-id>20842</object-id>
         <columns>descendant_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <column id="96" parent="25" name="id">
+      <column id="98" parent="26" name="id">
         <state-number>7634</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;courses_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="97" parent="25" name="name">
+      <column id="99" parent="26" name="name">
         <state-number>7634</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="98" parent="25" name="public_description">
+      <column id="100" parent="26" name="public_description">
         <state-number>7924</state-number>
         <data-type>text</data-type>
         <default-expression>&apos;&apos;::text</default-expression>
       </column>
-      <column id="99" parent="25" name="level">
+      <column id="101" parent="26" name="level">
         <state-number>7634</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="100" parent="25" name="created_at">
+      <column id="102" parent="26" name="created_at">
         <state-number>7634</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="101" parent="25" name="updated_at">
+      <column id="103" parent="26" name="updated_at">
         <state-number>7634</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="102" parent="25" name="parent_id">
+      <column id="104" parent="26" name="parent_id">
         <state-number>7645</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="103" parent="25" name="slug">
+      <column id="105" parent="26" name="slug">
         <state-number>7904</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="104" parent="25" name="full_description">
+      <column id="106" parent="26" name="full_description">
         <state-number>7924</state-number>
         <data-type>text</data-type>
         <default-expression>&apos;&apos;::text</default-expression>
       </column>
-      <index id="105" parent="25" name="courses_pkey">
+      <index id="107" parent="26" name="courses_pkey">
         <object-id>20808</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="106" parent="25" name="index_courses_on_slug">
+      <index id="108" parent="26" name="index_courses_on_slug">
         <object-id>20942</object-id>
         <columns></columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="107" parent="25" name="courses_pkey">
+      <key id="109" parent="26" name="courses_pkey">
         <columns>id</columns>
         <underlying-index>courses_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="108" parent="26" name="id">
+      <column id="110" parent="27" name="id">
         <state-number>7653</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;courses_students_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="109" parent="26" name="course_id">
+      <column id="111" parent="27" name="course_id">
         <state-number>7653</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="110" parent="26" name="student_id">
+      <column id="112" parent="27" name="student_id">
         <state-number>7653</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="111" parent="26" name="created_at">
+      <column id="113" parent="27" name="created_at">
         <state-number>7653</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="112" parent="26" name="updated_at">
+      <column id="114" parent="27" name="updated_at">
         <state-number>7653</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="113" parent="26" name="courses_students_pkey">
+      <index id="115" parent="27" name="courses_students_pkey">
         <object-id>20849</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="114" parent="26" name="index_courses_students_on_course_id">
+      <index id="116" parent="27" name="index_courses_students_on_course_id">
         <object-id>20851</object-id>
         <columns>course_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="115" parent="26" name="index_courses_students_on_student_id">
+      <index id="117" parent="27" name="index_courses_students_on_student_id">
         <object-id>20852</object-id>
         <columns>student_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="116" parent="26" name="courses_students_pkey">
+      <key id="118" parent="27" name="courses_students_pkey">
         <columns>id</columns>
         <underlying-index>courses_students_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="117" parent="27" name="id">
+      <column id="119" parent="28" name="id">
         <state-number>7628</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;districts_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="118" parent="27" name="name">
+      <column id="120" parent="28" name="name">
         <state-number>7628</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="119" parent="27" name="canton_id">
+      <column id="121" parent="28" name="canton_id">
         <state-number>7628</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="120" parent="27" name="created_at">
+      <column id="122" parent="28" name="created_at">
         <state-number>7628</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="121" parent="27" name="updated_at">
+      <column id="123" parent="28" name="updated_at">
         <state-number>7628</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="122" parent="27" name="districts_pkey">
+      <index id="124" parent="28" name="districts_pkey">
         <object-id>20765</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="123" parent="27" name="index_districts_on_canton_id">
+      <index id="125" parent="28" name="index_districts_on_canton_id">
         <object-id>20767</object-id>
         <columns>canton_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="124" parent="27" name="districts_pkey">
+      <key id="126" parent="28" name="districts_pkey">
         <columns>id</columns>
         <underlying-index>districts_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="125" parent="28" name="id">
+      <column id="127" parent="29" name="id">
         <state-number>7903</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;friendly_id_slugs_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="126" parent="28" name="slug">
+      <column id="128" parent="29" name="slug">
         <state-number>7903</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
       </column>
-      <column id="127" parent="28" name="sluggable_id">
+      <column id="129" parent="29" name="sluggable_id">
         <state-number>7903</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
       </column>
-      <column id="128" parent="28" name="sluggable_type">
+      <column id="130" parent="29" name="sluggable_type">
         <state-number>7903</state-number>
         <data-type>varchar(50)</data-type>
       </column>
-      <column id="129" parent="28" name="scope">
+      <column id="131" parent="29" name="scope">
         <state-number>7903</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="130" parent="28" name="created_at">
+      <column id="132" parent="29" name="created_at">
         <state-number>7903</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <index id="131" parent="28" name="friendly_id_slugs_pkey">
+      <index id="133" parent="29" name="friendly_id_slugs_pkey">
         <object-id>20936</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="132" parent="28" name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope">
+      <index id="134" parent="29" name="index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope">
         <object-id>20940</object-id>
         <columns>slug
 sluggable_type
@@ -632,536 +640,575 @@ scope</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="133" parent="28" name="index_friendly_id_slugs_on_slug_and_sluggable_type">
+      <index id="135" parent="29" name="index_friendly_id_slugs_on_slug_and_sluggable_type">
         <object-id>20939</object-id>
         <columns>slug
 sluggable_type</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="134" parent="28" name="index_friendly_id_slugs_on_sluggable_id">
+      <index id="136" parent="29" name="index_friendly_id_slugs_on_sluggable_id">
         <object-id>20938</object-id>
         <columns>sluggable_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="135" parent="28" name="index_friendly_id_slugs_on_sluggable_type">
+      <index id="137" parent="29" name="index_friendly_id_slugs_on_sluggable_type">
         <object-id>20941</object-id>
         <columns>sluggable_type</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="136" parent="28" name="friendly_id_slugs_pkey">
+      <key id="138" parent="29" name="friendly_id_slugs_pkey">
         <columns>id</columns>
         <underlying-index>friendly_id_slugs_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="137" parent="29" name="id">
+      <column id="139" parent="30" name="id">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;instructors_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="138" parent="29" name="email">
+      <column id="140" parent="30" name="email">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="139" parent="29" name="encrypted_password">
+      <column id="141" parent="30" name="encrypted_password">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="140" parent="29" name="reset_password_token">
+      <column id="142" parent="30" name="reset_password_token">
         <state-number>7630</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="141" parent="29" name="reset_password_sent_at">
+      <column id="143" parent="30" name="reset_password_sent_at">
         <state-number>7630</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="142" parent="29" name="remember_created_at">
+      <column id="144" parent="30" name="remember_created_at">
         <state-number>7630</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="143" parent="29" name="sign_in_count">
+      <column id="145" parent="30" name="sign_in_count">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <column id="144" parent="29" name="current_sign_in_at">
+      <column id="146" parent="30" name="current_sign_in_at">
         <state-number>7630</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="145" parent="29" name="last_sign_in_at">
+      <column id="147" parent="30" name="last_sign_in_at">
         <state-number>7630</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="146" parent="29" name="current_sign_in_ip">
+      <column id="148" parent="30" name="current_sign_in_ip">
         <state-number>7630</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="147" parent="29" name="last_sign_in_ip">
+      <column id="149" parent="30" name="last_sign_in_ip">
         <state-number>7630</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="148" parent="29" name="created_at">
+      <column id="150" parent="30" name="created_at">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="149" parent="29" name="updated_at">
+      <column id="151" parent="30" name="updated_at">
         <state-number>7630</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="150" parent="29" name="first_name">
+      <column id="152" parent="30" name="first_name">
         <state-number>7631</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="151" parent="29" name="last_name">
+      <column id="153" parent="30" name="last_name">
         <state-number>7631</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="152" parent="29" name="phone">
+      <column id="154" parent="30" name="phone">
         <state-number>7631</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="153" parent="29" name="district_id">
+      <column id="155" parent="30" name="district_id">
         <state-number>7631</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="154" parent="29" name="branch_id">
+      <column id="156" parent="30" name="branch_id">
         <state-number>7631</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="155" parent="29" name="instructors_pkey">
+      <index id="157" parent="30" name="instructors_pkey">
         <object-id>20782</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="156" parent="29" name="index_instructors_on_email">
+      <index id="158" parent="30" name="index_instructors_on_email">
         <object-id>20784</object-id>
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="157" parent="29" name="index_instructors_on_reset_password_token">
+      <index id="159" parent="30" name="index_instructors_on_reset_password_token">
         <object-id>20785</object-id>
         <columns>reset_password_token</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="158" parent="29" name="index_instructors_on_district_id">
+      <index id="160" parent="30" name="index_instructors_on_district_id">
         <object-id>20786</object-id>
         <columns>district_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="159" parent="29" name="index_instructors_on_branch_id">
+      <index id="161" parent="30" name="index_instructors_on_branch_id">
         <object-id>20787</object-id>
         <columns>branch_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="160" parent="29" name="instructors_pkey">
+      <key id="162" parent="30" name="instructors_pkey">
         <columns>id</columns>
         <underlying-index>instructors_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="161" parent="30" name="id">
+      <column id="163" parent="31" name="id">
         <state-number>7635</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;lessons_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="162" parent="30" name="branch_id">
+      <column id="164" parent="31" name="branch_id">
         <state-number>7635</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="163" parent="30" name="course_id">
+      <column id="165" parent="31" name="course_id">
         <state-number>7635</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="164" parent="30" name="instructor_id">
+      <column id="166" parent="31" name="instructor_id">
         <state-number>7635</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="165" parent="30" name="created_at">
+      <column id="167" parent="31" name="created_at">
         <state-number>7635</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="166" parent="30" name="updated_at">
+      <column id="168" parent="31" name="updated_at">
         <state-number>7635</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="167" parent="30" name="start_time">
+      <column id="169" parent="31" name="start_time">
         <state-number>7720</state-number>
         <mandatory>1</mandatory>
         <data-type>time</data-type>
       </column>
-      <column id="168" parent="30" name="end_time">
+      <column id="170" parent="31" name="end_time">
         <state-number>7720</state-number>
         <mandatory>1</mandatory>
         <data-type>time</data-type>
       </column>
-      <column id="169" parent="30" name="day_of_week">
+      <column id="171" parent="31" name="day_of_week">
         <state-number>7720</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>1</default-expression>
       </column>
-      <column id="170" parent="30" name="quota">
+      <column id="172" parent="31" name="quota">
         <state-number>7739</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <index id="171" parent="30" name="lessons_pkey">
+      <index id="173" parent="31" name="lessons_pkey">
         <object-id>20817</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="172" parent="30" name="index_lessons_on_branch_id">
+      <index id="174" parent="31" name="index_lessons_on_branch_id">
         <object-id>20819</object-id>
         <columns>branch_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="173" parent="30" name="index_lessons_on_course_id">
+      <index id="175" parent="31" name="index_lessons_on_course_id">
         <object-id>20820</object-id>
         <columns>course_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="174" parent="30" name="index_lessons_on_instructor_id">
+      <index id="176" parent="31" name="index_lessons_on_instructor_id">
         <object-id>20821</object-id>
         <columns>instructor_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="175" parent="30" name="lessons_pkey">
+      <key id="177" parent="31" name="lessons_pkey">
         <columns>id</columns>
         <underlying-index>lessons_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="176" parent="31" name="id">
+      <column id="178" parent="32" name="id">
         <state-number>7702</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;lessons_students_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="177" parent="31" name="lesson_id">
+      <column id="179" parent="32" name="lesson_id">
         <state-number>7702</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="178" parent="31" name="student_id">
+      <column id="180" parent="32" name="student_id">
         <state-number>7702</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="179" parent="31" name="created_at">
+      <column id="181" parent="32" name="created_at">
         <state-number>7702</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="180" parent="31" name="updated_at">
+      <column id="182" parent="32" name="updated_at">
         <state-number>7702</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="181" parent="31" name="lessons_students_pkey">
+      <index id="183" parent="32" name="lessons_students_pkey">
         <object-id>20859</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="182" parent="31" name="index_lessons_students_on_lesson_id">
+      <index id="184" parent="32" name="index_lessons_students_on_lesson_id">
         <object-id>20861</object-id>
         <columns>lesson_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="183" parent="31" name="index_lessons_students_on_student_id">
+      <index id="185" parent="32" name="index_lessons_students_on_student_id">
         <object-id>20862</object-id>
         <columns>student_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="184" parent="31" name="lessons_students_pkey">
+      <key id="186" parent="32" name="lessons_students_pkey">
         <columns>id</columns>
         <underlying-index>lessons_students_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="185" parent="32" name="id">
+      <column id="187" parent="33" name="id">
         <state-number>7626</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;provinces_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="186" parent="32" name="name">
+      <column id="188" parent="33" name="name">
         <state-number>7626</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="187" parent="32" name="created_at">
+      <column id="189" parent="33" name="created_at">
         <state-number>7626</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="188" parent="32" name="updated_at">
+      <column id="190" parent="33" name="updated_at">
         <state-number>7626</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <index id="189" parent="32" name="provinces_pkey">
+      <index id="191" parent="33" name="provinces_pkey">
         <object-id>20742</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="190" parent="32" name="provinces_pkey">
+      <key id="192" parent="33" name="provinces_pkey">
         <columns>id</columns>
         <underlying-index>provinces_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="191" parent="33" name="version">
+      <column id="193" parent="34" name="id">
+        <state-number>8032</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;requirements_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="194" parent="34" name="course_id">
+        <state-number>8032</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="195" parent="34" name="requirement_id">
+        <state-number>8032</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="196" parent="34" name="created_at">
+        <state-number>8032</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <column id="197" parent="34" name="updated_at">
+        <state-number>8032</state-number>
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+      </column>
+      <index id="198" parent="34" name="requirements_pkey">
+        <object-id>21035</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="199" parent="34" name="requirements_pkey">
+        <columns>id</columns>
+        <underlying-index>requirements_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="200" parent="35" name="version">
         <state-number>7622</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
       </column>
-      <index id="192" parent="33" name="unique_schema_migrations">
+      <index id="201" parent="35" name="unique_schema_migrations">
         <object-id>20705</object-id>
         <columns>version</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <column id="193" parent="34" name="id">
+      <column id="202" parent="36" name="id">
         <state-number>7887</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;slides_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="194" parent="34" name="title">
+      <column id="203" parent="36" name="title">
         <state-number>7887</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="195" parent="34" name="description">
+      <column id="204" parent="36" name="description">
         <state-number>7887</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="196" parent="34" name="created_at">
+      <column id="205" parent="36" name="created_at">
         <state-number>7887</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="197" parent="34" name="updated_at">
+      <column id="206" parent="36" name="updated_at">
         <state-number>7887</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="198" parent="34" name="image_file_name">
+      <column id="207" parent="36" name="image_file_name">
         <state-number>7887</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="199" parent="34" name="image_content_type">
+      <column id="208" parent="36" name="image_content_type">
         <state-number>7887</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="200" parent="34" name="image_file_size">
+      <column id="209" parent="36" name="image_file_size">
         <state-number>7887</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="201" parent="34" name="image_updated_at">
+      <column id="210" parent="36" name="image_updated_at">
         <state-number>7887</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="202" parent="34" name="image_meta">
+      <column id="211" parent="36" name="image_meta">
         <state-number>7887</state-number>
         <data-type>text</data-type>
       </column>
-      <index id="203" parent="34" name="slides_pkey">
+      <index id="212" parent="36" name="slides_pkey">
         <object-id>20925</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="204" parent="34" name="slides_pkey">
+      <key id="213" parent="36" name="slides_pkey">
         <columns>id</columns>
         <underlying-index>slides_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="205" parent="35" name="id">
+      <column id="214" parent="37" name="id">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;students_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="206" parent="35" name="email">
+      <column id="215" parent="37" name="email">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="207" parent="35" name="encrypted_password">
+      <column id="216" parent="37" name="encrypted_password">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>varchar</data-type>
         <default-expression>&apos;&apos;::character varying</default-expression>
       </column>
-      <column id="208" parent="35" name="reset_password_token">
+      <column id="217" parent="37" name="reset_password_token">
         <state-number>7624</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="209" parent="35" name="reset_password_sent_at">
+      <column id="218" parent="37" name="reset_password_sent_at">
         <state-number>7624</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="210" parent="35" name="remember_created_at">
+      <column id="219" parent="37" name="remember_created_at">
         <state-number>7624</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="211" parent="35" name="sign_in_count">
+      <column id="220" parent="37" name="sign_in_count">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>0</default-expression>
       </column>
-      <column id="212" parent="35" name="current_sign_in_at">
+      <column id="221" parent="37" name="current_sign_in_at">
         <state-number>7624</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="213" parent="35" name="last_sign_in_at">
+      <column id="222" parent="37" name="last_sign_in_at">
         <state-number>7624</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <column id="214" parent="35" name="current_sign_in_ip">
+      <column id="223" parent="37" name="current_sign_in_ip">
         <state-number>7624</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="215" parent="35" name="last_sign_in_ip">
+      <column id="224" parent="37" name="last_sign_in_ip">
         <state-number>7624</state-number>
         <data-type>inet</data-type>
       </column>
-      <column id="216" parent="35" name="created_at">
+      <column id="225" parent="37" name="created_at">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="217" parent="35" name="updated_at">
+      <column id="226" parent="37" name="updated_at">
         <state-number>7624</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="218" parent="35" name="first_name">
+      <column id="227" parent="37" name="first_name">
         <state-number>7629</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="219" parent="35" name="last_name">
+      <column id="228" parent="37" name="last_name">
         <state-number>7629</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="220" parent="35" name="phone">
+      <column id="229" parent="37" name="phone">
         <state-number>7629</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="221" parent="35" name="district_id">
+      <column id="230" parent="37" name="district_id">
         <state-number>7629</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="222" parent="35" name="branch_id">
+      <column id="231" parent="37" name="branch_id">
         <state-number>7629</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="223" parent="35" name="id_number">
+      <column id="232" parent="37" name="id_number">
         <state-number>7790</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="224" parent="35" name="beginner">
+      <column id="233" parent="37" name="beginner">
         <state-number>7804</state-number>
         <data-type>boolean</data-type>
       </column>
-      <column id="225" parent="35" name="birthdate">
+      <column id="234" parent="37" name="birthdate">
         <state-number>7827</state-number>
         <data-type>date</data-type>
       </column>
-      <column id="226" parent="35" name="second_last_name">
+      <column id="235" parent="37" name="second_last_name">
         <state-number>7881</state-number>
         <data-type>varchar</data-type>
       </column>
-      <index id="227" parent="35" name="students_pkey">
+      <index id="236" parent="37" name="students_pkey">
         <object-id>20718</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="228" parent="35" name="index_students_on_email">
+      <index id="237" parent="37" name="index_students_on_email">
         <object-id>20720</object-id>
         <columns>email</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="229" parent="35" name="index_students_on_reset_password_token">
+      <index id="238" parent="37" name="index_students_on_reset_password_token">
         <object-id>20721</object-id>
         <columns>reset_password_token</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="230" parent="35" name="index_students_on_id_number">
+      <index id="239" parent="37" name="index_students_on_id_number">
         <object-id>20894</object-id>
         <columns>id_number</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="231" parent="35" name="index_students_on_district_id">
+      <index id="240" parent="37" name="index_students_on_district_id">
         <object-id>20768</object-id>
         <columns>district_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <index id="232" parent="35" name="index_students_on_branch_id">
+      <index id="241" parent="37" name="index_students_on_branch_id">
         <object-id>20769</object-id>
         <columns>branch_id</columns>
         <desc-columns></desc-columns>
       </index>
-      <key id="233" parent="35" name="students_pkey">
+      <key id="242" parent="37" name="students_pkey">
         <columns>id</columns>
         <underlying-index>students_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <column id="234" parent="36" name="id">
+      <column id="243" parent="38" name="id">
         <state-number>7992</state-number>
         <mandatory>1</mandatory>
         <data-type>integer</data-type>
         <default-expression>nextval(&apos;videos_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="235" parent="36" name="created_at">
+      <column id="244" parent="38" name="created_at">
         <state-number>7992</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="236" parent="36" name="updated_at">
+      <column id="245" parent="38" name="updated_at">
         <state-number>7992</state-number>
         <mandatory>1</mandatory>
         <data-type>timestamp</data-type>
       </column>
-      <column id="237" parent="36" name="file_file_name">
+      <column id="246" parent="38" name="file_file_name">
         <state-number>7992</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="238" parent="36" name="file_content_type">
+      <column id="247" parent="38" name="file_content_type">
         <state-number>7992</state-number>
         <data-type>varchar</data-type>
       </column>
-      <column id="239" parent="36" name="file_file_size">
+      <column id="248" parent="38" name="file_file_size">
         <state-number>7992</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="240" parent="36" name="file_updated_at">
+      <column id="249" parent="38" name="file_updated_at">
         <state-number>7992</state-number>
         <data-type>timestamp</data-type>
       </column>
-      <index id="241" parent="36" name="videos_pkey">
+      <column id="250" parent="38" name="title">
+        <state-number>8026</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <index id="251" parent="38" name="videos_pkey">
         <object-id>21011</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="242" parent="36" name="videos_pkey">
+      <key id="252" parent="38" name="videos_pkey">
         <columns>id</columns>
         <underlying-index>videos_pkey</underlying-index>
         <primary>1</primary>
