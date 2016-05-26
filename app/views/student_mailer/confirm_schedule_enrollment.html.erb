@@ -1,6 +1,13 @@
-<h1><%= t('helpers.student.you_are_enrolled') %></h1>
+<h1>Bienvenid@ a Belly Dance Costa Rica Academia Aidah Manaar</h1>
 
-<p>Tu horario:</p>
+<p>
+  Gracias por matricularte en el curso <%= @lessons.first.course.name %>.
+  Estamos muy felices de que formes parte de nuestra academia.
+</p>
+
+<p>Tu primera lección será completamente gratuita. Recuerda llevar ropa cómoda.</p>
+
+<p>Tus lecciones serán en la sede de <%= @lessons.first.branch.name %> y tu horario es:</p>
 
 <ul>
   <% @lessons.sort_by { |l| [l[:day_of_week], l.start_time] }.each do |lesson| %>
