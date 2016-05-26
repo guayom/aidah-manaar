@@ -4,7 +4,7 @@ $ ->
       editor.destroy(true) if editor
 
       CKEDITOR.replace editorName,
-        language: 'es'
+#        language: 'es'
         toolbar: [
           {
             name: 'document'
@@ -27,7 +27,7 @@ $ ->
             items: ['Link', 'Unlink', 'Anchor']
           }, {
             name: 'insert',
-            items: ['Image', 'Table', 'HorizontalRule', 'SpecialChar']
+            items: ['Image', 'Video', 'Table', 'HorizontalRule', 'SpecialChar']
           }, '/', {
             name: 'styles',
             items: ['Styles', 'Format', 'Font', 'FontSize']

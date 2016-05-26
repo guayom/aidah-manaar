@@ -48,11 +48,14 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
   end
+
   config.model Student do
     weight 1
+
     object_label_method do
       :label
     end
+
     edit do
       exclude_fields :courses_students
     end
@@ -76,9 +79,10 @@ RailsAdmin.config do |config|
   end
 
   config.model Lesson do
+    weight 3
+
     configure :start_time, :time
     configure :end_time, :time
-    weight 3
 
     list do
       field :id
@@ -87,6 +91,24 @@ RailsAdmin.config do |config|
       field :day_of_week
       field :start_time
       field :instructor
+    end
+  end
+
+  config.model Video do
+    configure :url do
+      visible false
+    end
+
+    list do
+      field :id
+      field :updated_at
+      field :url
+    end
+
+    edit do
+      field :file do
+        partial 'video_uploader_viewer'
+      end
     end
   end
 end

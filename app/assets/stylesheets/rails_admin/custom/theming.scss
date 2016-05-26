@@ -1,3 +1,13 @@
 @import 'bootstrap-sprockets';
 @import '_bootstrap';
 @import 'video-js';
+
+.video_row .url_field {
+  white-space: pre-wrap !important;
+  overflow: visible !important;
+  max-width: 100% !important;
+}
+
+.cke_button__video_icon {
+  background-image: asset-url('ckeditor/embed.png') !important;
+}
