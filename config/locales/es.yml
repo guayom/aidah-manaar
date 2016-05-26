@@ -40,6 +40,14 @@ es:
         phone: 'Número telefónico'
         branch_id: 'Sede'
         current_password: 'Password actual'
+    errors:
+      models:
+        course:
+          attributes:
+            parent_id:
+              errors:
+                messages:
+                  invalid: 'no es válido'
 
   devise:
     registrations:

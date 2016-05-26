@@ -14,11 +14,21 @@ class Course < ActiveRecord::Base
 
   friendly_id :name, use: :slugged
 
+  validate :can_be_only_one_base_course
+
   def to_s
     name
   end
 
   def parent_name
     parent.try(:name)
+  end
+
+  def can_be_only_one_base_course
+    if parent.nil?
+      if Course.where(parent: nil).any?
+        errors.add(:parent_id, :invalid)
+      end
+    end
   end
 end
