@@ -4,7 +4,7 @@ $ ->
       editor.destroy(true) if editor
 
       CKEDITOR.replace editorName,
-#        language: 'es'
+        language: 'es'
         toolbar: [
           {
             name: 'document'
