@@ -71,7 +71,7 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      exclude_fields :children, :self_and_ancestors, :self_and_descendants
+      exclude_fields :children, :self_and_ancestors, :self_and_descendants, :requirements
 
       field :full_description, :ck_editor
       field :public_description, :ck_editor
@@ -111,5 +111,10 @@ RailsAdmin.config do |config|
         partial 'video_uploader_viewer'
       end
     end
+  end
+
+
+  config.model 'Requirement' do
+    visible false
   end
 end

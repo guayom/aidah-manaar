@@ -5,6 +5,8 @@ class Course < ActiveRecord::Base
   has_many :lessons
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy
   has_many :students, through: :courses_students
+  has_many :requirements
+  has_many :required_courses, through: :requirements, source: :requirement
 
   # TODO Add validation to control that there is only one base course (course without parent).
 
