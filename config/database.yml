@@ -9,11 +9,3 @@ default: &default
 development:
   <<: *default
   database: aidah_manaar_development
-
-test:
-  <<: *default
-  database: aidah_manaar_test
-
-production:
-  <<: *default
-  database: aidah_manaar_production
