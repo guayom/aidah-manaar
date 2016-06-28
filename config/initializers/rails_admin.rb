@@ -47,6 +47,23 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
+
+    member :send_invoice do
+      link_icon 'icon-envelope'
+      visible do
+        [Invoice].include?(bindings[:abstract_model].model) &&
+          !bindings[:object].try(:sent?)
+      end
+      controller do
+        Proc.new do
+          @object.send!
+
+          flash[:success] = 'Invoice is now sent to student.'
+
+          redirect_to back_or_index
+        end
+      end
+    end
   end
 
   config.model Student do
@@ -94,6 +111,24 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Invoice do
+    list do
+      field :payed
+      field :sent
+      field :student
+      field :description
+      field :updated_at
+    end
+
+    edit do
+      field :payed
+      field :sent
+      field :student
+      field :description
+      field :items
+    end
+  end
+
   config.model Video do
     configure :url do
       visible false
@@ -112,7 +147,6 @@ RailsAdmin.config do |config|
       end
     end
   end
-
 
   config.model 'Requirement' do
     visible false

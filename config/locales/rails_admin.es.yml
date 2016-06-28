@@ -53,6 +53,10 @@ es:
         title: Detalles para  %{model_label} "%{object_label}"
       show_in_app:
         menu: Ver en la aplicación
+
+      send_invoice:
+        menu: '[[[SEND_INVOICE]]]'
+        title: '[[[SEND_INVOICE]]]'
     export:
       click_to_reverse_selection: Haga click para invertir la selección
       confirmation: Exportar a %{name}
