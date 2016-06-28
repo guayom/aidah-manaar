@@ -1,6 +1,8 @@
 class Slide < ActiveRecord::Base
-  has_attached_file :image, styles: { homepage: '1440x900>' }#,
-                    # default_url: '/images/:style/missing.png'
+  has_attached_file :image,
+                    path: '/slides/:id/:style/:filename',
+                    styles: { homepage: '1440x900>' }
+
   validates_attachment :image, content_type: { content_type: /\Aimage\/.*\Z/ }, presence: true
 
   rails_admin do
