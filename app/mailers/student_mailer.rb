@@ -1,6 +1,8 @@
 class StudentMailer < ApplicationMailer
-  def confirm_registration(student)
+  def confirm_registration(student, password, params = {})
     @student = student
+    @password = password
+    @params = params
     mail(to: student.email, subject: t('devise.registrations.thank_you.title'))
   end
 

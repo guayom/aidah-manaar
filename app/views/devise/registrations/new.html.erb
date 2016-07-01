@@ -60,25 +60,6 @@
     </p>
   </div>
 
-  <div class="form-group">
-    <%= f.label :password %> <span class="required">*</span>
-    <%= f.password_field :password, autocomplete: 'off', class: 'form-control', required: true %>
-    <% if @minimum_password_length %>
-      <p class="help-block">
-        <%= t('helpers.student.password.minimum_password_length',
-              minimum_password_length: @minimum_password_length) %>
-      </p>
-    <% end %>
-    <p class="error-block">
-      <%= t('errors.messages.blank') %>
-    </p>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %> <span class="required">*</span>
-    <%= f.password_field :password_confirmation, autocomplete: 'off', class: 'form-control' %>
-  </div>
-
   <% if :student == resource_name %>
     <div class="form-group">
       <%= f.label :phone %> <span class="required">*</span>
