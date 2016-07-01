@@ -33,9 +33,8 @@
     <orderEntry type="library" scope="PROVIDED" name="arel (v6.0.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="autoprefixer-rails (v6.3.6.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="av (v0.9.0, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v2.3.4, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk-core (v2.3.4, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="aws-sdk-resources (v2.3.4, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v1.66.0, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="aws-sdk-v1 (v1.66.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.11, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="better_errors (v2.1.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="binding_of_caller (v0.7.2, RVM: ruby-2.3.0) [gem]" level="application" />
@@ -68,10 +67,8 @@
     <orderEntry type="library" scope="PROVIDED" name="heroku-api (v0.4.2, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.4.1, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="jmespath (v1.2.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v4.1.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-ui-rails (v5.0.5, RVM: ruby-2.3.0) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.8.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="kaminari (v0.16.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.4.3, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="letter_opener (v1.4.1, RVM: ruby-2.3.0) [gem]" level="application" />
