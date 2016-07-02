@@ -18,6 +18,14 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
+    RailsAdmin::Config::Fields::Types::register(self)
+
+    register_instance_option :partial do
+      :form_bootsy
+    end
+  end
+
   class RailsAdmin::Config::Fields::Types::Date
     register_instance_option :date_format do
       :default
@@ -48,16 +56,22 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
   end
-
   config.model Student do
     weight 1
-
     object_label_method do
       :label
     end
-
     edit do
       exclude_fields :courses_students
+    end
+    list do
+      field :first_name
+      field :last_name
+      field :second_last_name
+      field :branch_id
+      field :beginner
+      field :start_time
+      field :instructor
     end
   end
 
@@ -71,18 +85,17 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      exclude_fields :children, :self_and_ancestors, :self_and_descendants, :requirements
+      exclude_fields :children, :self_and_ancestors, :self_and_descendants
 
-      field :full_description, :ck_editor
-      field :public_description, :ck_editor
+      field :full_description, :bootsy
+      field :public_description, :bootsy
     end
   end
 
   config.model Lesson do
-    weight 3
-
     configure :start_time, :time
     configure :end_time, :time
+    weight 3
 
     list do
       field :id
@@ -92,29 +105,5 @@ RailsAdmin.config do |config|
       field :start_time
       field :instructor
     end
-  end
-
-  config.model Video do
-    configure :url do
-      visible false
-    end
-
-    list do
-      field :id
-      field :updated_at
-      field :url
-    end
-
-    edit do
-      field :title
-      field :file do
-        partial 'video_uploader_viewer'
-      end
-    end
-  end
-
-
-  config.model 'Requirement' do
-    visible false
   end
 end
