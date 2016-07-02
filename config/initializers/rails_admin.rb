@@ -117,7 +117,6 @@ RailsAdmin.config do |config|
   config.model Payment do
     label "Recibo"
     label_plural "Recibos"
-    navigation_label 'League related'
     weight -1
   end
 end
