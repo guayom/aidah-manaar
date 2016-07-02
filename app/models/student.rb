@@ -11,6 +11,8 @@ class Student < ActiveRecord::Base
   has_many :courses, through: :courses_students
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :lessons, through: :lessons_students
+  has_many :invoices
+  has_many :payments
 
   validates_presence_of :first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number

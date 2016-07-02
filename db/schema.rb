@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526140025) do
+ActiveRecord::Schema.define(version: 20160628195646) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -153,6 +153,25 @@ ActiveRecord::Schema.define(version: 20160526140025) do
   add_index "instructors", ["email"], name: "index_instructors_on_email", unique: true, using: :btree
   add_index "instructors", ["reset_password_token"], name: "index_instructors_on_reset_password_token", unique: true, using: :btree
 
+  create_table "invoice_items", force: :cascade do |t|
+    t.integer  "invoice_id", null: false
+    t.string   "name"
+    t.decimal  "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "invoice_items", ["invoice_id"], name: "index_invoice_items_on_invoice_id", using: :btree
+
+  create_table "invoices", force: :cascade do |t|
+    t.boolean  "payed",       default: false
+    t.integer  "student_id"
+    t.text     "description"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "sent",        default: false
+  end
+
   create_table "lessons", force: :cascade do |t|
     t.integer  "branch_id"
     t.integer  "course_id"
@@ -178,6 +197,15 @@ ActiveRecord::Schema.define(version: 20160526140025) do
 
   add_index "lessons_students", ["lesson_id"], name: "index_lessons_students_on_lesson_id", using: :btree
   add_index "lessons_students", ["student_id"], name: "index_lessons_students_on_student_id", using: :btree
+
+  create_table "payments", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "invoice_id"
+    t.decimal  "sum"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "provinces", force: :cascade do |t|
     t.string   "name"

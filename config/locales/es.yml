@@ -104,6 +104,7 @@ es:
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
       you_are_enrolled: 'Te has matriculado en este curso'
       edit_profile: 'Editar mi información'
+      you_have_new_invoice: '[[[YOU HAVE NEW INVOICE FROM AIDAH MANAAR]]]'
     close: 'Cerrar'
     submit:
       course_student:
