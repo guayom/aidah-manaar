@@ -40,7 +40,7 @@ class HomeController < ApplicationController
     end
 
     JSON.parse(
-      Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/courses_students.json'))
+      Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/course_students.json'))
     ).each do |data|
       cscs = CourseStudent.find_by(id: data['id'])
       if !cscs
@@ -76,7 +76,7 @@ class HomeController < ApplicationController
     end
 
     JSON.parse(
-      Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/lessons_students.json'))
+      Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/lesson_students.json'))
     ).each do |data|
       lsls = LessonStudent.find_by(id: data['id'])
       if !lsls
