@@ -6,6 +6,10 @@ class Invoice < ActiveRecord::Base
 
   has_many :payments
 
+  after_create do
+    send!
+  end
+
   def send!
     SendInvoiceJob.perform_later(self)
 
