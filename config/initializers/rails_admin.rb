@@ -18,6 +18,14 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
+    RailsAdmin::Config::Fields::Types::register(self)
+
+    register_instance_option :partial do
+      :form_bootsy
+    end
+  end
+
   class RailsAdmin::Config::Fields::Types::Date
     register_instance_option :date_format do
       :default
@@ -47,34 +55,23 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
-
-    member :send_invoice do
-      link_icon 'icon-envelope'
-      visible do
-        [Invoice].include?(bindings[:abstract_model].model) &&
-          !bindings[:object].try(:sent?)
-      end
-      controller do
-        Proc.new do
-          @object.send!
-
-          flash[:success] = 'Invoice is now sent to student.'
-
-          redirect_to back_or_index
-        end
-      end
-    end
   end
-
   config.model Student do
     weight 1
-
     object_label_method do
       :label
     end
-
     edit do
       exclude_fields :courses_students
+    end
+    list do
+      field :first_name
+      field :last_name
+      field :second_last_name
+      field :branch_id
+      field :beginner
+      field :start_time
+      field :instructor
     end
   end
 
@@ -88,18 +85,17 @@ RailsAdmin.config do |config|
     end
 
     edit do
-      exclude_fields :children, :self_and_ancestors, :self_and_descendants, :requirements
+      exclude_fields :children, :self_and_ancestors, :self_and_descendants
 
-      field :full_description, :ck_editor
-      field :public_description, :ck_editor
+      field :full_description, :bootsy
+      field :public_description, :bootsy
     end
   end
 
   config.model Lesson do
-    weight 3
-
     configure :start_time, :time
     configure :end_time, :time
+    weight 3
 
     list do
       field :id
@@ -112,43 +108,15 @@ RailsAdmin.config do |config|
   end
 
   config.model Invoice do
-    list do
-      field :payed
-      field :sent
-      field :student
-      field :description
-      field :updated_at
-    end
-
-    edit do
-      field :payed
-      field :sent
-      field :student
-      field :description
-      field :items
-    end
+    label "Factura"
+    label_plural "Facturas"
+    navigation_label 'Facturación'
+    weight -2
   end
 
-  config.model Video do
-    configure :url do
-      visible false
-    end
-
-    list do
-      field :id
-      field :updated_at
-      field :url
-    end
-
-    edit do
-      field :title
-      field :file do
-        partial 'video_uploader_viewer'
-      end
-    end
-  end
-
-  config.model 'Requirement' do
-    visible false
+  config.model Payment do
+    label "Recibo"
+    label_plural "Recibos"
+    weight -1
   end
 end
