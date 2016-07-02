@@ -1,9 +1,9 @@
-class Export::StudentsController < ApplicationController
+class Export::LessonsStudentsController < ApplicationController
   load_resource
 
   def index
     if can?(:export, :data)
-      render json: Student.all
+      render json: LessonStudent.all
     else
       render root_path
     end

@@ -21,4 +21,22 @@ class Course < ActiveRecord::Base
   def parent_name
     parent.try(:name)
   end
+
+  def as_json(options = nil)
+    attrs = {
+      only: [
+        'id',
+        'name',
+        'public_description',
+        'level',
+        'created_at',
+        'updated_at',
+        'parent_id',
+        'slug',
+        'full_description'
+      ]
+    }
+
+    super(attrs.merge(options || {}))
+  end
 end

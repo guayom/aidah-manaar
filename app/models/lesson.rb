@@ -22,4 +22,23 @@ class Lesson < ActiveRecord::Base
   def has_available_places?
     available_places > 0
   end
+
+  def as_json(options = nil)
+    attrs = {
+      only: [
+        'id',
+        'branch_id',
+        'course_id',
+        'instructor_id',
+        'created_at',
+        'updated_at',
+        'start_time',
+        'end_time',
+        'day_of_week',
+        'quota'
+      ]
+    }
+
+    super(attrs.merge(options || {}))
+  end
 end

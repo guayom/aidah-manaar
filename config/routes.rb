@@ -21,6 +21,11 @@ Rails.application.routes.draw do
   namespace :export do
     resources :branches, only: [:index], format: :json
     resources :students, only: [:index], format: :json
+    resources :courses, only: [:index], format: :json
+    resources :courses_students, only: [:index], format: :json
+    resources :instructors, only: [:index], format: :json
+    resources :lessons, only: [:index], format: :json
+    resources :lessons_students, only: [:index], format: :json
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
