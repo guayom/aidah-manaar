@@ -106,17 +106,19 @@ RailsAdmin.config do |config|
       field :instructor
     end
   end
-end
-config.model Invoice do
-  label "Factura"
-  label_plural "Facturas"
-  navigation_label 'Facturación'
-  weight -2
-end
-config.model Payment do
-  label "Recibo"
-  label_plural "Recibos"
-  navigation_label 'League related'
-  navigation_label 'Faturación'
-  weight -1
+
+  config.model Invoice do
+    label "Factura"
+    label_plural "Facturas"
+    navigation_label 'Facturación'
+    weight -2
+  end
+  
+  config.model Payment do
+    label "Recibo"
+    label_plural "Recibos"
+    navigation_label 'League related'
+    navigation_label 'Faturación'
+    weight -1
+  end
 end
