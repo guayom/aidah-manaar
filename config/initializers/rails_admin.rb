@@ -113,12 +113,11 @@ RailsAdmin.config do |config|
     navigation_label 'Facturación'
     weight -2
   end
-  
+
   config.model Payment do
     label "Recibo"
     label_plural "Recibos"
     navigation_label 'League related'
-    navigation_label 'Faturación'
     weight -1
   end
 end
