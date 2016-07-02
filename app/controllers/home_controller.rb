@@ -3,9 +3,12 @@ class HomeController < ApplicationController
   end
 
   def import
-    students_json = JSON.parse(
+    JSON.parse(
       Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/students.json'))
-    )
-    fail students_json.inspect
+    ).each do |data|
+      if !Student.find_by(id: data['id'])
+        Student.create!(data)
+      end
+    end
   end
 end
