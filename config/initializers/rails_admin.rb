@@ -18,6 +18,8 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
+  #config.excluded_models << "Ckeditor::Asset"
+
   class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
     RailsAdmin::Config::Fields::Types::register(self)
 
@@ -56,8 +58,26 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
   end
-  config.model Student do
+
+  config.model Invoice do
+    label "Factura"
+    label_plural "Facturas"
+    navigation_label 'Facturación'
     weight 1
+  end
+
+  config.model Payment do
+    label "Recibo"
+    label_plural "Recibos"
+    navigation_label 'Facturación'
+    weight 2
+  end
+
+  config.model Student do
+    label "Estudiante"
+    label_plural "Estudiantes"
+    weight 3
+    navigation_label 'Administración'
     object_label_method do
       :label
     end
@@ -70,13 +90,15 @@ RailsAdmin.config do |config|
       field :second_last_name
       field :branch_id
       field :beginner
-      field :start_time
       field :instructor
     end
   end
 
   config.model Course do
-    weight 2
+    navigation_label 'Administración'
+    label "Curso"
+    label_plural "Cursos"
+    weight 4
 
     list do
       field :name
@@ -92,10 +114,20 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Requirement do
+    label "Requerimiento"
+    label_plural "Requerimientos"
+    navigation_label 'Administración'
+    weight 5
+  end
+
   config.model Lesson do
     configure :start_time, :time
     configure :end_time, :time
-    weight 3
+    weight 6
+    navigation_label 'Administración'
+    label "Lección"
+    label_plural "Lecciones"
 
     list do
       field :id
@@ -107,16 +139,79 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model Invoice do
-    label "Factura"
-    label_plural "Facturas"
-    navigation_label 'Facturación'
-    weight -2
+  config.model Branch do
+    label "Sede"
+    label_plural "Sedes"
+    navigation_label 'Administración'
+    weight 7
   end
 
-  config.model Payment do
-    label "Recibo"
-    label_plural "Recibos"
-    weight -1
+  config.model Instructor do
+    label "Instructor"
+    label_plural "Instructores"
+    navigation_label 'Administración'
+    weight 8
+  end
+
+  config.model Admin do
+    label "Administrador"
+    label_plural "Administradores"
+    navigation_label 'Administración'
+    weight 9
+  end
+
+  config.model Slide do
+    navigation_label 'Contenido'
+    weight 10
+  end
+
+  config.model BranchInstructor do
+    navigation_label 'Desarrollo'
+    weight 11
+  end
+  config.model Province do
+    navigation_label 'Desarrollo'
+    weight 12
+  end
+  config.model Canton do
+    navigation_label 'Desarrollo'
+    weight 13
+  end
+  config.model District do
+    navigation_label 'Desarrollo'
+    weight 14
+  end
+  config.model InvoiceItem do
+    navigation_label 'Desarrollo'
+    weight 15
+  end
+  config.model LessonStudent do
+    navigation_label 'Desarrollo'
+    weight 16
+  end
+  config.model District do
+    navigation_label 'Desarrollo'
+    weight 17
+  end
+  config.model Video do
+    navigation_label 'Desarrollo'
+    weight 18
+  end
+  config.model CourseStudent do
+    navigation_label 'Desarrollo'
+    weight 18
+  end
+
+  config.model Ckeditor::Asset do
+    weight 200
+    visible false
+  end
+  config.model Ckeditor::AttachmentFile do
+    weight 200
+    visible false
+  end
+  config.model Ckeditor::Picture do
+    weight 200
+    visible false
   end
 end
