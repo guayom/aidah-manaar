@@ -90,7 +90,6 @@ RailsAdmin.config do |config|
       field :second_last_name
       field :branch_id
       field :beginner
-      field :instructor
     end
   end
 
