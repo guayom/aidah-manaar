@@ -18,8 +18,6 @@ RailsAdmin.config do |config|
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
-  #config.excluded_models << "Ckeditor::Asset"
-
   class RailsAdmin::Config::Fields::Types::Bootsy < RailsAdmin::Config::Fields::Types::Text
     RailsAdmin::Config::Fields::Types::register(self)
 
@@ -202,15 +200,15 @@ RailsAdmin.config do |config|
   end
 
   config.model Ckeditor::Asset do
+    navigation_label 'Desarrollo'
     weight 200
-    visible false
   end
   config.model Ckeditor::AttachmentFile do
+    navigation_label 'Desarrollo'
     weight 200
-    visible false
   end
   config.model Ckeditor::Picture do
+    navigation_label 'Desarrollo'
     weight 200
-    visible false
   end
 end
