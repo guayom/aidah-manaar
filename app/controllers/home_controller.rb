@@ -7,7 +7,8 @@ class HomeController < ApplicationController
       Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/students.json'))
     ).each do |data|
       if !Student.find_by(id: data['id'])
-        Student.create!(data)
+        s = Student.new(data)
+        s.save(validate: false)
       end
     end
   end
