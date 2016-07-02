@@ -55,23 +55,6 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
-
-    member :send_invoice do
-      link_icon 'icon-envelope'
-      visible do
-        [Invoice].include?(bindings[:abstract_model].model) &&
-          !bindings[:object].try(:sent?)
-      end
-      controller do
-        Proc.new do
-          @object.send!
-
-          flash[:success] = 'Invoice is now sent to student.'
-
-          redirect_to back_or_index
-        end
-      end
-    end
   end
   config.model Student do
     weight 1
@@ -123,45 +106,17 @@ RailsAdmin.config do |config|
       field :instructor
     end
   end
-
-  config.model Invoice do
-    list do
-      field :payed
-      field :sent
-      field :student
-      field :description
-      field :updated_at
-    end
-
-    edit do
-      field :payed
-      field :sent
-      field :student
-      field :description
-      field :items
-    end
-  end
-
-  config.model Video do
-    configure :url do
-      visible false
-    end
-
-    list do
-      field :id
-      field :updated_at
-      field :url
-    end
-
-    edit do
-      field :title
-      field :file do
-        partial 'video_uploader_viewer'
-      end
-    end
-  end
-
-  config.model 'Requirement' do
-    visible false
-  end
+end
+config.model Invoice do
+  label "Factura"
+  label_plural "Facturas"
+  navigation_label 'Facturación'
+  weight -2
+end
+config.model Payment do
+  label "Recibo"
+  label_plural "Recibos"
+  navigation_label 'League related'
+  navigation_label 'Faturación'
+  weight -1
 end
