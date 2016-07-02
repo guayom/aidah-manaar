@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :lesson_students, only: [:create]
 
   namespace :export do
+    resources :branches, only: [:index], format: :json
     resources :students, only: [:index], format: :json
   end
 
