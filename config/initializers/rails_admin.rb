@@ -200,15 +200,15 @@ RailsAdmin.config do |config|
   end
 
   config.model Ckeditor::Asset do
-    navigation_label 'Desarrollo'
+    navigation_label 'Contenido'
     weight 200
   end
   config.model Ckeditor::AttachmentFile do
-    navigation_label 'Desarrollo'
+    navigation_label 'Contenido'
     weight 200
   end
   config.model Ckeditor::Picture do
-    navigation_label 'Desarrollo'
+    navigation_label 'Contenido'
     weight 200
   end
 end
