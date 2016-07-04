@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lessons_per_week: 1
+  price: 9.99
+  price_with_discount: 9.99
+  tuition: 9.99
+  leveling: 9.99
+
+two:
+  name: MyString
+  lessons_per_week: 1
+  price: 9.99
+  price_with_discount: 9.99
+  tuition: 9.99
+  leveling: 9.99
