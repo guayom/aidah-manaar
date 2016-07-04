@@ -115,3 +115,8 @@ es:
 
   navigation:
     courses: 'Cursos'
+
+  number:
+    currency:
+      format:
+        precision: 0

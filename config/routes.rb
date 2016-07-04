@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  get 'prices' => 'home#prices'
   get 'import' => 'home#import'
 
   # The priority is based upon order of creation: first created -> highest priority.

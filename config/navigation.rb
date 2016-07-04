@@ -41,6 +41,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.dom_class = 'nav navbar-nav'
 
     primary.item :courses, t('navigation.courses'), courses_path
+    primary.item :prices, t('navigation.prices'), prices_path
 
     # Add an item to the primary navigation. The following params apply:
     # key - a symbol which uniquely defines your navigation item in the scope of the primary_navigation

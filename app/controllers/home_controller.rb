@@ -2,6 +2,10 @@ class HomeController < ApplicationController
   def index
   end
 
+  def prices
+    @plans = DancePlan.all
+  end
+
   def import
     JSON.parse(
       Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/branches.json'))

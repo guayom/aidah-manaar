@@ -1,0 +1,35 @@
+<% first_amateur = true %>
+
+<h2>Dance Courses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Plan</th>
+      <th>Lessons per week</th>
+      <th>Price</th>
+      <th>Price with discount</th>
+      <th>Tuition</th>
+      <th>Leveling</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @plans.each do |plan| %>
+      <tr>
+        <% if 'Amateur' == plan.name %>
+          <% if first_amateur %>
+            <th rowspan="<%= DancePlan.where(name: 'Amateur').count %>">Amateur</th>
+            <% first_amateur = false %>
+          <% end %>
+        <% else %>
+          <th>Professional</th>
+        <% end %>
+        <td><%= plan.lessons_per_week || 'Unlimited' %></td>
+        <td><%= number_to_currency(plan.price) %></td>
+        <td><%= number_to_currency(plan.price_with_discount) || 'N/A' %></td>
+        <td><%= number_to_currency(plan.tuition) %></td>
+        <td><%= number_to_currency(plan.leveling) || 'Free' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
