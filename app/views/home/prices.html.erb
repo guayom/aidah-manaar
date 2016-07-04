@@ -18,11 +18,13 @@
       <tr>
         <% if 'Amateur' == plan.name %>
           <% if first_amateur %>
-            <th rowspan="<%= DancePlan.where(name: 'Amateur').count %>">Amateur</th>
+            <th rowspan="<%= DancePlan.where(name: 'Amateur').count %>">
+              <%= plan.name %>
+            </th>
             <% first_amateur = false %>
           <% end %>
         <% else %>
-          <th>Professional</th>
+          <th><%= plan.name %></th>
         <% end %>
         <td><%= plan.lessons_per_week || 'Unlimited' %></td>
         <td><%= number_to_currency(plan.price) %></td>
