@@ -2,6 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    can :export, :data
+
     can :read, Course
 
     if user.present?
