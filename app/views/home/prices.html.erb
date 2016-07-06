@@ -5,7 +5,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Plan</th>
+      <th></th>
       <th>Lessons per week</th>
       <th>Price</th>
       <th>Price with discount</th>
@@ -31,6 +31,27 @@
         <td><%= number_to_currency(plan.price_with_discount) || 'N/A' %></td>
         <td><%= number_to_currency(plan.tuition) %></td>
         <td><%= number_to_currency(plan.leveling) || 'Free' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br><br>
+
+<h2>Other Courses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Price per lesson</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% OtherPlan.all.each do |plan| %>
+      <tr>
+        <th><%= plan.name %></th>
+        <td><%= number_to_currency(plan.price_per_lesson) %></td>
       </tr>
     <% end %>
   </tbody>
