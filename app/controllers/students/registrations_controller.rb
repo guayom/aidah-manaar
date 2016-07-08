@@ -77,6 +77,6 @@ class Students::RegistrationsController < Devise::RegistrationsController
   def after_sign_in_path_for(resource)
     flash[:alert] = nil
 
-    select_schedule_path
+    root_path
   end
 end

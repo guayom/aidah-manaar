@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   devise_for :instructors
   devise_for :admins
 
+  resources :students
+
   resources :courses, only: [:index, :show]
   resources :lessons, only: [:index, :show]
 

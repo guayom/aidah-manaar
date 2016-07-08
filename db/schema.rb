@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706112509) do
+ActiveRecord::Schema.define(version: 20160706124942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -279,6 +279,15 @@ ActiveRecord::Schema.define(version: 20160706112509) do
   add_index "students", ["email"], name: "index_students_on_email", unique: true, using: :btree
   add_index "students", ["id_number"], name: "index_students_on_id_number", unique: true, using: :btree
   add_index "students", ["reset_password_token"], name: "index_students_on_reset_password_token", unique: true, using: :btree
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "student_id"
+    t.integer  "dance_plan_id"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "videos", force: :cascade do |t|
     t.datetime "created_at",        null: false

@@ -17,6 +17,10 @@ class Invoice < ActiveRecord::Base
     update!(sent: true)
   end
 
+  def sum
+    items.map(&:price).sum
+  end
+
   # RAILS_ADMIN_CONFIG
 
   rails_admin do

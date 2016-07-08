@@ -1,0 +1,53 @@
+<h2><%= current_student.full_name %></h2>
+
+<h3>Invoices</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Payed?</th>
+      <th>Date</th>
+      <th>Sum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_student.invoices.each do |invoice| %>
+      <tr class="<%= 'danger' unless invoice.payed? %>">
+        <th><%= invoice.id %></th>
+        <td>
+          <% if invoice.payed? %>
+            <i class="fa fa-check" style="font-size: 2em; margin-top: -0.2em;"></i>
+          <% end %>
+        </td>
+        <td><%= l(invoice.created_at.to_date) %></td>
+        <td><%= number_to_currency(invoice.sum) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h3>Payments</h3>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Date</th>
+      <th>Sum</th>
+      <th>Invoice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% current_student.payments.each do |payment| %>
+      <tr>
+        <th><%= payment.id %></th>
+        <td><%= l(payment.created_at.to_date) %></td>
+        <td><%= number_to_currency(payment.sum) %></td>
+        <td>
+          #<%= payment.invoice.id %>, <%= l(payment.invoice.created_at.to_date) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
