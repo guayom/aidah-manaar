@@ -6,6 +6,6 @@
 
 <hr>
 
-<%= render 'invoices' %>
+<%= render 'invoices' if current_student.invoices.any? %>
 
-<%= render 'payments' %>
+<%= render 'payments' if current_student.payments.any? %>
