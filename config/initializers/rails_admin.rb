@@ -55,6 +55,25 @@ RailsAdmin.config do |config|
     delete
     # history_show
     show_in_app
+
+    member :send_invoice do
+      link_icon 'icon-envelope'
+
+      visible do
+        [Invoice].include?(bindings[:abstract_model].model) # &&
+          # !bindings[:object].try(:sent)
+      end
+
+      controller do
+        Proc.new do
+          @object.send!
+
+          flash[:success] = "#{@model_config.label} was sent to student."
+
+          redirect_to back_or_index
+        end
+      end
+    end
   end
 
   config.model Invoice do
