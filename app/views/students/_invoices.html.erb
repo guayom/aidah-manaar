@@ -16,6 +16,17 @@
       <td>
         <% if invoice.payed? %>
           <i class="fa fa-check" style="font-size: 2em; margin-top: -0.2em;"></i>
+        <% else %>
+          <%= form_for invoice.payments.build do |f| %>
+            <%= f.hidden_field :student_id, value: current_student.id %>
+            <%= f.hidden_field :invoice_id, value: invoice.id %>
+            <%= f.hidden_field :sum, value: invoice.sum %>
+
+            <%= f.label :comment, 'Confirmation number' %>
+            <%= f.text_field :comment %>
+
+            <%= f.submit 'Add' %>
+          <% end %>
         <% end %>
       </td>
       <td><%= l(invoice.created_at.to_date) %></td>

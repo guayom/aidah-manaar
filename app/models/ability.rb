@@ -17,6 +17,8 @@ class Ability
         end
 
         can :create, CourseStudent, student_id: user.id
+
+        can :create, Payment, student_id: user.id, accepted: false
       end
     end
 

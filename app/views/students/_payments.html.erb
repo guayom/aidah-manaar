@@ -7,16 +7,24 @@
     <th>Date</th>
     <th>Sum</th>
     <th>Invoice</th>
+    <th>Status</th>
   </tr>
   </thead>
   <tbody>
   <% current_student.payments.each do |payment| %>
-    <tr>
+    <tr class="<%= 'text-muted' unless payment.accepted? %>">
       <th><%= payment.id %></th>
       <td><%= l(payment.created_at.to_date) %></td>
       <td><%= number_to_currency(payment.sum) %></td>
       <td>
         #<%= payment.invoice.id %>, <%= l(payment.invoice.created_at.to_date) %>
+      </td>
+      <td>
+        <% if payment.accepted? %>
+          Accepted.
+        <% else %>
+          Checking...
+        <% end %>
       </td>
     </tr>
   <% end %>

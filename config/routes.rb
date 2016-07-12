@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :course_students, only: [:create]
   resources :lesson_students, only: [:create]
 
+  resources :payments, only: [:create]
+
   mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
