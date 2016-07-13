@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   resources :course_students, only: [:create]
   resources :lesson_students, only: [:create]
 
+  # Mass creation of invoices.
+  post 'create_invoices' => 'invoices#mass_create'
+
   resources :payments, only: [:create]
 
   mount Ckeditor::Engine => '/ckeditor'

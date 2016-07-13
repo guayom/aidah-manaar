@@ -17,7 +17,9 @@
       <td><%= l(payment.created_at.to_date) %></td>
       <td><%= number_to_currency(payment.sum) %></td>
       <td>
-        #<%= payment.invoice.id %>, <%= l(payment.invoice.created_at.to_date) %>
+        <% if payment.invoice.present? %>
+          #<%= payment.invoice.id %>, <%= l(payment.invoice.created_at.to_date) %>
+        <% end %>
       </td>
       <td>
         <% if payment.accepted? %>
