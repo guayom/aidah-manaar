@@ -90,7 +90,7 @@ RailsAdmin.config do |config|
 
       controller do
         Proc.new do
-          @object.update_attributes!(confirmed: true)
+          @object.confirm!
 
           flash[:success] = 'Invoice is confirmed.'
 

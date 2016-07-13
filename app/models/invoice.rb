@@ -13,6 +13,10 @@ class Invoice < ActiveRecord::Base
     update!(sent: true)
   end
 
+  def confirm!
+    update_attributes!(confirmed: true)
+  end
+
   def sum
     items.map(&:price).sum
   end
