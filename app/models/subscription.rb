@@ -6,6 +6,8 @@ class Subscription < ActiveRecord::Base
   delegate :price_with_discount, to: :dance_plan
   delegate :tuition, to: :dance_plan
 
+  delegate :subscriptions, to: :student
+
   default_scope do
     order(created_at: :desc)
   end
@@ -19,7 +21,23 @@ class Subscription < ActiveRecord::Base
   end
 
   after_create do
-    student.create_invoice!(self)
+    student.invoices.where('created_at >= ? ', Date.today.beginning_of_month).each do |invoice|
+      invoice.destroy unless invoice.payed?
+    end
+
+    invoice = student.invoices.build
+    invoice.items.build(name: 'Tuition', price: tuition)
+
+    if (Date.today - Date.today.beginning_of_month).days > 10
+      invoice.items.build(name: 'Dance plan',
+                          price: price)
+    else
+      invoice.items.build(name: 'Dance plan',
+                          price: price,
+                          price_with_discount: price_with_discount)
+    end
+
+    invoice.save!
   end
 
   rails_admin do
