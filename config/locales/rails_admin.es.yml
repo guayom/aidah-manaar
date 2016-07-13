@@ -6,6 +6,8 @@ es:
         bulk_link: Eliminar los %{model_label_plural} seleccionados
         menu: Eliminación Múltiple
         title: Eliminar %{model_label_plural}
+      create_invoices:
+        menu: '[[[CREATE INVOICES]]]'
       dashboard:
         breadcrumb: Panel de control
         menu: Panel de control

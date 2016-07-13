@@ -7,7 +7,7 @@ module RailsAdmin
         end
 
         register_instance_option :breadcrumb_parent do
-          :dashboard
+          :nil
         end
       end
     end

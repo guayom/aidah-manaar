@@ -79,6 +79,49 @@ RailsAdmin.config do |config|
         end
       end
     end
+
+    member :confirm_invoice do
+      link_icon 'icon-check'
+
+      visible do
+        [Invoice].include?(bindings[:abstract_model].model) &&
+          bindings[:object].payed? && !bindings[:object].confirmed?
+      end
+
+      controller do
+        Proc.new do
+          @object.update_attributes!(confirmed: true)
+
+          flash[:success] = 'Invoice is confirmed.'
+
+          redirect_to back_or_index
+        end
+      end
+    end
+
+    member :accept_payment do
+      link_icon 'icon-check'
+      register_instance_option :pjax? do
+        false
+      end
+
+      visible do
+        [Payment].include?(bindings[:abstract_model].model) &&
+          !bindings[:object].accepted?
+      end
+
+      controller do
+        Proc.new do
+          if @object.update_attributes(accepted: true)
+            flash[:success] = 'Payment is confirmed.'
+          else
+            flash[:error] = 'Payment was not accepted. Check if it is correctly linked to invoice.'
+          end
+
+          redirect_to back_or_index
+        end
+      end
+    end
   end
 
   config.model Invoice do
@@ -86,6 +129,23 @@ RailsAdmin.config do |config|
     label_plural "Facturas"
     navigation_label 'Facturación'
     weight 1
+
+    list do
+      field :id
+      field :payed
+      field :confirmed
+      field :payments_for_invoice do
+        pretty_value do
+          path = bindings[:view].index_path(
+            model_name: 'payment',
+            f: { invoice: { rand(1000000) => { o: 'is', v: bindings[:object].id } } }
+          )
+          "<a href=#{path}>Payments</a>".html_safe
+        end
+      end
+      field :student
+      field :created_at
+    end
   end
 
   config.model Payment do

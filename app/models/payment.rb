@@ -4,6 +4,8 @@ class Payment < ActiveRecord::Base
 
   scope :accepted, -> { where(accepted: true) }
 
+  validates_presence_of :invoice, if: :accepted?
+
   after_save do
     unless invoice.payed
       total_sum = invoice.items.map(&:price).sum
