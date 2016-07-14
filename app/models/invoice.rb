@@ -19,13 +19,11 @@ class Invoice < ActiveRecord::Base
     update_attributes!(confirmed: true)
   end
 
-  def sum
-    items.map(&:price).sum
-  end
-
   def has_discount?
-    (created_at < created_at.beginning_of_month.days_since(10)) &&
-      items.find_all { |i| i.has_discount? }.any?
+    payed_with_discount? ||
+      ((created_at < created_at.beginning_of_month.days_since(10)) &&
+        (Date.today < created_at.beginning_of_month.days_since(10)) &&
+        items.find_all { |i| i.has_discount? }.any?)
   end
 
   def discount
@@ -33,10 +31,14 @@ class Invoice < ActiveRecord::Base
   end
 
   def total
-    if has_discount?
+    if payed_with_discount? || has_discount?
       items.map(&:price).sum - discount.abs
     else
       items.map(&:price).sum
     end
+  end
+
+  def total_payed
+    payments.map(&:sum).sum
   end
 end

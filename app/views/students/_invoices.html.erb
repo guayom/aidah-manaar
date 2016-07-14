@@ -20,7 +20,7 @@
           <%= form_for invoice.payments.build do |f| %>
             <%= f.hidden_field :student_id, value: current_student.id %>
             <%= f.hidden_field :invoice_id, value: invoice.id %>
-            <%= f.hidden_field :sum, value: invoice.sum %>
+            <%= f.hidden_field :sum, value: invoice.total %>
 
             <%= f.label :comment, 'Confirmation number' %>
             <%= f.text_field :comment %>
@@ -30,7 +30,7 @@
         <% end %>
       </td>
       <td><%= l(invoice.created_at.to_date) %></td>
-      <td><%= number_to_currency(invoice.sum) %></td>
+      <td><%= number_to_currency(invoice.total) %></td>
     </tr>
   <% end %>
   </tbody>

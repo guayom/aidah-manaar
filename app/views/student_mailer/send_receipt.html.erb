@@ -4,8 +4,11 @@
   <% @invoice.items.each do |item| %>
     <li><%= item.name %> — <%= number_to_currency(item.price) %></li>
   <% end %>
-  <li>
+  <% if @invoice.payed_with_discount? %>
+    <li>Discount — <%= number_to_currency(@invoice.discount) %></li>
+  <% end %>
+  <li style="list-style-type: none;">
     <hr>
   </li>
-  <li>Total — <%= number_to_currency(@invoice.items.map(&:price).sum) %></li>
+  <li>Total — <%= number_to_currency(@invoice.total_payed) %></li>
 </ul>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713134200) do
+ActiveRecord::Schema.define(version: 20160714083537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -176,13 +176,14 @@ ActiveRecord::Schema.define(version: 20160713134200) do
   add_index "invoice_items", ["invoice_id"], name: "index_invoice_items_on_invoice_id", using: :btree
 
   create_table "invoices", force: :cascade do |t|
-    t.boolean  "payed",       default: false
+    t.boolean  "payed",               default: false
     t.integer  "student_id"
     t.text     "description"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.boolean  "sent",        default: false
-    t.boolean  "confirmed",   default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.boolean  "sent",                default: false
+    t.boolean  "confirmed",           default: false
+    t.boolean  "payed_with_discount", default: false
   end
 
   create_table "lessons", force: :cascade do |t|

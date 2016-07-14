@@ -107,7 +107,7 @@ RailsAdmin.config do |config|
 
       visible do
         [Payment].include?(bindings[:abstract_model].model) &&
-          !bindings[:object].accepted?
+          !bindings[:object].try(:accepted?)
       end
 
       controller do
