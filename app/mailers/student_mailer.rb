@@ -15,4 +15,9 @@ class StudentMailer < ApplicationMailer
     @invoice = invoice
     mail(to: invoice.student.email, subject: t('helpers.student.you_have_new_invoice'))
   end
+
+  def send_receipt(invoice)
+    @invoice = invoice
+    mail(to: invoice.student.email, subject: t('helpers.student.new_receipt'))
+  end
 end

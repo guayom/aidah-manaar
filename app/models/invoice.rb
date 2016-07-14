@@ -14,6 +14,8 @@ class Invoice < ActiveRecord::Base
   end
 
   def confirm!
+    SendReceiptJob.perform_later(self)
+
     update_attributes!(confirmed: true)
   end
 
