@@ -4,6 +4,8 @@ class Payment < ActiveRecord::Base
 
   scope :accepted, -> { where(accepted: true) }
 
+  scope :pending, -> { where(accepted: false) }
+
   validates_presence_of :invoice, if: :accepted?
 
   after_save do

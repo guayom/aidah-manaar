@@ -149,12 +149,14 @@ RailsAdmin.config do |config|
   end
 
   config.model Payment do
-    label "Recibo"
-    label_plural "Recibos"
+    label 'Recibo'
+    label_plural 'Recibos'
     navigation_label 'Facturación'
     weight 2
 
     list do
+      scopes [:all, :pending]
+
       field :id
       field :accepted
       field :student
@@ -177,6 +179,8 @@ RailsAdmin.config do |config|
       exclude_fields :courses_students
     end
     list do
+      scopes [:all, :with_pending_invoices]
+
       field :first_name
       field :last_name
       field :second_last_name
