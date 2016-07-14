@@ -22,4 +22,21 @@ class Invoice < ActiveRecord::Base
   def sum
     items.map(&:price).sum
   end
+
+  def has_discount?
+    (created_at < created_at.beginning_of_month.days_since(10)) &&
+      items.find_all { |i| i.has_discount? }.any?
+  end
+
+  def discount
+    items.find_all { |i| i.has_discount? }.map { |i| i.discount }.sum
+  end
+
+  def total
+    if has_discount?
+      items.map(&:price).sum - discount.abs
+    else
+      items.map(&:price).sum
+    end
+  end
 end
