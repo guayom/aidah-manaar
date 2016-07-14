@@ -4,6 +4,8 @@ class Student < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable,
          :validatable
 
+  enum status: { active: 1, inactive: 2 }
+
   belongs_to :district
   belongs_to :branch
 
@@ -51,6 +53,14 @@ class Student < ActiveRecord::Base
       end
 
       invoice.save!
+    end
+  end
+
+  def check_status!
+    if courses.any? && invoices.where(payed: false).empty?
+      update!(status: :active)
+    else
+      update!(status: :inactive)
     end
   end
 end

@@ -168,8 +168,8 @@ RailsAdmin.config do |config|
   end
 
   config.model Student do
-    label "Estudiante"
-    label_plural "Estudiantes"
+    label 'Estudiante'
+    label_plural 'Estudiantes'
     weight 3
     navigation_label 'Administración'
     object_label_method do
@@ -181,6 +181,7 @@ RailsAdmin.config do |config|
     list do
       scopes [:all, :with_pending_invoices]
 
+      field :status
       field :first_name
       field :last_name
       field :second_last_name
