@@ -120,3 +120,4 @@ es:
     currency:
       format:
         precision: 0
+        unit: '₡'
