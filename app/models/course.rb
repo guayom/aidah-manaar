@@ -16,7 +16,7 @@ class Course < ActiveRecord::Base
 
   friendly_id :name, use: :slugged
 
-  validate :can_be_only_one_base_course
+  # validate :can_be_only_one_base_course
 
   def to_s
     name
