@@ -7,6 +7,9 @@ class HomeController < ApplicationController
   end
 
   def import
+    CourseStudent.destroy_all
+    LessonStudent.destroy_all
+
     JSON.parse(
       Net::HTTP.get(URI('http://aidah-manaar.herokuapp.com/export/branches.json'))
     ).each do |data|
