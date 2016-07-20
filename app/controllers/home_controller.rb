@@ -13,9 +13,9 @@ class HomeController < ApplicationController
       bb = Branch.find_by(id: data['id'])
       if !bb
         b = Branch.new(data)
-        b.save(validate: false)
+        b.save!(validate: false)
       else
-        bb.update(data)
+        bb.update!(data)
       end
     end
 
@@ -25,9 +25,9 @@ class HomeController < ApplicationController
       ss = Student.find_by(id: data['id'])
       if !ss
         s = Student.new(data)
-        s.save(validate: false)
+        s.save!(validate: false)
       else
-        ss.update(data)
+        ss.update!(data)
       end
     end
 
@@ -37,9 +37,9 @@ class HomeController < ApplicationController
       cc = Course.find_by(id: data['id'])
       if !cc
         c = Course.new(data)
-        c.save(validate: false)
+        c.save!(validate: false)
       else
-        cc.update(data)
+        cc.update!(data)
       end
     end
 
@@ -49,9 +49,9 @@ class HomeController < ApplicationController
       cscs = CourseStudent.find_by(id: data['id'])
       if !cscs
         cs = CourseStudent.new(data)
-        cs.save(validate: false)
+        cs.save!(validate: false)
       else
-        cscs.update(data)
+        cscs.update!(data)
       end
     end
 
@@ -61,9 +61,9 @@ class HomeController < ApplicationController
       ii = Instructor.find_by(id: data['id'])
       if !ii
         i = Instructor.new(data)
-        i.save(validate: false)
+        i.save!(validate: false)
       else
-        ii.update(data)
+        ii.update!(data)
       end
     end
 
@@ -73,9 +73,9 @@ class HomeController < ApplicationController
       ll = Lesson.find_by(id: data['id'])
       if !ll
         l = Lesson.new(data)
-        l.save(validate: false)
+        l.save!(validate: false)
       else
-        ll.update(data)
+        ll.update!(data)
       end
     end
 
@@ -85,9 +85,9 @@ class HomeController < ApplicationController
       lsls = LessonStudent.find_by(id: data['id'])
       if !lsls
         ls = LessonStudent.new(data)
-        ls.save(validate: false)
+        ls.save!(validate: false)
       else
-        lsls.update(data)
+        lsls.update!(data)
       end
     end
   end
