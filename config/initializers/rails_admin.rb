@@ -205,8 +205,8 @@ RailsAdmin.config do |config|
     edit do
       exclude_fields :children, :self_and_ancestors, :self_and_descendants
 
-      field :full_description, :bootsy
-      field :public_description, :bootsy
+      field :full_description, :ck_editor
+      field :public_description, :ck_editor
     end
   end
 
