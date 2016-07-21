@@ -9,13 +9,6 @@ class AdminAbility
       can :manage, :all
     end
 
-    # can :index, Admin
-    # can :manage, Admin, id: admin.id
-    #
-    # can :manage, Branch
-    # can :manage, Instructor
-    # can :manage, Student
-    # can :manage, Course
-    # can :manage, Lesson
+    cannot :destroy, Invoice
   end
 end
