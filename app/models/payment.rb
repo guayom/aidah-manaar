@@ -1,4 +1,7 @@
 class Payment < ActiveRecord::Base
+  enum method: { cash: 1, card: 2 }
+  enum payment_system: { visa: 1, mastercard: 2 }
+
   belongs_to :student
   belongs_to :invoice
 
@@ -6,6 +9,7 @@ class Payment < ActiveRecord::Base
 
   scope :pending, -> { where(accepted: false) }
 
+  validates_presence_of :method
   validates_presence_of :invoice, if: :accepted?
 
   after_save do
