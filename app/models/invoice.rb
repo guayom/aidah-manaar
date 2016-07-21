@@ -1,11 +1,20 @@
 class Invoice < ActiveRecord::Base
-
   belongs_to :student
 
   has_many :items, class_name: 'InvoiceItem', inverse_of: :invoice
   accepts_nested_attributes_for :items, allow_destroy: true
 
   has_many :payments
+
+  validates_presence_of :student
+
+  after_create do
+    if should_be_auto_payed
+      payments.create!(student_id: student_id, invoice_id: id, sum: total, accepted: true, method: :cash)
+
+      update_attributes!(confirmed: true)
+    end
+  end
 
   def send!
     SendInvoiceJob.perform_later(self)
