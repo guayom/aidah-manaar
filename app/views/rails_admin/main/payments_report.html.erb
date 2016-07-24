@@ -1,4 +1,4 @@
-<% current_date = Date.strptime(params[:date]) || Date.today %>
+<% current_date = params[:date].present? ? Date.strptime(params[:date]) : Date.today %>
 <% prev_date = current_date.prev_month %>
 <% next_date = current_date.next_month %>
 
