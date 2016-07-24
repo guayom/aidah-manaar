@@ -16,14 +16,14 @@ class Payment < ActiveRecord::Base
     unless invoice.payed
       payed_sum = invoice.payments.accepted.map(&:sum).sum
       if payed_sum >= invoice.total
-        invoice.update!(payed: true)
+        invoice.update!(payed: true, partial: false)
 
         if invoice.has_discount?
           invoice.update!(payed_with_discount: true)
         end
       else
         invoice.update!(partial: true)
-        NotifyPartialInvoiceJob.perform_later(self)
+        NotifyPartialInvoiceJob.perform_later(invoice)
       end
     end
   end
