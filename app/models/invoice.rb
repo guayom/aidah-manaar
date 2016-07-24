@@ -8,6 +8,10 @@ class Invoice < ActiveRecord::Base
 
   validates_presence_of :student
 
+  scope :not_confirmed, -> { where(payed: true, confirmed: false) }
+
+  scope :partial, -> { where(partial: true, payed: false) }
+
   after_create do
     if should_be_auto_payed
       payments.create!(student_id: student_id, invoice_id: id, sum: total, accepted: true, method: :cash)

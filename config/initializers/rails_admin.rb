@@ -131,6 +131,8 @@ RailsAdmin.config do |config|
     weight 1
 
     list do
+      scopes [:all, :partial, :not_confirmed]
+
       field :id
       field :payed
       field :confirmed
