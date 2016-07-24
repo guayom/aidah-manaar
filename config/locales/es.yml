@@ -83,6 +83,7 @@ es:
       new_student_added: 'Se ha matriculado un nuevo estudiante'
       new_advanced_student: 'Estudiante avanzada. Necesita programar una cita para evaluación'
       new_beginner_student: 'Es una estudiante de primer nivel. Su horario se encuentra a continuación'
+      new_partial_invoice_added: '[[[NEW PARTIAL INVOICE ADDED]]]'
     lesson:
       places_available:
         one: '¡Últimos cupos disponibles!'

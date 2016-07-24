@@ -1,0 +1,4 @@
+<h1><%= t('helpers.admin.new_partial_invoice_added') %></h1>
+
+<%= link_to "Invoice ##{@invoice.id}", rails_admin.show_path(model_name: 'invoice',
+                                                            id: @invoice.id) %>
