@@ -37,7 +37,7 @@ class Student < ActiveRecord::Base
   end
 
   def create_invoice!
-    if invoices.where('created_at >= ? ', Date.today.beginning_of_month).empty?
+    if active_subscriptions.any? && invoices.where('created_at >= ? ', Date.today.beginning_of_month).empty?
       subscription = active_subscriptions.last
 
       invoice = invoices.build
