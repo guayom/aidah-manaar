@@ -3,7 +3,7 @@ task :create_invoices => :environment do
 
   if Task.need?('create_invoices')
     Student.find_by(id: 232).create_invoice!
-    Invoice.where(student_id: 232).last.send!
+    Invoice.where(student_id: 232).last.try(:send!)
     Task.finish!('create_invoices')
   end
 
