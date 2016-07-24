@@ -41,7 +41,13 @@ class Student < ActiveRecord::Base
       subscription = active_subscriptions.last
 
       invoice = invoices.build
-      invoice.items.build(name: 'Tuition', price: subscription.tuition)
+
+      prev_invoices_for_that_course = invoices.where('created_at < ?', Date.today).find_all do |i|
+        i.course_id == courses.first.id
+      end
+      unless prev_invoices_for_that_course.any?
+        invoice.items.build(name: 'Tuition', price: subscription.tuition)
+      end
 
       if (Date.today - Date.today.beginning_of_month).days > 10
         invoice.items.build(name: 'Dance plan',
