@@ -1,7 +1,7 @@
 module RailsAdmin
   module Config
     module Actions
-      class CreateInvoices < RailsAdmin::Config::Actions::Base
+      class PaymentsReport < RailsAdmin::Config::Actions::Base
         register_instance_option :root? do
           true
         end

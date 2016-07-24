@@ -1,5 +1,5 @@
-require Rails.root.join('lib', 'rails_admin', 'create_invoices.rb')
-RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::CreateInvoices)
+require Rails.root.join('lib', 'rails_admin', 'payments_report.rb')
+RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::PaymentsReport)
 
 RailsAdmin.config do |config|
   ### Popular gems integration
@@ -59,7 +59,7 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
 
-    create_invoices
+    payments_report
 
     member :send_invoice do
       link_icon 'icon-envelope'

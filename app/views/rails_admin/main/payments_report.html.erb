@@ -1,0 +1,35 @@
+<% current_date = Date.strptime(params[:date]) || Date.today %>
+<% prev_date = current_date.prev_month %>
+<% next_date = current_date.next_month %>
+
+<% payments = Payment.where('created_at >= ?', current_date.beginning_of_month).where('created_at <= ?', current_date.end_of_month) %>
+
+<h2>Payments Report</h2>
+
+<div class="row">
+  <div class="col-sm-4">
+    <%= link_to '&larr; '.html_safe + l(prev_date, format: '%B de %Y').capitalize,
+                payments_report_path(date: prev_date) %>
+  </div>
+  <div class="col-sm-4">
+    <h3><%= l(current_date, format: '%B de %Y').capitalize %></h3>
+  </div>
+  <div class="col-sm-4">
+    <%= link_to (l(next_date, format: '%B de %Y').capitalize + ' &rarr;').html_safe,
+                payments_report_path(date: next_date) %>
+  </div>
+</div>
+
+<ul>
+  <li>Total <%= payments.size %> payments — <%= number_to_currency(payments.map(&:sum).sum) %></li>
+
+  <li>
+    In cash: <%= payments.find_all { |p| p.cash? }.size %> payments
+    — <%= number_to_currency(payments.find_all { |p| p.cash? }.map(&:sum).sum) %>
+  </li>
+
+  <li>
+    Card: <%= payments.find_all { |p| p.card? }.size %> payments
+    — <%= number_to_currency(payments.find_all { |p| p.card? }.map(&:sum).sum) %>
+  </li>
+</ul>
