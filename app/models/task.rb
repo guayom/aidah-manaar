@@ -5,6 +5,6 @@ class Task < ActiveRecord::Base
   end
 
   def self.finish!(name)
-    Task.create!(name)
+    Task.create!(name: name)
   end
 end
