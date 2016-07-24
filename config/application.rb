@@ -29,5 +29,7 @@ module AidahManaar
 
     config.autoload_paths << Rails.root.join('lib')
     config.autoload_once_paths << Rails.root.join('lib')
+
+    config.action_mailer.default_url_options = { host: 'aidah-manaar-website.herokuapp.com' }
   end
 end
