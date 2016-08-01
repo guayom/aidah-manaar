@@ -54,8 +54,8 @@ es:
     send_reset_password: 'Enviarme instrucciones para restaurar mi contraseña'
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
-    sign_up: 'Matrícula en línea'
-    sign_up_description: "Matriculate en línea para nuestros cursos"
+    sign_up: 'Pre-Matrícula en línea'
+    sign_up_description: "Reserva en línea para nuestros cursos"
 
     failure:
       admin:
@@ -98,14 +98,14 @@ es:
       selec_max_description: 'Podés seleccionar de 1 a 3 lecciones a la semana.'
       select_max_3_lessons: 'Podés seleccionar un máximo de 3 lecciones a la semana'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
-      you_are_enrolled: 'Te has matriculado en este curso'
+      you_are_enrolled: 'Has reservado tu espacio en este curso'
       edit_profile: 'Editar mi información'
     close: 'Cerrar'
     submit:
       course_student:
         create: 'Aplicar para este curso'
       student:
-#        create: 'Matricularme'
+#        create: 'Registrarme'
 #        create: 'Iniciar sesión'
         update: 'Editar mi perfil'
 
