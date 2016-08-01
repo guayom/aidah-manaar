@@ -38,6 +38,16 @@ class Subscription < ActiveRecord::Base
     end
 
     invoice.save!
+
+    if automatically_generate_first_payment
+      invoice.payments.create!(student_id: student.id,
+                               invoice_id: invoice.id,
+                               sum: invoice.total,
+                               accepted: true,
+                               method: :cash)
+
+      invoice.update_attributes!(confirmed: true)
+    end
   end
 
   rails_admin do
