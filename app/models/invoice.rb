@@ -34,8 +34,8 @@ class Invoice < ActiveRecord::Base
 
   def has_discount?
     payed_with_discount? ||
-      ((created_at < created_at.beginning_of_month.days_since(10)) &&
-        (Date.today < created_at.beginning_of_month.days_since(10)) &&
+      ((created_at <= created_at.beginning_of_month.days_since(10)) &&
+        (Date.today <= created_at.beginning_of_month.days_since(10)) &&
         items.find_all { |i| i.has_discount? }.any?)
   end
 

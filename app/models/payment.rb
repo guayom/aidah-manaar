@@ -15,6 +15,11 @@ class Payment < ActiveRecord::Base
   after_save do
     unless invoice.payed
       payed_sum = invoice.payments.accepted.map(&:sum).sum
+
+      unless self.accepted
+        payed_sum += self.sum
+      end
+
       if payed_sum >= invoice.total
         invoice.update!(payed: true, partial: false)
 
