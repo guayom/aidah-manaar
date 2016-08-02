@@ -92,7 +92,7 @@ es:
         basic: 'Me gustaría empezar desde el nivel básico.'
         advanced: 'Me gustaría que evaluén mi conocimiento y me ubiquen en el nivel más apropiado para mí.'
       already_have_an_account: ¿Ya estás matriculad@?
-      apply_for_lesson: 'Registrarme'
+      apply_for_lesson: 'Reservar'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
       select_your_schedule: 'Por favor seleccioná tu horario.'
       selec_max_description: 'Podés seleccionar de 1 a 3 lecciones a la semana.'
@@ -103,9 +103,9 @@ es:
     close: 'Cerrar'
     submit:
       course_student:
-        create: 'Aplicar para este curso'
+        create: 'Reservar cupo para este curso'
       student:
-#        create: 'Registrarme'
+#        create: 'Reservar'
 #        create: 'Iniciar sesión'
         update: 'Editar mi perfil'
 
