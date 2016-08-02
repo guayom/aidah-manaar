@@ -49,8 +49,8 @@ es:
         signed_up_and_basic_course: '¡Bienvenid@! Te has Matriculado en la Belly Dance Costa Rica, Academia de baile Aidah Manaar'
         signed_up_and_advanced_course: 'Hemos recibido tus datos. Estaremos en contacto contigo a la brevedad posible'
       thank_you:
-        title: 'Gracias por matricularte'
-        text: 'Estamos muy felices de que formés parte de nuestra academia. Recibirás un correo con la información de tu matrícula.'
+        title: 'Gracias por pre-matricularte'
+        text: 'Estamos muy felices de que formés parte de nuestra academia. Recibirás un correo con la información de tu prr-matrícula.'
     send_reset_password: 'Enviarme instrucciones para restaurar mi contraseña'
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
