@@ -1,6 +1,8 @@
 class Course < ActiveRecord::Base
   extend FriendlyId
 
+  enum kind: { dance: 1, cooking: 2 }
+
   has_closure_tree
   has_many :lessons
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy

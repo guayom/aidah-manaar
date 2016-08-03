@@ -199,6 +199,7 @@ RailsAdmin.config do |config|
     weight 4
 
     list do
+      field :kind
       field :name
       field :parent_name
       field :level
