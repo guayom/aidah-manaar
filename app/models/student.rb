@@ -12,7 +12,11 @@ class Student < ActiveRecord::Base
   has_many :subscriptions
   has_many :active_subscriptions, -> { where(finished_at: nil) }, class_name: 'Subscription'
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy
+
   has_many :courses, through: :courses_students
+  has_many :dance_courses, -> { where(kind: 1) }, class_name: 'Course',
+           through:  :courses_students, source: :course
+
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :lessons, through: :lessons_students
   has_many :invoices
@@ -42,10 +46,14 @@ class Student < ActiveRecord::Base
 
       invoice = invoices.build
 
-      prev_invoices_for_that_course = invoices.where('created_at < ?', Date.today).find_all do |i|
-        i.course_id == courses.first.id
+      if dance_courses.any?
+        prev_invoices_for_that_course = invoices.where('created_at < ?', Date.today).find_all do |i|
+          i.course_id == dance_courses.first.id
+        end
+      else
+        prev_invoices_for_that_course = []
       end
-      unless prev_invoices_for_that_course.any?
+      if prev_invoices_for_that_course.empty?
         invoice.items.build(name: 'Tuition', price: subscription.tuition)
       end
 
