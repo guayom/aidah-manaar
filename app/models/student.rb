@@ -10,7 +10,7 @@ class Student < ActiveRecord::Base
   belongs_to :branch
 
   has_many :subscriptions
-  has_many :active_subscriptions, -> { where(finished_at: nil) }, class_name: 'Subscription'
+  has_many :active_subscriptions, -> { where('finished_at IS NULL OR finished_at >= CURRENT_TIMESTAMP') }, class_name: 'Subscription'
   has_many :courses_students, class_name: 'CourseStudent', dependent: :destroy
 
   has_many :courses, through: :courses_students
