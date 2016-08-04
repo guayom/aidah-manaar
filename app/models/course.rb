@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   extend FriendlyId
 
-  enum kind: { dance: 1, cooking: 2 }
+  enum kind: { dance: 1, free: 2 }
 
   has_closure_tree
   has_many :lessons
