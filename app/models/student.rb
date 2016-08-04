@@ -46,16 +46,16 @@ class Student < ActiveRecord::Base
 
       invoice = invoices.build
 
-      if dance_courses.any?
-        prev_invoices_for_that_course = invoices.where('created_at < ?', Date.today).find_all do |i|
-          i.course_id == dance_courses.first.id
-        end
-      else
-        prev_invoices_for_that_course = []
-      end
-      if prev_invoices_for_that_course.empty?
-        invoice.items.build(name: 'Tuition', price: subscription.tuition)
-      end
+      # if dance_courses.any?
+      #   prev_invoices_for_that_course = invoices.where('created_at < ?', Date.today).find_all do |i|
+      #     i.course_id == dance_courses.first.id
+      #   end
+      # else
+      #   prev_invoices_for_that_course = []
+      # end
+      # if prev_invoices_for_that_course.empty?
+      #   invoice.items.build(name: 'Tuition', price: subscription.tuition)
+      # end
 
       if (Date.today - Date.today.beginning_of_month).days > 10
         invoice.items.build(name: 'Dance plan',
