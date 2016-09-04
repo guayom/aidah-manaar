@@ -18,3 +18,9 @@
 
 public/ckeditor_assets/**/*
 .idea/workspace.xml
+
+app/assets/.DS_Store
+
+app/assets/images/.DS_Store
+
+config/.DS_Store
