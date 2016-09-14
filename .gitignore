@@ -19,3 +19,9 @@
 workspace.xml
 
 public/ckeditor_assets/**/*
+
+app/assets/.DS_Store
+
+app/assets/images/.DS_Store
+
+config/.DS_Store
