@@ -1,3 +1,4 @@
+desc 'Create monthly invoices for all students with active subscriptions and send them by email.'
 task create_invoices: :environment do
   puts 'Creating monthly invoices...'
 

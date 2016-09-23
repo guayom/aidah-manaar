@@ -1,3 +1,5 @@
+desc 'Import new students from promo (branch register) site.'
+
 task import: :environment do
   puts 'Importing new students from Register site...'
 
