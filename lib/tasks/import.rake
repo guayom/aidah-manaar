@@ -1,4 +1,4 @@
-task :import => :environment do
+task import: :environment do
   puts 'Importing new students from Register site...'
 
   JSON.parse(

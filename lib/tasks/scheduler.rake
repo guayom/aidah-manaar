@@ -1,9 +1,13 @@
-task :create_invoices => :environment do
+task create_invoices: :environment do
   puts 'Creating monthly invoices...'
 
   if Task.need?('create_invoices')
-    Student.find_by(id: 232).create_invoice!
-    Invoice.where(student_id: 232).last.try(:send!)
+    Student.all.each do |student|
+      invoice = student.create_invoice!
+      if invoice.present?
+        invoice.send!
+      end
+    end
     Task.finish!('create_invoices')
   end
 

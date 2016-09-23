@@ -67,6 +67,8 @@ class Student < ActiveRecord::Base
       end
 
       invoice.save!
+
+      invoice
     end
   end
 
