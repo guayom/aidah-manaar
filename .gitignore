@@ -25,3 +25,6 @@ app/assets/.DS_Store
 app/assets/images/.DS_Store
 
 config/.DS_Store
+
+# Ignore application configuration
+/config/application.yml
