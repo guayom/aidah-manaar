@@ -1,5 +1,5 @@
 
-/* 
+/*
    File: pricing.css
     Author     : Design_mylife
 */
@@ -485,7 +485,7 @@
     transform: translateY(-50%);
     height: 20px;
     width: 20px;
-    background: url(../images/cd-icon-small-arrow.svg);
+    background: url(asset-path('assets/images/cd-icon-small-arrow.svg'));
 }
 @media only screen and (min-width: 768px) {
     .cd-pricing-footer {
