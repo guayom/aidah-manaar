@@ -28,14 +28,14 @@ $(document).ready(function () {
  /*==========================*/
 
 
- // $(document).ready(function() {
- //
- //      $('.js-activated').dropdownHover({
- //          instantlyCloseOthers: false,
- //          delay: 0
- //      }).dropdown();
- //
- //  });
+ $(document).ready(function() {
+
+      $('.js-activated').dropdownHover({
+          instantlyCloseOthers: false,
+          delay: 0
+      }).dropdown();
+
+  });
 
 
 /* -------------------
