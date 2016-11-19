@@ -14,9 +14,9 @@
 //= require jquery_ujs
 //= require jquery.maskedinput
 //= require jquery-ui
-//= jquery-migrate.min
-//= moderniz.min
-//= jquery.easing.1.3
+//= require jquery-migrate.min
+//= require modernizr.min
+//= require jquery.easing.1.3
 
 //= require bootstrap/affix
 //= require bootstrap/alert
@@ -35,7 +35,6 @@
 //= require waypoints.min
 //= require jquery.sticky
 //= require wow.min
-//= require template
 //= require contact-form
 
 //= require jquery.themepunch.enablelog.js
@@ -56,6 +55,8 @@
 //= require masterslider
 //= require masterslider-custom
 //= require pace.min
+
+//= require template
 
 $(function() {
   $('form').submit(function() {
