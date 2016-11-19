@@ -261,94 +261,94 @@ website:   	http://www.themepunch.com
 			padding-top: 1px;
 			background-color:#fff;
 					}
-					
-					
+
+
 .tp-caption.modern_medium_fat{
-			position: absolute; 
-			color: #000; 
-			text-shadow: none; 
-			font-weight: 800; 
-			font-size: 24px; 
-			line-height: 20px; 
-			font-family: 'Ubuntu', sans-serif; 
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			white-space:nowrap;		
+			position: absolute;
+			color: #000;
+			text-shadow: none;
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 20px;
+			font-family: 'Ubuntu', sans-serif;
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			white-space:nowrap;
 		}
 .tp-caption.modern_medium_fat_white{
-			position: absolute; 
-			color: #fff; 
-			text-shadow: none; 
-			font-weight: 800; 
-			font-size: 24px; 
-			line-height: 20px; 
-			font-family: 'Ubuntu', sans-serif; 
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			white-space:nowrap;		
+			position: absolute;
+			color: #fff;
+			text-shadow: none;
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 20px;
+			font-family: 'Ubuntu', sans-serif;
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			white-space:nowrap;
 		}
 .tp-caption.modern_medium_light{
-			position: absolute; 
-			color: #000; 
-			text-shadow: none; 
-			font-weight: 300; 
-			font-size: 24px; 
-			line-height: 20px; 
-			font-family: 'Ubuntu', sans-serif; 
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			white-space:nowrap;		
+			position: absolute;
+			color: #000;
+			text-shadow: none;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 20px;
+			font-family: 'Ubuntu', sans-serif;
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			white-space:nowrap;
 		}
 .tp-caption.modern_big_bluebg{
-			position: absolute; 
-			color: #fff; 
-			text-shadow: none; 
-			font-weight: 800; 
-			font-size: 30px; 
-			line-height: 36px; 
-			font-family: 'Ubuntu', sans-serif; 
-			padding: 3px 10px; 
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			background-color:#4e5b6c;	
-			letter-spacing: 0;										
+			position: absolute;
+			color: #fff;
+			text-shadow: none;
+			font-weight: 800;
+			font-size: 30px;
+			line-height: 36px;
+			font-family: 'Ubuntu', sans-serif;
+			padding: 3px 10px;
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			background-color:#4e5b6c;
+			letter-spacing: 0;
 		}
 .tp-caption.modern_big_redbg{
-			position: absolute; 
-			color: #fff; 
-			text-shadow: none; 
-			font-weight: 300; 
-			font-size: 30px; 
-			line-height: 36px; 
-			font-family: 'Ubuntu', sans-serif; 
-			padding: 3px 10px; 
+			position: absolute;
+			color: #fff;
+			text-shadow: none;
+			font-weight: 300;
+			font-size: 30px;
+			line-height: 36px;
+			font-family: 'Ubuntu', sans-serif;
+			padding: 3px 10px;
   			padding-top: 1px;
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			background-color:#de543e;	
-			letter-spacing: 0;										
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			background-color:#de543e;
+			letter-spacing: 0;
 		}
 .tp-caption.modern_small_text_dark{
-			position: absolute; 
-			color: #555; 
-			text-shadow: none; 
-			font-size: 14px; 
-			line-height: 22px; 
-			font-family: Arial; 
-			margin: 0px; 
-			border-width: 0px; 
-			border-style: none; 
-			white-space:nowrap;		
+			position: absolute;
+			color: #555;
+			text-shadow: none;
+			font-size: 14px;
+			line-height: 22px;
+			font-family: Arial;
+			margin: 0px;
+			border-width: 0px;
+			border-style: none;
+			white-space:nowrap;
 		}
 
-					
-					
-					
+
+
+
 
 .tp-caption.boxshadow{
 		-moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -735,7 +735,7 @@ website:   	http://www.themepunch.com
 /************************************
 		-	TP BANNER TIMER		-
 *************************************/
-.tp-bannertimer								{	width:100%; height:10px; background:url(../assets/timer.png);position:absolute; z-index:200;top:0px;}
+.tp-bannertimer								{	width:100%; height:10px; background:url(asset-path('assets/images/timer.png'));position:absolute; z-index:200;top:0px;}
 .tp-bannertimer.tp-bottom					{	bottom:0px;height:5px; top:auto;}
 
 
@@ -811,4 +811,3 @@ website:   	http://www.themepunch.com
 .tp-3d				{	-webkit-transform-style: preserve-3d;
 						 -webkit-transform-origin: 50% 50%;
 					}
-
