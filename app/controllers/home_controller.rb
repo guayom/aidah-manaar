@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @slides = Slide.all
   end
 
   def prices
