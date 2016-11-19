@@ -23,21 +23,6 @@ $(document).ready(function () {
     });
 });
 
-/*=========================*/
- /*========on hover dropdown navigation====*/
- /*==========================*/
-
-
- $(document).ready(function() {
-
-      $('.js-activated').dropdownHover({
-          instantlyCloseOthers: false,
-          delay: 0
-      }).dropdown();
-
-  });
-
-
 /* -------------------
  Parallax Sections
  ---------------------*/
@@ -137,19 +122,6 @@ $(document).ready(function () {
     $(".sticky-nav").sticky({topSpacing: 0});
 });
 
-
-
-//on hover dropdown navigation
-// $(document).ready(function () {
-//
-//     $('.js-activated').dropdownHover({
-//         instantlyCloseOthers: false,
-//         delay: 0
-//     }).dropdown();
-//
-// });
-
-
 //wow js
 jQuery(document).ready(function () {
     wow = new WOW(
@@ -168,19 +140,6 @@ jQuery(document).ready(function () {
 
     $("[data-toggle=tooltip]").tooltip();
 });
-
-
-//mailchimp
-// $('.form-subscribe input[type="text"], .form-subscribe input[type="email"]').live('focus keypress', function() {
-// 	var $email = $(this);
-//
-// 	if ($email.hasClass('error')) {
-// 		$email.val('').removeClass('error');
-// 	}
-// 	if ($email.hasClass('success')) {
-// 		$email.val('').removeClass('success');
-// 	}
-// });
 
 	// Subscribe form when submit to database
 	$('.form-subscribe').submit(function() {
@@ -217,3 +176,39 @@ jQuery(document).ready(function () {
 
 		return false;
 	});
+
+/*=========================*/
+/*========on hover dropdown navigation====*/
+/*==========================*/
+
+
+ $(document).ready(function() {
+
+    $('.js-activated').dropdownHover({
+        instantlyCloseOthers: false,
+        delay: 0
+    }).dropdown();
+
+});
+
+//on hover dropdown navigation
+// $(document).ready(function () {
+//
+//     $('.js-activated').dropdownHover({
+//         instantlyCloseOthers: false,
+//         delay: 0
+//     }).dropdown();
+//
+// });
+
+//mailchimp
+// $('.form-subscribe input[type="text"], .form-subscribe input[type="email"]').live('focus keypress', function() {
+// 	var $email = $(this);
+//
+// 	if ($email.hasClass('error')) {
+// 		$email.val('').removeClass('error');
+// 	}
+// 	if ($email.hasClass('success')) {
+// 		$email.val('').removeClass('success');
+// 	}
+// });
