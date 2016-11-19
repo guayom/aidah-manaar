@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.maskedinput
+//= require jquery-ui
+//= jquery-migrate.min
+//= moderniz.min
+//= jquery.easing.1.3
 
 //= require bootstrap/affix
 //= require bootstrap/alert
@@ -24,32 +29,31 @@
 //= require bootstrap-select
 //= bootstrap-hover-dropdown.min
 
-//= require jquery.maskedinput
-//= require jquery-ui
-//= jquery.magnific-popup.min
-//= jquery.particleground
-//= jquery.sticky
-//= jquery.imagesloaded.min
-//= jquery-migrate-1.2.1.min
-//= jquery.backstretch.min
-//= jquery.easing.1.3
-//= jquery-migrate.min
-//= jquery.flexslider-min
+//= require jquery.flexslider-min
+//= require parallax.min
+//= require tweetie.min
+//= require waypoints.min
+//= require jquery.sticky
+//= require wow.min
+//= require template
+//= require contact-form
+//= require jquery.themepunch.tools.min
+//= require jquery.themepunch.revolution.min
 
-//= contact-form
-//= pricing
+//= require revolution-custom
+//= require jquery.cubeportfolio.min
+//= require cube-portfolio
+//= require pricing
 
-//= template
+// require jquery.magnific-popup.min
+// require jquery.particleground
 
-//= cube-portfolio
-//= masterslider-custom
-//= moderniz.min
-//= pace.min
-//= parallax.min
-//= tweetie.min
-//= waypoints.min
-//= wow.min
-//= revolution-custom
+// require jquery.imagesloaded.min
+// require jquery.backstretch.min
+
+//= require masterslider
+//= require masterslider-custom
+//= require pace.min
 
 $(function() {
   $('form').submit(function() {
