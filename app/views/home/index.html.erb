@@ -1,1 +1,49 @@
+<% content_for :banner do %>
+  <%= render 'application/banner' %>
+<% end %>
+
+<%= render 'application/navigation' %>
+<%= render 'application/about' %>
+<%= render 'application/fun_facts' %>
+<div class="quote parallax-1">
+    <div class="container text-center">
+        <div class="col-sm-8 col-sm-offset-2 wow animated fadeIn" data-wow-delay=".2s">
+            <p>
+                " Websites promote you 24/7: No employee will do that. "
+            </p>
+            <h5>Paul Cookson</h5>
+        </div>
+    </div>
+</div><!--quote section end-->
+<div class="gray-cta">
+    <div class="container text-center scroll-to">
+        <h2>are you ready to start a conversation?</h2>
+        <a href="#contact" class="btn btn-lg btn-theme-bg">Get in touch</a>
+    </div>
+</div><!--gray cta-->
+<%= render 'application/team' %>
+<%= render 'application/testimonials' %>
 <%= render 'application/services' %>
+<%= render 'application/twitter' %>
+<%= render 'application/pricing' %>
+<div class="gray-cta">
+    <div class="container text-center scroll-to">
+        <h2>Awesome one page parallax</h2>
+        <a href="#contact" class="btn btn-lg btn-dark-bg">Get it now</a>
+    </div>
+</div><!--gray cta-->
+<%= render 'application/portfolio' %>
+<%= render 'application/subscribe' %>
+<div class="call-to-action cta-1 parallax-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center wow animated fadeInDown" data-wow-delay=".1s">
+                <h2>We are passionate about design</h2>
+                <a href="index.html" class="btn btn-white btn-lg wow animated fadeInDown" data-wow-delay=".2s">
+                    <span> Purchase Bavely</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div><!--call to action-->
+<%= render 'application/contact' %>
