@@ -37,10 +37,12 @@
 //= require wow.min
 //= require template
 //= require contact-form
-//= require jquery.themepunch.tools.min
-//= require jquery.themepunch.revolution.min
 
+//= require jquery.themepunch.enablelog.js
+//= require jquery.themepunch.tools.min.js
+//= require jquery.themepunch.revolution.min
 //= require revolution-custom
+
 //= require jquery.cubeportfolio.min
 //= require cube-portfolio
 //= require pricing
