@@ -7,8 +7,8 @@ $verde: #6ca650;
 //some variables for bavely theme, you can create your own easily.
 $body-bg:#fff;
 $base-line-height:24px;
-$skincolor: $morado;//Theme default color code, paste your own code here
-$text-color: $verde;
+$skincolor: $salmon;//Theme default color code, paste your own code here
+$text-color: $morado;
 $lightcolor:#fff; //white color and background
 $graycolor:#777; //gray color for p tags
 $darkcolor:#000; //dark color for heading
@@ -19,15 +19,15 @@ $alert-color:red; //alert color
 
 //navbar
 $bgDefault      : #fff;
-$colDefault     : #474747;
+$colDefault     : $morado;
 $colHighlight   : #FFD600;
 $dropDown       : false;
 
 //backgrounds
 
-$quote-bg: url(../../assets/images/bg-2.jpg) no-repeat center center;
-$testimonials-bg:url(../../assets/images/blog-2.jpg) no-repeat center center;
-$twitter-bg:url(../../assets/images/blog-1.jpg) no-repeat center center;
-$cta-1-bg:url(../../assets/images/bg-3.jpg) no-repeat center center;
+$quote-bg: url(/assets/images/bg-2.jpg) no-repeat center center;
+$testimonials-bg:url(/assets/images/blog-2.jpg) no-repeat center center;
+$twitter-bg:url(/assets/images/blog-1.jpg) no-repeat center center;
+$cta-1-bg:url(/assets/images/bg-3.jpg) no-repeat center center;
 $contact-bg:#fff;
-$parallax-bg:url(../../assets/images/bg-3.jpg) fixed;
+$parallax-bg:url(/assets/images/bg-3.jpg) fixed;
