@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161120170747) do
+ActiveRecord::Schema.define(version: 20161120174815) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -162,6 +162,8 @@ ActiveRecord::Schema.define(version: 20161120170747) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "short_description"
+    t.string   "specialty"
   end
 
   add_index "instructors", ["branch_id"], name: "index_instructors_on_branch_id", using: :btree

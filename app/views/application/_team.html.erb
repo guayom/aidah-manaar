@@ -17,9 +17,9 @@
 
                             <div class="ms-info text-center">
                                 <h3><%= instructor.complete_name %></h3>
-                                <h4>Company ceo</h4>
-                                <p class="email">E-Mail: <a href="#"><%= instructor.email %></a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                <%= "<h4>#{instructor.specialty}</h4>".html_safe unless instructor.specialty.nil? %>
+                                <p class="email">E-Mail: <a href="mailto:<%= instructor.email %>"><%= instructor.email %></a></p>
+                                <%= "<p>#{instructor.short_description}</p>".html_safe unless instructor.short_description.nil? %>
                             </div>
                         </div>
                         <% end %>
