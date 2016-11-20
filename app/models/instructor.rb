@@ -16,4 +16,8 @@ class Instructor < ActiveRecord::Base
   def address
     "#{district.canton.province}, #{district.canton}, #{district}"
   end
+
+  def complete_name
+    "#{self.first_name} #{self.last_name}"
+  end
 end

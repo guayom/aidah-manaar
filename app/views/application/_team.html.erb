@@ -11,118 +11,18 @@
                 <div class="ms-staff-carousel">
                     <!-- masterslider -->
                     <div class="master-slider" id="teamslider">
+                      <% @instructors.each do |instructor| %>
                         <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-1.jpg" alt="lorem ipsum dolor sit"/>
+                            <img src="assets/master-slider/style/blank.gif" data-src="<%= instructor.avatar.url(:medium) %>" alt="<%= instructor.complete_name %>"/>
 
                             <div class="ms-info text-center">
-                                <h3>Nikita</h3>
+                                <h3><%= instructor.complete_name %></h3>
                                 <h4>Company ceo</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
+                                <p class="email">E-Mail: <a href="#"><%= instructor.email %></a></p>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
                             </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-2.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>John</h3>
-                                <h4>Web Developer</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-3.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>Maria</h3>
-                                <h4>Director</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-4.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>Adam</h3>
-                                <h4>Project Manager</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-1.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>Juliana</h3>
-                                <h4>CREATIVE DESIGNER</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-2.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>John</h3>
-                                <h4>CREATIVE DESIGNER</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
-                        <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="assets/images/team-3.jpg" alt="lorem ipsum dolor sit"/>
-
-                            <div class="ms-info text-center">
-                                <h3>Maria</h3>
-                                <h4>CREATIVE DESIGNER</h4>
-                                <p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
-                                <ul class="ms-socials list-inline">
-                                    <li class="ms-ico-fb"><a href="#"><i class="ion-social-facebook"></i></a></li>
-                                    <li class="ico-tw"><a href="#"><i class="ion-social-twitter"></i></a></li>
-                                    <li class="ico-gp"><a href="#"><i class="ion-social-youtube"></i></a></li>
-                                    <li class="ico-yt"><a href="#"><i class="ion-social-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div><!--slide item-->
+                        </div>
+                        <% end %>
                     </div>
                     <!-- end of masterslider -->
                     <div class="ms-staff-info" id="staff-info"> </div>
