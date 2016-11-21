@@ -2,41 +2,25 @@
 
     <div class="container">
         <div class="text-center wow animated fadeInDown" data-wow-delay=".1s">
-            <h2 class="center-title"> <span class="colored-text">Happy </span> Clients</h2>
+            <h2 class="center-title"> <span class="colored-text">¿Qué piensan nuestras </span> alumnas?</h2>
             <span class="center-border-line"></span>
-            <p class="sub-text">Over 8000 extremely satisfied clients!</p>
+            <p class="sub-text">Ya tenemos más de 200 alumnas </p>
         </div>
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="flexslider testi-slider wow animated fadeInUp" data-wow-delay=".2s">
                     <ul class="slides">
+                      <% @testimonials.each do |testimonial| %>
                         <li>
                             <div class="testi-slider-item">
                                 <p>
-                                    Pellentesquemattis arcu malesuada in. Donec urna sem, rutrum sit amet pellentesque vel, suscipit at metus.
+                                    <%= testimonial.quote %>
                                 </p>
-                                <img src="assets/images/team-1.jpg" alt="">
-                                <h6>John Doe - <span class="colored-text">Assan Inc.</span></h6>
+                                <%= image_tag testimonial.avatar.url(:thumb), alt: testimonial.author %>
+                                <h6><%= testimonial.author %> - <span class="colored-text"><%= testimonial.job_title %></span></h6>
                             </div>
                         </li><!--Single slide li-->
-                        <li>
-                            <div class="testi-slider-item">
-                                <p>
-                                    Pellentesquemattis arcu malesuada in. Donec urna sem, rutrum sit amet pellentesque vel, suscipit at metus.
-                                </p>
-                                <img src="assets/images/team-2.jpg" alt="">
-                                <h6>John Doe - <span class="colored-text">Assan Inc.</span></h6>
-                            </div>
-                        </li><!--Single slide li-->
-                        <li>
-                            <div class="testi-slider-item">
-                                <p>
-                                    Pellentesquemattis arcu malesuada in. Donec urna sem, rutrum sit amet pellentesque vel, suscipit at metus.
-                                </p>
-                                <img src="assets/images/team-3.jpg" alt="">
-                                <h6>John Doe - <span class="colored-text">Assan Inc.</span></h6>
-                            </div>
-                        </li><!--Single slide li-->
+                      <% end %>
                     </ul>
                 </div>
             </div>
