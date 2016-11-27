@@ -1,10 +1,3 @@
-
-/* 
-    Created on : 10 Apr, 2015, 1:08:57 PM
-    Author     : Design_mylife
-    Project    : Bavely - Classy One page Theme
-*/
-
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,700,600,500,300);
 @import "_mixins";
 @import "_variables";
@@ -165,7 +158,7 @@ iframe {
     @include box-shadow (0px 1px 5px rgba(0, 0, 0, 0.15));
     /*  border:0px;*/
     margin:0px;
-    padding:8px 0;   
+    padding:8px 0;
     .navbar-text {
         color: $colDefault; }
     .navbar-nav {
@@ -252,7 +245,7 @@ iframe {
     @include border-radius(2px);
     font-family: $primary-font;
     &:focus, &:hover{
-        outline: 0; 
+        outline: 0;
     }
 }
 .btn-lg span{
@@ -297,7 +290,7 @@ iframe {
         }
     }
     &:hover, &:focus{
-        border-color: transparent; 
+        border-color: transparent;
     }
 }
 button{
@@ -319,41 +312,41 @@ button{
         }
     }
     &:hover, &:focus{
-        border-color: transparent; 
+        border-color: transparent;
     }
 }
 
 //theme border button
 .btn-theme-border{
     color:$skincolor;
-    border: 1px solid $skincolor;    
+    border: 1px solid $skincolor;
     &:hover, &:focus{
-        border-color: $skincolor; 
+        border-color: $skincolor;
         background-color: $skincolor;
         color:$lightcolor;
-    } 
+    }
 }
 
 //dark border button
 .btn-dark-border{
     color:$darkcolor;
-    border: 1px solid $darkcolor;    
+    border: 1px solid $darkcolor;
     &:hover, &:focus{
-        border-color: $darkcolor; 
+        border-color: $darkcolor;
         background-color: $darkcolor;
         color:$lightcolor;
-    } 
+    }
 }
 //light border button
 .btn-light-border{
     color:$lightcolor;
     background-color: transparent;
-    border: 1px solid $lightcolor;    
+    border: 1px solid $lightcolor;
     &:hover, &:focus{
-        border-color: $lightcolor; 
+        border-color: $lightcolor;
         background-color: $lightcolor;
         color:$skincolor;
-    } 
+    }
 }
 //theme background button
 .btn-theme-bg{
@@ -364,30 +357,30 @@ button{
         background-color: $skincolor;
         color:#fff;
         border-color: $skincolor;
-    } 
+    }
 }
 
 //dark background button
 .btn-dark-bg{
     color:$lightcolor;
-    background-color: $darkcolor;    
+    background-color: $darkcolor;
     &:hover, &:focus{
         background-color: $skincolor;
         color:$lightcolor;
-    } 
+    }
 }
 //light background button
 .btn-white-bg{
     color:$darkcolor;
-    background-color: $lightcolor;    
+    background-color: $lightcolor;
     &:hover, &:focus{
         background-color: $skincolor;
         color:$lightcolor;
-    } 
+    }
 }
 /***********
 
-SLIDER REVOLUTION 
+SLIDER REVOLUTION
 
 **************/
 
@@ -425,7 +418,7 @@ SLIDER REVOLUTION
         display: block;
         font-size: 25px;
 
-    }    
+    }
 }
 @media(max-width:568px){
     .slider-arrow-down a{
@@ -434,11 +427,11 @@ SLIDER REVOLUTION
             border: 0px !important;
             background-color: transparent !important;
         }
-    }   
+    }
 }
 /********
 
-services icons 
+services icons
 
 ********/
 
@@ -517,7 +510,7 @@ FUN FACTS
 }
 /************
 
-TEAM 
+TEAM
 
 *************/
 .team{
@@ -571,7 +564,7 @@ TEAM
 }
 /*********
 
-SERVICES SECTION 
+SERVICES SECTION
 
 ********/
 .services-box{
@@ -621,7 +614,7 @@ SERVICES SECTION
 
 /**************
 
-TESTIMONIALS 
+TESTIMONIALS
 
 *****************/
 
@@ -724,7 +717,7 @@ PRICING TABLES
 
 ***********************/
 .pricing-section{
-    background-color: #fff; 
+    background-color: #fff;
 }
 .pricing-table {
     background: #fff;
@@ -909,7 +902,7 @@ ul.filter{
 /**************cta*************/
 .call-to-action{
     padding: 80px 0;
-    
+
     h2{
         font-family: $primary-font;
         font-weight: 600;
@@ -1065,7 +1058,7 @@ body.gray-bg{
 }
 .comments{
     h4{
-        margin-bottom: 40px;  
+        margin-bottom: 40px;
     }
     .comment-box{
         margin: 30px 0;
@@ -1123,7 +1116,7 @@ body.gray-bg{
             right:10px;
             top: 11px;
             color:$graycolor;
-            font-size: 20px;   
+            font-size: 20px;
             &:hover, &:focus{
                 outline: 0;
                 color:$skincolor;
@@ -1287,7 +1280,7 @@ body.gray-bg{
 .footer{
     padding: 70px 0;
     background-color: #f0f0f0;
- 
+
     p{
         margin: 0px;
         color:$graycolor;
@@ -1323,7 +1316,7 @@ body.gray-bg{
             i{
                 display: block;
             }
-           
+
         }
     }
 }
@@ -1477,12 +1470,12 @@ HOME V2 - PARALLAX BACKGROUND WITH FLEX TEXT SLIDER
         @include box-shadow (0px);
         &:hover{
             background-color: #fff;
-            background:#fff;   
+            background:#fff;
         }
     }
     .flex-control-paging li a.flex-active{
         background-color: #fff;
-        background:#fff;  
+        background:#fff;
     }
 }
 @media(max-width:736px){
@@ -1665,7 +1658,7 @@ LANDING PAGE index.html
 }
 .demo-box img{
     padding: 5px;
-    border:1px solid $graycolor;      
+    border:1px solid $graycolor;
 }
 .demo-box a{
     margin: 30px 0;
@@ -1731,7 +1724,7 @@ LANDING PAGE index.html
     &:hover, &:focus{
       border-color: $skincolor;
       background-color:  $skincolor;
-    color:#fff;  
+    color:#fff;
     }
 }
 /*********

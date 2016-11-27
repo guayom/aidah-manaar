@@ -1,5 +1,4 @@
 /* 
- * Bavely v1.2
  * Design_mylife
  */
 
@@ -25,9 +24,9 @@
 		  e.preventDefault();
 		  $(this).tab('show');
 		});
-                
-                
-//team carousel 2 in parallax demo  
+
+
+//team carousel 2 in parallax demo
 
 var slider = new MasterSlider();
 		slider.setup('teamslider-parallaxdemo' , {
@@ -48,8 +47,8 @@ var slider = new MasterSlider();
 		  e.preventDefault();
 		  $(this).tab('show');
 		});
-                
-                
+
+
 //team carousel 3 in video slider demo
 
 	var slider = new MasterSlider();

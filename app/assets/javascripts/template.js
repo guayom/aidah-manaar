@@ -1,10 +1,3 @@
-/*
- * Bavely v1.2
- * Design_mylife
- */
-
-
-
 /**smooth scroll on anchor tag****/
 $(document).ready(function () {
     $(function () {

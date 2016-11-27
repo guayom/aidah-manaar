@@ -1,15 +1,10 @@
-/* 
- * bavely 1.1.1
- * Pricing js file
- */
-
 jQuery(document).ready(function($){
 	//hide the subtle gradient layer (.cd-pricing-list > li::after) when pricing table has been scrolled to the end (mobile version only)
 	checkScrolling($('.cd-pricing-body'));
 	$(window).on('resize', function(){
 		window.requestAnimationFrame(function(){checkScrolling($('.cd-pricing-body'))});
 	});
-	$('.cd-pricing-body').on('scroll', function(){ 
+	$('.cd-pricing-body').on('scroll', function(){
 		var selected = $(this);
 		window.requestAnimationFrame(function(){checkScrolling(selected)});
 	});
@@ -53,14 +48,14 @@ jQuery(document).ready(function($){
 				//give higher z-index to the pricing table items selected by the radio input
 				show_selected_items(table_elements[selected_filter]);
 
-				//rotate each cd-pricing-wrapper 
+				//rotate each cd-pricing-wrapper
 				//at the end of the animation hide the not-selected pricing tables and rotate back the .cd-pricing-wrapper
-				
+
 				if( !Modernizr.cssanimations ) {
 					hide_not_selected_items(table_elements, selected_filter);
 					pricing_table_wrapper.removeClass('is-switched');
 				} else {
-					pricing_table_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {		
+					pricing_table_wrapper.addClass('is-switched').eq(0).one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function() {
 						hide_not_selected_items(table_elements, selected_filter);
 						pricing_table_wrapper.removeClass('is-switched');
 						//change rotation direction if .cd-pricing-list has the .cd-bounce-invert class
@@ -76,7 +71,7 @@ jQuery(document).ready(function($){
 
 	function hide_not_selected_items(table_containers, filter) {
 		$.each(table_containers, function(key, value){
-	  		if ( key != filter ) {	
+	  		if ( key != filter ) {
 				$(this).removeClass('is-visible is-selected').addClass('is-hidden');
 
 			} else {
