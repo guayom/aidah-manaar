@@ -1,3 +1,7 @@
+//My Fonts
+$niconne: 'Niconne', cursive;
+$poppins: 'Poppins', sans-serif;
+
 //My colors
 $salmon: #c8403c;
 $morado: #5d2e88;
@@ -11,7 +15,8 @@ $text-color: $morado;
 $lightcolor:#fff; //white color and background
 $graycolor:#777; //gray color for p tags
 $darkcolor:#000; //dark color for heading
-$primary-font:  'Poppins', sans-serif; //default font family
+$primary-font:  "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; //default font family
+$title-font: $niconne;
 $base-font-size:13px; //default basic font size
 $alert-color:red; //alert color
 
