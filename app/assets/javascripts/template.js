@@ -96,14 +96,14 @@ $(document).ready(function () {
 
 
 //  TWEETIE -  TWITTER FEED PLUGIN THAT WORKS WITH NEW Twitter 1.1 API
-jQuery(document).ready(function () {
-    $('.tweet').twittie({
-        apiPath: 'assets/twit-api/tweet.php',
-        dateFormat: '%b. %d, %Y',
-        template: '{{tweet}} <div class="date">{{date}}</div> <a href="{{url}}"{{screen_name}}',
-        count: 1
-    });
-});
+// jQuery(document).ready(function () {
+//     $('.tweet').twittie({
+//         apiPath: 'assets/twit-api/tweet.php',
+//         dateFormat: '%b. %d, %Y',
+//         template: '{{tweet}} <div class="date">{{date}}</div> <a href="{{url}}"{{screen_name}}',
+//         count: 1
+//     });
+// });
 
 
 
@@ -128,11 +128,11 @@ jQuery(document).ready(function () {
 });
 
 //tooltip and popovers
-jQuery(document).ready(function () {
-    $("[data-toggle=popover]").popover();
-
-    $("[data-toggle=tooltip]").tooltip();
-});
+// jQuery(document).ready(function () {
+//     $("[data-toggle=popover]").popover();
+//
+//     $("[data-toggle=tooltip]").tooltip();
+// });
 
 	// Subscribe form when submit to database
 	$('.form-subscribe').submit(function() {
@@ -185,14 +185,14 @@ jQuery(document).ready(function () {
 });
 
 //on hover dropdown navigation
-// $(document).ready(function () {
-//
-//     $('.js-activated').dropdownHover({
-//         instantlyCloseOthers: false,
-//         delay: 0
-//     }).dropdown();
-//
-// });
+$(document).ready(function () {
+
+    $('.js-activated').dropdownHover({
+        instantlyCloseOthers: false,
+        delay: 0
+    }).dropdown();
+
+});
 
 //mailchimp
 // $('.form-subscribe input[type="text"], .form-subscribe input[type="email"]').live('focus keypress', function() {

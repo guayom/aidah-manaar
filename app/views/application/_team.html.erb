@@ -13,7 +13,7 @@
                     <div class="master-slider" id="teamslider">
                       <% @instructors.each do |instructor| %>
                         <div class="ms-slide">
-                            <img src="assets/master-slider/style/blank.gif" data-src="<%= instructor.avatar.url(:medium) %>" alt="<%= instructor.complete_name %>"/>
+                            <img src="assets/images/blank.gif" data-src="<%= instructor.avatar.url(:medium) %>" alt="<%= instructor.complete_name %>"/>
 
                             <div class="ms-info text-center">
                                 <h3><%= instructor.complete_name %></h3>
