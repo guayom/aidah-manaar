@@ -1,0 +1,20 @@
+a.navbar-brand{
+  padding-top: 0;
+  padding-bottom: 0;
+  img{
+    display: inline-block;
+  }
+  span{
+    display: inline-block;
+    padding: 15px;
+    color: #fff;
+    font-family: $title-font;
+    font-size: 1.2em;
+  }
+}
+.welcome{
+  p{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+}

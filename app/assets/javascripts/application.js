@@ -12,20 +12,53 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap/affix
-//= require bootstrap/alert
-//= require bootstrap/carousel
-//= require bootstrap/collapse
-//= require bootstrap/dropdown
-//= require bootstrap/modal
-//= require bootstrap/transition
-//= require bootstrap/tooltip
-//= require bootstrap-select
 //= require jquery.maskedinput
-//= require video
 //= require jquery-ui
-//= require forms
-//= require header
+//= require jquery-migrate.min
+//= require modernizr.min
+//= require jquery.easing.1.3
+
+//= require bootstrap/affix
+// require bootstrap/alert
+// require bootstrap/carousel
+// require bootstrap/collapse
+//= require bootstrap/dropdown
+// require bootstrap/modal
+//= require bootstrap/transition
+// require bootstrap/tooltip
+// require bootstrap-select
+
+//= require jquery.flexslider-min
+//= require parallax.min
+// require tweetie.min
+//= require waypoints.min
+//= require jquery.sticky
+//= require wow.min
+//= require contact-form
+
+//= require jquery.themepunch.enablelog.js
+//= require jquery.themepunch.tools.min.js
+//= require jquery.themepunch.revolution.min
+//= require revolution-custom
+
+// require jquery.cubeportfolio.min
+// require cube-portfolio
+// require pricing
+
+// require jquery.magnific-popup.min
+// require jquery.particleground
+
+//= require jquery.imagesloaded.min
+// require jquery.backstretch.min
+
+//= require masterslider
+//= require masterslider-custom
+//= require pace.min
+
+//= bootstrap-hover-dropdown.min
+
+//= require template
+
 
 $(function() {
   $('form').submit(function() {

@@ -26,6 +26,7 @@ source 'https://rubygems.org' do
   gem 'uglifier'
   gem 'videojs_rails'
 
+
   group :development do
     gem 'better_errors'
     gem 'binding_of_caller'
@@ -34,6 +35,7 @@ source 'https://rubygems.org' do
     gem 'quiet_assets'
     gem 'rails-erd'
     gem 'traceroute'
+    gem 'figaro', '~> 1.1', '>= 1.1.1'
   end
 
   group :production do

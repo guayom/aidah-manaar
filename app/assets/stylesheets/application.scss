@@ -1,57 +1,19 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright');
+//Stylesheets
 @import 'variables';
 @import 'bootstrap-sprockets';
 @import '_bootstrap';
 @import 'bootstrap-select';
-@import 'forms';
+@import "icons/css/ionicons";
+@import "vendor/flexslider";
+@import "vendor/animate";
+@import "vendor/cubeportfolio";
+@import "vendor/pricing";
+@import "vendor/rs-plugin/settings";
+@import "vendor/master-slider/style/masterslider";
+@import "vendor/master-slider/skins/default/style";
+@import 'vendor/master-slider-custom';
 @import 'video-js';
-
-html {
-  padding: 0;
-  margin: 0;
-}
-body {
-  padding: 0;
-  margin: 0;
-}
-
-.panel-body {
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@import 'header';
-
-@import 'courses';
-
-.footer {
-  background: $morado;
-  color: white;
-  padding-top: 40px;
-  margin-top: 40px;
-
-  .social {
-    font-size: 2.5em;
-
-    li {
-      a {
-        color: white;
-
-        &:hover {
-          color: $naranja;
-        }
-      }
-    }
-  }
-
-  .copyright {
-    background: darken($morado, 20%);
-    padding: 10px 0;
-    font-size: 0.8em;
-    margin-top: 40px;
-  }
-
-  a {
-    color: white;
-  }
-}
+@import 'style';
+@import 'custom';
