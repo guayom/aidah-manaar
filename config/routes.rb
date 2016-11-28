@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   get 'prices' => 'home#prices'
   get 'import' => 'home#import'
 
+  get 'select-schedule', to: 'promo#select_schedule'
+  get 'thank-you', to: 'promo#thank_you'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
