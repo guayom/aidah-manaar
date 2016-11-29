@@ -14,19 +14,16 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right scroll-to">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                   <span class="dropdown-toggle js-activated" data-toggle="dropdown" role="button" aria-haspopup="true">Pages <i class="caret"></i></span>
-                    <ul class="dropdown-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-single.html">Blog Single</a></li>
-                        <li><a href="elements.html">Elements</a></li>
-                    </ul>
-                </li>
+                <li><a href="#home">Inicio</a></li>
+                <li><%= link_to "Precios", prices_path  %></li>
+                <% if student_signed_in? %>
+                  <li><%= link_to('Elegir horarios', select_schedule_path) %></li>
+                  <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
+                  <li><%= link_to('Cerrar sesión', destroy_student_session_path, :method => :delete) %></li>
+                <% else %>
+                  <li><%= link_to('Matricularme', new_student_registration_path)  %></li>
+                  <li><%= link_to "Iniciar sesión", new_student_session_path %></li>
+                <% end %>
             </ul>
         </div><!--/.nav-collapse -->
     </div><!--/.container -->
