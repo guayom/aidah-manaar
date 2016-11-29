@@ -57,7 +57,7 @@
 
 //= bootstrap-hover-dropdown.min
 
-//= require template
+// require template
 
 
 $(function() {
