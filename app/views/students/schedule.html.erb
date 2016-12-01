@@ -1,0 +1,70 @@
+<h2>
+  <%= t('helpers.student.select_your_schedule') %>
+</h2>
+<p><%= t('helpers.student.selec_max_description') %></p>
+
+<%= form_tag schedule_students_path, method: :get do %>
+  <% @student.courses.each do |course| %>
+    <p><%= t('helpers.student.you_are_enrolled_to_course', course_name: course.name) %></p>
+
+    <br>
+
+      <p class="select_max_3_lessons" style="color: red; display: none;">
+        <%= t('helpers.student.select_max_3_lessons') %>
+      </p>
+      <table class="table calendar">
+        <tr>
+          <% @days.sort.each do |_, v| %>
+            <th><%= v.capitalize %></th>
+          <% end %>
+        </tr>
+        <tr>
+          <% @lessons[course.id].sort.to_h.each do |_, lessons| %>
+            <td>
+              <ul class="list-unstyled">
+                <% lessons.sort_by(&:time_interval).each do |lesson| %>
+                  <% checked = @student.lessons.include?(lesson) %>
+                  <li style="margin-bottom: 10px;">
+                    <button class="btn <%= checked ? 'btn-primary' : 'btn-default' %>"
+                            data-lesson="<%= lesson.id %>">
+                      <%= lesson.time_interval %>
+                    </button>
+
+                    <input type="checkbox" name="lesson_ids[]" id="lesson_<%= lesson.id %>"
+                           value="<%= lesson.id %>" class="hidden" <%= 'checked' if checked %>>
+                  </li>
+                <% end %>
+              </ul>
+            </td>
+          <% end %>
+        </tr>
+      </table>
+
+  <% end %>
+
+  <script>
+    $('.calendar button').click(function(event) {
+      if ($(this).hasClass('btn-primary')) {
+        $('#lesson_' + $(this).attr('data-lesson')).attr('checked', false);
+        $(this).toggleClass('btn-default');
+        $(this).toggleClass('btn-primary');
+        if ($(this).parents('.calendar').find('.btn-primary').length < 3) {
+          $(this).parents('.calendar').prev('.select_max_3_lessons').hide();
+        }
+      } else {
+        if ($(this).parents('.calendar').find('.btn-primary').length < 3) {
+          $('#lesson_' + $(this).attr('data-lesson')).attr('checked', true);
+          $(this).toggleClass('btn-default');
+          $(this).toggleClass('btn-primary');
+        } else {
+          $(this).parents('.calendar').prev('.select_max_3_lessons').show();
+        }
+      }
+      event.preventDefault();
+    });
+  </script>
+
+  <button id="apply_for_lesson" class="btn btn-primary">
+    <%= t('helpers.student.apply_for_lesson') %>
+  </button>
+<% end %>

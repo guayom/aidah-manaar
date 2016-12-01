@@ -17,7 +17,7 @@
                 <li><a href="#home">Inicio</a></li>
                 <li><%= link_to "Precios", prices_path  %></li>
                 <% if student_signed_in? %>
-                  <li><%= link_to('Elegir horarios', select_schedule_path) %></li>
+                  <li><%= link_to('Elegir horarios', schedule_students_path) %></li>
                   <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
                   <li><%= link_to('Cerrar sesión', destroy_student_session_path, :method => :delete) %></li>
                 <% else %>
