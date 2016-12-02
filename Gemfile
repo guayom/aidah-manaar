@@ -19,6 +19,7 @@ source 'https://rubygems.org' do
   gem 'rails', '4.2.6'
   gem 'rails-i18n'
   gem 'rails_admin'
+  gem 'rb-readline'
   gem 'sass-rails'
   gem 'simple-navigation'
   gem 'therubyracer', platforms: :ruby
