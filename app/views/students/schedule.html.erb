@@ -1,13 +1,26 @@
 <h2>
   <%= t('helpers.student.select_your_schedule') %>
 </h2>
+
+<p>[[[SELECT COURSES FOR NEW SEMESTER]]]</p>
+
+<%= render partial: 'add_new_course' %>
+
+<hr>
+
 <p><%= t('helpers.student.selec_max_description') %></p>
 
 <%= form_tag schedule_students_path, method: :get do %>
-  <% @student.courses.each do |course| %>
-    <p><%= t('helpers.student.you_are_enrolled_to_course', course_name: course.name) %></p>
+  <% CourseStudent::ACTUAL_SEMESTERS.each do |date| %>
+    <% @student.courses_students.each do |course_student| %>
+      <% next unless (date[:year] == course_student.year && date[:semester] == course_student.semester) %>
+      <% course = course_student.course %>
 
-    <br>
+      <p>
+        <%= t('helpers.student.you_are_enrolled_to_course', course_name: course.name) %>
+        (<%= date[:year] %>, <%= 1 == date[:semester] ? 'spring' : 'autumn' %>)
+      </p>
+      <br>
 
       <p class="select_max_3_lessons" style="color: red; display: none;">
         <%= t('helpers.student.select_max_3_lessons') %>
@@ -40,6 +53,7 @@
         </tr>
       </table>
 
+    <% end %>
   <% end %>
 
   <script>

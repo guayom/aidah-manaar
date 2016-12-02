@@ -15,7 +15,7 @@ class Student < ActiveRecord::Base
 
   has_many :courses, through: :courses_students
   has_many :dance_courses, -> { where(kind: 1) }, class_name: 'Course',
-           through:  :courses_students, source: :course
+           through: :courses_students, source: :course
 
   has_many :lessons_students, class_name: 'LessonStudent', dependent: :destroy
   has_many :lessons, through: :lessons_students
@@ -77,6 +77,12 @@ class Student < ActiveRecord::Base
       update!(status: :active)
     else
       update!(status: :inactive)
+    end
+  end
+
+  def current_dance_courses
+    Course.where(kind: 1).all.find_all do |course|
+      !courses.include?(course)
     end
   end
 end

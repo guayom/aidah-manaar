@@ -6,6 +6,13 @@ class StudentsController < ApplicationController
   def schedule
     @student = current_student
 
+    if params[:new_course]
+      # @student.courses << Course.find(params[:new_course])
+      @student.courses_students.create(
+        CourseStudent::CURRENT_SEMESTER.merge({ course_id: params[:new_course] })
+      )
+    end
+
     if params[:lesson_ids].try(:any?)
       @student.lesson_ids = params[:lesson_ids]
 
