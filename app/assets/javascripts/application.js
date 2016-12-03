@@ -2,6 +2,7 @@
 //= require jquery-migrate.min
 //= require modernizr.min
 //= require jquery.easing.1.3
+//= require jquery.maskedinput
 
 //= require bootstrap/affix
 //= require bootstrap/alert
@@ -39,7 +40,6 @@
 //= require pace.min
 
 // require jquery_ujs
-//= require jquery.maskedinput
 // require jquery-ui
 
 // require jquery.magnific-popup.min
