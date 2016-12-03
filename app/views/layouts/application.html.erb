@@ -23,7 +23,9 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
     <%= yield :banner %>
     <%= render 'application/navigation' %>
-    <%= yield %>
+    <div class="container section-inner">
+      <%= yield %>
+    </div>
     <%= render 'application/contact_info' %>
     <%= render 'application/footer' %>
     <%= javascript_include_tag 'application' %>
