@@ -1,20 +1,20 @@
 /**smooth scroll on anchor tag****/
-$(document).ready(function () {
-    $(function () {
-        $('.scroll-to a[href*=#]:not([href=#])').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-});
+// $(document).ready(function () {
+//     $(function () {
+//         $('.scroll-to a[href*=#]:not([href=#])').click(function () {
+//             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+//                 var target = $(this.hash);
+//                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+//                 if (target.length) {
+//                     $('html,body').animate({
+//                         scrollTop: target.offset().top
+//                     }, 1000);
+//                     return false;
+//                 }
+//             }
+//         });
+//     });
+// });
 
 /* -------------------
  Parallax Sections
@@ -175,24 +175,24 @@ jQuery(document).ready(function () {
 /*==========================*/
 
 
- $(document).ready(function() {
-
-    $('.js-activated').dropdownHover({
-        instantlyCloseOthers: false,
-        delay: 0
-    }).dropdown();
-
-});
+//  $(document).ready(function() {
+//
+//     $('.js-activated').dropdownHover({
+//         instantlyCloseOthers: false,
+//         delay: 0
+//     }).dropdown();
+//
+// });
 
 //on hover dropdown navigation
-$(document).ready(function () {
-
-    $('.js-activated').dropdownHover({
-        instantlyCloseOthers: false,
-        delay: 0
-    }).dropdown();
-
-});
+// $(document).ready(function () {
+//
+//     $('.js-activated').dropdownHover({
+//         instantlyCloseOthers: false,
+//         delay: 0
+//     }).dropdown();
+//
+// });
 
 //mailchimp
 // $('.form-subscribe input[type="text"], .form-subscribe input[type="email"]').live('focus keypress', function() {
