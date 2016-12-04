@@ -81,7 +81,7 @@ class Student < ActiveRecord::Base
   end
 
   def current_dance_courses
-    Course.where(kind: 1).where(branch: branch).all.find_all do |course|
+    Course.where(kind: 1).all.find_all do |course|
       !courses.include?(course)
     end
   end
