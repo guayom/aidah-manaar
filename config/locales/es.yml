@@ -122,7 +122,8 @@ es:
       format:
         precision: 0
         unit: '₡'
-
+        format: '%u%n'
+        
   navigation:
     prices: 'Precios'
-    courses: 'Cursos'      
+    courses: 'Cursos'
