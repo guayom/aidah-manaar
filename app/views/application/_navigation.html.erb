@@ -20,7 +20,6 @@
                   <li><%= link_to('Elegir horarios', schedule_students_path) %></li>
                   <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
                   <li><%= link_to('Cerrar sesión', destroy_student_session_path, :method => :delete) %></li>
-                  <li><%= link_to('Cerrar sesión', destroy_admin_session_path, :method => :delete) %></li>
                 <% else %>
                   <li><%= link_to('Matricularme', new_student_registration_path)  %></li>
                   <li><%= link_to "Iniciar sesión", new_student_session_path %></li>
