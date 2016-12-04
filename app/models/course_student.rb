@@ -7,9 +7,16 @@ class CourseStudent < ActiveRecord::Base
 
   self.table_name = 'courses_students'
 
+
+
   belongs_to :course
   belongs_to :student
 
   validates_presence_of :year
   validates_presence_of :semester
+
+  after_initialize unless: :persisted? do
+    self.year ||= CURRENT_SEMESTER[:year]
+    self.semester ||= CURRENT_SEMESTER[:semester]
+  end
 end
