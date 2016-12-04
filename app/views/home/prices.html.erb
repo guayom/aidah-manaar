@@ -26,11 +26,11 @@
         <% else %>
           <th><%= plan.name %></th>
         <% end %>
-        <td><%= plan.lessons_per_week || 'Unlimited' %></td>
+        <td><%= plan.lessons_per_week || 'Ilimitado' %></td>
         <td><%= number_to_currency(plan.price) %></td>
         <td><%= number_to_currency(plan.price_with_discount) || 'N/A' %></td>
         <td><%= number_to_currency(plan.tuition) %></td>
-        <td><%= number_to_currency(plan.leveling) || 'Free' %></td>
+        <td><%= number_to_currency(plan.leveling) || 'Gratis' %></td>
       </tr>
     <% end %>
   </tbody>
