@@ -18,3 +18,17 @@ a.navbar-brand{
     margin-bottom: 1em;
   }
 }
+a.navbar-brand span.smaller-brand{
+  font-size: 0.8em;
+  line-height: 1em;
+}
+a.navbar-brand img{
+  height: 30px;
+  margin-top: -15px;
+}
+@media (min-width: $screen-sm-min) {
+  a.navbar-brand img{
+    height: 50px;
+    margin-top: 0;
+  }
+}
