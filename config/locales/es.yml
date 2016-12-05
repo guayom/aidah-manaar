@@ -101,11 +101,14 @@ es:
       already_have_an_account: ¿Ya estás matriculad@?
       apply_for_lesson: 'Aplicar para esta lección'
       you_are_enrolled_to_course: 'Te has inscrito en el curso: %{course_name}'
-      select_your_schedule: 'Por favor selecciona un horario'
+      select_your_schedule: 'Por favor seleccioná un horario'
       we_will_call_you: 'Te llamaremos pronto con más detalles para coordinar una evaluación'
       you_are_enrolled: 'Te has matriculado en este curso'
       edit_profile: 'Editar mi información'
       you_have_new_invoice: 'Tienes un nuevo recibo de Academia Aidah Manaar'
+      selec_max_description: Seleccioná máximo 3 cursos
+      apply_for_new_course: Aplicar para este curso
+      select_course: Seleccioná un curso
     close: 'Cerrar'
     submit:
       course_student:
@@ -123,7 +126,7 @@ es:
         precision: 0
         unit: '₡'
         format: '%u%n'
-        
+
   navigation:
     prices: 'Precios'
     courses: 'Cursos'

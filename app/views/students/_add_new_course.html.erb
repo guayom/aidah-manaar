@@ -1,6 +1,6 @@
 <%= form_tag schedule_students_path, method: :get do %>
   <div class="form-group">
-    <label>Select course</label>
+    <label><%= t('helpers.student.select_course') %></label>
 
     <select name="new_course" class="form-control">
       <% @student.current_dance_courses.each do |course| %>
@@ -9,5 +9,5 @@
     </select>
   </div>
 
-  <button class="btn btn-primary">Apply for new course</button>
+  <button class="btn btn-primary"><%= t('helpers.student.apply_for_new_course') %></button>
 <% end %>

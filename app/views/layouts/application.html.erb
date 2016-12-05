@@ -25,6 +25,9 @@
     <%= render 'application/navigation' %>
     <%= yield :full_width %>
     <div class="container section-inner">
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+      <% end %>
       <%= yield %>
     </div>
     <%= render 'application/contact_info' %>
