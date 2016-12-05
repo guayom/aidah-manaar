@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'prices' => 'home#prices'
+  get 'gracias' => 'home#gracias'
   get 'import' => 'home#import'
 
   get 'select-schedule', to: 'promo#select_schedule'

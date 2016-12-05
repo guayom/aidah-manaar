@@ -13,7 +13,7 @@
             <div class="col-sm-7">
                 <div class="contact-form wow animated fadeInLeft" data-wow-delay=".2s">
 
-                    <form role="form" id="feedbackForm">
+                    <form role="form" id="feedbackForm" action="https://formspree.io/info@bellydancecr.com" method="POST">
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="form-group">
@@ -31,7 +31,7 @@
                                 <div class="form-group">
                                     <label class="control-label" for="email">Correo electrónico *</label>
                                     <div>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Escribí tu dirección de correo electrónico" />
+                                        <input type="email" class="form-control" id="email" name="_replyto" placeholder="Escribí tu dirección de correo electrónico" />
 
                                     </div>
                                     <span class="help-block" style="display: none;">Por favor escribí una dirección de correo válida</span>
@@ -46,6 +46,10 @@
                             </div>
                             <span class="help-block" style="display: none;">Por favor escribe un mensaje.</span>
                         </div>
+
+                        <input type="hidden" name="_subject" value="Mensaje desde la página" />
+                        <input type="hidden" name="_next" value="/gracias" />
+                        <input type="text" name="_gotcha" style="display:none" />
 
                         <button type="submit" id="feedbackSubmit" class="btn btn-dark-bg btn-lg" data-loading-text="Enviando..." style="display: block; margin-top: 10px;">Enviar</button>
                     </form>
