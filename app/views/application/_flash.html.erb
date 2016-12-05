@@ -1,0 +1,16 @@
+<% unless flash.blank? %>
+<div class='row'>
+  <div class='col-sm-12'>
+    <div id='flash' class="container">
+      <% flash.each do |key, value| %>
+        <div class='flash alert alert-dismissible fade in alert-<%= key == 'notice' ? 'info' : 'danger' %>'>
+          <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% end %>

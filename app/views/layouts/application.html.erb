@@ -23,11 +23,9 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="80">
     <%= yield :banner %>
     <%= render 'application/navigation' %>
+    <%= render 'application/flash' %>
     <%= yield :full_width %>
     <div class="container section-inner">
-      <% flash.each do |key, value| %>
-        <%= content_tag :div, value, class: "flash #{key}" %>
-      <% end %>
       <%= yield %>
     </div>
     <%= render 'application/contact_info' %>

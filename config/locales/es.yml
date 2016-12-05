@@ -62,16 +62,20 @@ es:
     sign_out: 'Cerrar Sesión'
     sign_up: 'Matrícula en línea'
     sign_up_description: "Matriculate en línea para nuestros cursos"
-
     failure:
       admin:
         unauthenticated: "No has iniciado sesión"
         invalid: "Usuario inválido"
         signed_in: Has iniciado sesión
+      student:
+        not_found_in_database: Este usuario no existe en nuestra base de datos
     sessions:
       admin:
         signed_in: Iniciaste sesión correctamente
         signed_out: Cerraste sesión correctamente
+      student:
+        signed_in: Has iniciado sesión correctamente
+        signed_out: Has cerrado sesión correctamente
   errors:
     messages:
       not_saved:
