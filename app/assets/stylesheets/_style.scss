@@ -255,6 +255,25 @@ iframe {
         }
     }
 }
+.btn-main{
+    color:#fff;
+    padding: 0px;
+    border: 0px;
+    span{
+        background-color: $skincolor;
+        @include transition(all .3s ease);
+        color:#fff;
+        font-size: 2em;
+
+        display: inline-block;
+        &:hover, &:focus{
+            background-color: darken($skincolor, 10%);
+            color:$lightcolor;
+        }
+    }
+}
+
+
 /**btn dark**/
 .btn-dark{
     color:$lightcolor;
@@ -336,6 +355,10 @@ button{
         background-color: $skincolor;
         color:#fff;
         border-color: $skincolor;
+    }
+    &.white{
+      background:#fff;
+      color: $skincolor;
     }
 }
 
