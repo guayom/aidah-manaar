@@ -80,9 +80,17 @@ class Student < ActiveRecord::Base
     end
   end
 
-  def current_dance_courses
-    Course.where(kind: 1).all.find_all do |course|
-      !courses.include?(course)
+  def dance_courses_for_next_semester
+    current_year = CourseStudent::CURRENT_SEMESTER[:year]
+    current_semester = CourseStudent::CURRENT_SEMESTER[:semester]
+    prev_courses = courses_students.find_all do |cs|
+      (cs.year == current_year && cs.semester < current_semester) ||
+        (cs.year < current_year)
+    end
+    prev_courses.map!(&:course)
+
+    Course.where(kind: 1).all.find_all do |c|
+      prev_courses.include?(c.parent)
     end
   end
 end

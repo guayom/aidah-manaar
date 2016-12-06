@@ -3,7 +3,7 @@
     <label><%= t('helpers.student.select_course') %></label>
 
     <select name="new_course" class="form-control">
-      <% @student.current_dance_courses.each do |course| %>
+      <% @student.dance_courses_for_next_semester.each do |course| %>
         <option value="<%= course.id %>"><%= course.name %></option>
       <% end %>
     </select>
