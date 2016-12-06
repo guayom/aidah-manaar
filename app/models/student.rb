@@ -89,8 +89,14 @@ class Student < ActiveRecord::Base
     end
     prev_courses.map!(&:course)
 
-    Course.where(kind: 1).all.find_all do |c|
+    next_courses = Course.where(kind: 1).all.find_all do |c|
       prev_courses.include?(c.parent)
+    end
+
+    if next_courses.empty?
+      Course.base
+    else
+      next_courses
     end
   end
 end
