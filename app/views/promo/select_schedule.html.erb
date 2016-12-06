@@ -38,24 +38,26 @@
   </table>
 
   <script>
-    $('#calendar button').click(function(event) {
-      if ($(this).hasClass('btn-primary')) {
-        $('#lesson_' + $(this).attr('data-lesson')).attr('checked', false);
-        $(this).toggleClass('btn-default');
-        $(this).toggleClass('btn-primary');
-        if ($('#calendar .btn-primary').length < 3) {
-          $('#select_max_3_lessons').hide();
-        }
-      } else {
-        if ($('#calendar .btn-primary').length < 3) {
-          $('#lesson_' + $(this).attr('data-lesson')).attr('checked', true);
+    document.addEventListener('DOMContentLoaded', function() {
+      $('#calendar button').click(function(event) {
+        if ($(this).hasClass('btn-primary')) {
+          $('#lesson_' + $(this).attr('data-lesson')).attr('checked', false);
           $(this).toggleClass('btn-default');
           $(this).toggleClass('btn-primary');
+          if ($('#calendar .btn-primary').length < 3) {
+            $('#select_max_3_lessons').hide();
+          }
         } else {
-          $('#select_max_3_lessons').show();
+          if ($('#calendar .btn-primary').length < 3) {
+            $('#lesson_' + $(this).attr('data-lesson')).attr('checked', true);
+            $(this).toggleClass('btn-default');
+            $(this).toggleClass('btn-primary');
+          } else {
+            $('#select_max_3_lessons').show();
+          }
         }
-      }
-      event.preventDefault();
+        event.preventDefault();
+      });
     });
   </script>
 
