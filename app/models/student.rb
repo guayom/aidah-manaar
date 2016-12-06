@@ -94,7 +94,7 @@ class Student < ActiveRecord::Base
     end
 
     if next_courses.empty?
-      Course.base
+      [Course.base]
     else
       next_courses
     end
