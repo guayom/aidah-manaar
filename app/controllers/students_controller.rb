@@ -1,4 +1,7 @@
 class StudentsController < ApplicationController
+  def auth
+  end
+
   def show
 
   end
