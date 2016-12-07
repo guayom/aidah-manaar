@@ -2,8 +2,10 @@
 
 <p>Estamos muy felices de que formes parte de nuestra academia.</p>
 
-<p>
-  Como ya tienes experiencia, necesitamos programar una lección para ubicarte en el nivel más
-  apropiado para tí. Nos pondremos en contacto contigo via telefónica para coordinar la lección.
-  Esta lección será completamente gratuita. Recuerda llevar ropa cómoda.
-</p>
+<% unless @params[:beginner] %>
+  <p>
+    Como ya tienes experiencia, necesitamos programar una lección para ubicarte en el nivel más
+    apropiado para tí. Nos pondremos en contacto contigo via telefónica para coordinar la lección.
+    Esta lección será completamente gratuita. Recuerda llevar ropa cómoda.
+  </p>
+<% end %>
