@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   get 'prices' => 'home#prices'
   get 'gracias' => 'home#gracias'
+  get 'como-matricular' => 'home#como-matricular'
   get 'import' => 'home#import'
 
   get 'select-schedule', to: 'promo#select_schedule'
