@@ -1,7 +1,7 @@
 <div class="gray-cta">
     <div class="container text-center scroll-to">
         <h2>¿Estás lista para aprender a bailar?</h2>
-        <a href="/students/sign_up" class="btn btn-lg btn-theme-bg"><%= t('cta_pre_matriculate') %></a>
-        <a href="/como-matricular" class="btn btn-lg btn-theme-bg white"><%= t('cta_como_matricular') %></a>
+        <%= link_to t('cta_pre_matriculate'), auth_students_path, class: "btn btn-lg btn-theme-bg"  %>
+        <%= link_to t('cta_como_matricular'), como_matricular_path, class: "btn btn-lg btn-theme-bg white"%>
     </div>
 </div>

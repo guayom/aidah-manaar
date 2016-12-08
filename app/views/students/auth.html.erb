@@ -1,9 +1,20 @@
-<h2>Have you registered before?</h2>
-
-<br><br>
-
-<%= link_to 'Yes, I have', new_student_session_path %>
-
-<br><br>
-
-<%= link_to 'No, I want to register', new_student_registration_path %>
+<div class="row text-center">
+  <div class="cols-xs-12">
+    <h2>¿Ya te has registrado en nuestra página?</h2>
+  </div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-xs-6 col-md-3 text-center col-md-offset-3">
+    <%= link_to 'Sí, me he registrado antes', new_student_session_path, class: "btn btn-primary btn-lg" %>
+  </div>
+  <div class="col-xs-6 col-md-3 text-center">
+    <%= link_to 'No, nunca me he registrado', new_student_registration_path, class: "btn btn-danger btn-lg" %>
+  </div>
+</div>
+<br/>
+<div class="row text-center">
+  <div class="col-xs-12">
+    <p>Si ya te has registrado antes, te eviaremos un password a tu correo</p>
+  </div>
+</div>

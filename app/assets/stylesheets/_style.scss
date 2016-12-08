@@ -246,7 +246,6 @@ iframe {
         background-color: #fff;
         @include transition(all .3s ease);
         color:#515A5F;
-        font-size: 2em;
 
         display: inline-block;
         &:hover, &:focus{
@@ -263,7 +262,6 @@ iframe {
         background-color: $skincolor;
         @include transition(all .3s ease);
         color:#fff;
-        font-size: 2em;
 
         display: inline-block;
         &:hover, &:focus{
@@ -350,7 +348,7 @@ button{
     color:$lightcolor;
     background-color: $skincolor;
     border:1px solid transparent;
-    font-size: 1.5em;
+    font-size: 0.7em;
     &:hover, &:focus{
         background-color: $skincolor;
         color:#fff;
