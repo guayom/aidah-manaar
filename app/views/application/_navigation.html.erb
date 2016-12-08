@@ -23,13 +23,9 @@
                   <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
                   <li><%= link_to('Cerrar sesión', destroy_student_session_path, method: :delete) %></li>
                 <% else %>
-
-                  <li>
-                    <%= link_to('Matricularme', auth_students_path)  %>
-                  </li>
-                  <li>
-                    <%= link_to 'Iniciar sesión', new_student_session_path %>
-                  </li>
+                  <li><%= link_to('Cómo matricular', como_matricular_path)  %></li>
+                  <li><%= link_to('Matricularme', auth_students_path)  %></li>
+                  <li><%= link_to 'Iniciar sesión', new_student_session_path %></li>
                 <% end %>
             </ul>
         </div><!--/.nav-collapse -->
