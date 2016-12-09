@@ -122,6 +122,9 @@ RailsAdmin.config do |config|
         end
       end
     end
+
+    # Add the nestable action for configured models
+    nestable
   end
 
   config.model Invoice do
@@ -312,5 +315,9 @@ RailsAdmin.config do |config|
   config.model Ckeditor::Picture do
     navigation_label 'Contenido'
     weight 200
+  end
+
+  config.model DancePlan do
+    nestable_list true
   end
 end

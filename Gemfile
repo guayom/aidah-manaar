@@ -26,6 +26,7 @@ source 'https://rubygems.org' do
   gem 'thin'
   gem 'uglifier'
   gem 'videojs_rails'
+  gem 'rails_admin_nestable', '~> 0.3.2'
 
 
   group :development do
