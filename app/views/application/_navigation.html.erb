@@ -9,15 +9,15 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/">
-              <%= image_tag "isotipo.png", alt: "Belly Dance Costa Rica" %>&nbsp;
+              <%= image_tag 'isotipo.png', alt: 'Belly Dance Costa Rica' %>&nbsp;
               <span class="hidden-sm hiddenl-md hidden-lg smaller-brand">Belly Dance Costa Rica<br/>Academia Aidah Manaar</span>
               <span class="hidden-xs">Belly Dance Costa Rica Academia Aidah Manaar</span>
             </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right scroll-to">
-                <li><%= link_to "Inicio", root_path %></li>
-                <li><%= link_to "Precios", prices_path  %></li>
+                <li><%= link_to 'Inicio', root_path %></li>
+                <li><%= link_to 'Precios', prices_path  %></li>
                 <% if student_signed_in? %>
                   <li><%= link_to('Elegir horarios', schedule_students_path) %></li>
                   <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
