@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get 'gracias' => 'home#gracias'
   get 'como-matricular' => 'home#como-matricular'
   get 'import' => 'home#import'
+  get 'contrataciones' => 'home#contrataciones'
+  get 'contrataciones/gracias' => 'home#gracias'
 
   get 'select-schedule', to: 'promo#select_schedule'
   get 'thank-you', to: 'promo#thank_you'

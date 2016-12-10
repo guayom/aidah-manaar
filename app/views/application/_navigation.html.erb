@@ -18,6 +18,7 @@
             <ul class="nav navbar-nav navbar-right scroll-to">
                 <li><%= link_to 'Inicio', root_path %></li>
                 <li><%= link_to 'Precios', prices_path  %></li>
+                <li><%= link_to 'Contrataciones', contrataciones_path  %></li>
                 <% if student_signed_in? %>
                   <li><%= link_to('Elegir horarios', schedule_students_path) %></li>
                   <li><%= link_to('Editar mi perfil', edit_student_registration_path) %></li>
