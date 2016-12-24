@@ -72,12 +72,24 @@ class Student < ActiveRecord::Base
     end
   end
 
-  def check_status!
-    if courses.any? && invoices.where(payed: false).empty?
-      update!(status: :active)
-    else
-      update!(status: :inactive)
-    end
+  # def check_status!
+  #   if invoices.where(payed: false).empty? && active_subscriptions.any?
+  #     update!(status: :active)
+  #   else
+  #     update!(status: :inactive)
+  #   end
+  # end
+
+  def active?
+    invoices.where(payed: false).empty? && active_subscriptions.any?
+  end
+
+  def inactive?
+    invoices.where(payed: false).any? || active_subscriptions.empty?
+  end
+
+  def student_is_active
+    active?
   end
 
   def dance_courses_for_next_semester

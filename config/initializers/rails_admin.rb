@@ -180,13 +180,16 @@ RailsAdmin.config do |config|
     object_label_method do
       :label
     end
+    configure :student_is_active
     edit do
       exclude_fields :courses_students
     end
     list do
       scopes [:all, :with_pending_invoices]
 
-      field :status
+      field :student_is_active, :boolean do
+        label 'Active'
+      end
       field :first_name
       field :last_name
       field :second_last_name
