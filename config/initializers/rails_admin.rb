@@ -319,5 +319,34 @@ RailsAdmin.config do |config|
 
   config.model DancePlan do
     nestable_list true
+    navigation_label 'Administración'
+    label "Plan"
+    label_plural "Planes"
+    weight 150
+  end
+
+  config.model Testimonial do
+    navigation_label 'Administración'
+    label "Testimonio"
+    label_plural "Testimonios"
+  end
+
+  config.model Subscription do
+    navigation_label 'Administración'
+    label "Suscripción"
+    label_plural "Suscripciones"
+  end
+
+  config.model Task do
+    navigation_label 'Administración'
+    label "Tarea"
+    label_plural "Tareas"
+    weight 200
+  end
+  config.model OtherPlan do
+    navigation_label 'Administración'
+    label "Otro plan"
+    label_plural "Otros planes"
+    weight 151
   end
 end
