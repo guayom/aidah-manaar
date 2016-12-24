@@ -14,10 +14,14 @@ class Invoice < ActiveRecord::Base
 
   after_create do
     if should_be_auto_payed
-      payments.create!(student_id: student_id, invoice_id: id, sum: total, accepted: true, method: :cash)
-
-      update_attributes!(confirmed: true)
+      autopay!
     end
+  end
+
+  def autopay!
+    payments.create!(student_id: student_id, invoice_id: id, sum: total, accepted: true, method: :cash)
+    update_attributes!(confirmed: true)
+    # confirm!
   end
 
   def send!

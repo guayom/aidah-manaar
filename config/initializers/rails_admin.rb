@@ -99,6 +99,25 @@ RailsAdmin.config do |config|
       end
     end
 
+    member :autopay_invoice do
+      link_icon 'icon-plus'
+
+      visible do
+        [Invoice].include?(bindings[:abstract_model].model) &&
+          !bindings[:object].payed?
+      end
+
+      controller do
+        Proc.new do
+          @object.autopay!
+
+          flash[:success] = 'Payment was created and invoice was confirmed.'
+
+          redirect_to back_or_index
+        end
+      end
+    end
+
     member :accept_payment do
       link_icon 'icon-check'
       register_instance_option :pjax? do
