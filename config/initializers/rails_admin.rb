@@ -1,3 +1,6 @@
+require Rails.root.join('lib', 'rails_admin', 'attendance.rb')
+RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Attendance)
+
 require Rails.root.join('lib', 'rails_admin', 'payments_report.rb')
 RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::PaymentsReport)
 
@@ -59,6 +62,7 @@ RailsAdmin.config do |config|
     # history_show
     show_in_app
 
+    attendance
     payments_report
 
     member :send_invoice do

@@ -28,6 +28,9 @@ class Student < ActiveRecord::Base
 
   scope :with_pending_invoices, -> { joins(:invoices).where(invoices: { payed: false }) }
 
+  include PgSearch
+  pg_search_scope :search_by_main_fields, against: [:first_name, :last_name]
+
   def full_name
     "#{first_name} #{last_name}"
   end

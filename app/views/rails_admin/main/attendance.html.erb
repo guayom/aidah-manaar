@@ -1,0 +1,35 @@
+<h2>Attendance Control</h2>
+
+<form>
+  <div class="form-group">
+    <label for="query">Search query</label>
+    <input type="search" class="form-control" id="query" name="query"
+           value="<%= params[:query] %>">
+  </div>
+
+  <button type="submit" class="btn btn-default">Search</button>
+</form>
+
+<% students = Student.search_by_main_fields(params[:query]) %>
+<% if students.any? %>
+  <table class="table table-condensed table-striped">
+    <thead>
+      <tr>
+        <th>Active?</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <% students.each do |student| %>
+      <tr>
+        <td>
+          <% if student.active? %>
+            <span class="label label-success">✓</span>
+          <% else %>
+            <span class="label label-danger">✘</span>
+          <% end %>
+        </td>
+        <td><%= student.full_name %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

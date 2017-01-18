@@ -16,6 +16,7 @@ source 'https://rubygems.org' do
   gem 'paperclip-av-transcoder'
   gem 'paperclip-meta'
   gem 'pg'
+  gem 'pg_search'
   gem 'rails', '4.2.6'
   gem 'rails-i18n'
   gem 'rails_admin'

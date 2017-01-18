@@ -94,6 +94,7 @@
     <orderEntry type="library" scope="PROVIDED" name="paperclip-av-transcoder (v0.6.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="paperclip-meta (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, RVM: ruby-2.3.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg_search (v2.0.1, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="quiet_assets (v1.1.0, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.4, RVM: ruby-2.3.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-pjax (v0.8.0, RVM: ruby-2.3.0) [gem]" level="application" />
