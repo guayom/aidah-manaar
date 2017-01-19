@@ -59,6 +59,10 @@ es:
       send_invoice:
         menu: '[[[SEND_INVOICE]]]'
         title: '[[[SEND_INVOICE]]]'
+      attendance:
+        menu: Asistencia
+      payments_report:
+        menu: Reportes de pago
     export:
       click_to_reverse_selection: Haga click para invertir la selección
       confirmation: Exportar a %{name}
