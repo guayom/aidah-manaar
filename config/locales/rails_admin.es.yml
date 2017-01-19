@@ -7,7 +7,7 @@ es:
         menu: Eliminación Múltiple
         title: Eliminar %{model_label_plural}
       create_invoices:
-        menu: '[[[CREATE INVOICES]]]'
+        menu: 'Crear Factura'
       dashboard:
         breadcrumb: Panel de control
         menu: Panel de control
@@ -57,8 +57,8 @@ es:
         menu: Ver en la aplicación
 
       send_invoice:
-        menu: '[[[SEND_INVOICE]]]'
-        title: '[[[SEND_INVOICE]]]'
+        menu: 'Enviar factura'
+        title: 'Enviar factura'
       attendance:
         menu: Asistencia
       payments_report:
