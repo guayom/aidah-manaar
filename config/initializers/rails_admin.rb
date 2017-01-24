@@ -205,7 +205,7 @@ RailsAdmin.config do |config|
     end
     configure :student_is_active
     edit do
-      exclude_fields :courses_students
+      exclude_fields :courses_students, :student_is_active
     end
     list do
       scopes [:all, :with_pending_invoices]
