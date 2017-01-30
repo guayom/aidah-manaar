@@ -371,8 +371,17 @@ RailsAdmin.config do |config|
   end
   config.model OtherPlan do
     navigation_label 'Administración'
-    label "Otro plan"
-    label_plural "Otros planes"
+    label 'Otro plan'
+    label_plural 'Otros planes'
     weight 151
+  end
+
+  config.model Visit do
+    edit do
+      field :student
+      field :timestamp, :datetime do
+        strftime_format '%Y-%m-%d %H:%M'
+      end
+    end
   end
 end

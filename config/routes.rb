@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # Mass creation of invoices.
   post 'create_invoices' => 'invoices#mass_create'
 
+  get 'track-visit' => 'visits#track_visit'
   resources :payments, only: [:create]
 
   mount Ckeditor::Engine => '/ckeditor'

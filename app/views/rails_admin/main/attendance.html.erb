@@ -17,10 +17,12 @@
       <tr>
         <th>Active?</th>
         <th>Name</th>
+        <th>Last visit</th>
+        <th></th>
       </tr>
     </thead>
     <% students.each do |student| %>
-      <tr>
+      <tr class="<%= 'danger' unless student.active? %>">
         <td>
           <% if student.active? %>
             <span class="label label-success">✓</span>
@@ -29,6 +31,18 @@
           <% end %>
         </td>
         <td><%= student.full_name %></td>
+        <td>
+          <% if student.last_visit.present? %>
+            <%= distance_of_time_in_words_to_now(student.last_visit.timestamp) %>
+          <% else %>
+            never
+          <% end %>
+        </td>
+        <td>
+          <%= link_to 'Track visit',
+                      rails_admin.new_path(model_name: :visit,
+                                           visit: { student_id: student.id } ) %>
+        </td>
       </tr>
     <% end %>
   </table>

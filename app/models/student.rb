@@ -21,6 +21,7 @@ class Student < ActiveRecord::Base
   has_many :lessons, through: :lessons_students
   has_many :invoices
   has_many :payments
+  has_many :visits
 
   validates_presence_of :first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number
@@ -113,5 +114,9 @@ class Student < ActiveRecord::Base
     else
       next_courses
     end
+  end
+
+  def last_visit
+    visits.order(timestamp: :desc).first
   end
 end
