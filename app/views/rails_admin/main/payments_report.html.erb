@@ -32,4 +32,9 @@
     Card: <%= payments.find_all { |p| p.card? }.size %> payments
     — <%= number_to_currency(payments.find_all { |p| p.card? }.map(&:sum).sum) %>
   </li>
+
+  <li>
+    Deposit: <%= payments.find_all { |p| p.deposit? }.size %> payments
+    — <%= number_to_currency(payments.find_all { |p| p.deposit? }.map(&:sum).sum) %>
+  </li>
 </ul>

@@ -1,5 +1,5 @@
 class Payment < ActiveRecord::Base
-  enum method: { cash: 1, card: 2 }
+  enum method: { cash: 1, card: 2, deposit: 3 }
   enum payment_system: { visa: 1, mastercard: 2 }
 
   belongs_to :student
