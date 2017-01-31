@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get :auth
       get :schedule
+      get :pay_online
     end
   end
 

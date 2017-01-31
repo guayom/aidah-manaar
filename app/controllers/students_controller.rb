@@ -41,4 +41,8 @@ class StudentsController < ApplicationController
       @lessons[course.id] = lessons_by_week
     end
   end
+
+  def pay_online
+    authenticate_student!
+  end
 end
