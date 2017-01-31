@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get :auth
       get :schedule
       get :pay_online
+      get :finish_payment
     end
   end
 

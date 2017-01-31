@@ -42,7 +42,21 @@ class StudentsController < ApplicationController
     end
   end
 
+  # Start process of payment
   def pay_online
     authenticate_student!
+  end
+
+  # Finish process of payment (callback url)
+  def finish_payment
+    if params[:sum].present? && params[:student_id].present? && params[:invoice_id].present?
+      Student.find(params[:student_id]).payments.create!(invoice_id: params[:invoice_id],
+                                                         sum: params[:sum],
+                                                         accepted: true,
+                                                         method: :card)
+      render plain: 'Payment accepted'
+    else
+      render plain: 'No payment found'
+    end
   end
 end
