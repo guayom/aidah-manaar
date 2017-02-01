@@ -62,10 +62,10 @@ class Student < ActiveRecord::Base
       # end
 
       if (Date.today - Date.today.beginning_of_month).days > 10.days
-        invoice.items.build(name: 'Dance plan',
+        invoice.items.build(name: 'Plan de danza',
                             price: subscription.price)
       else
-        invoice.items.build(name: 'Dance plan',
+        invoice.items.build(name: 'Plan de danza',
                             price: subscription.price,
                             price_with_discount: subscription.price_with_discount)
       end
