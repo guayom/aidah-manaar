@@ -63,6 +63,8 @@ es:
         menu: Asistencia
       payments_report:
         menu: Reportes de pago
+      autoplay_invoice:
+        menu: Pago rápido
     export:
       click_to_reverse_selection: Haga click para invertir la selección
       confirmation: Exportar a %{name}
