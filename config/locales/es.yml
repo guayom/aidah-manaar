@@ -40,6 +40,13 @@ es:
         phone: 'Número telefónico'
         branch_id: 'Sede'
         current_password: 'Password actual'
+      invoice:
+        payed: Pagado
+        confirmed: Confirmado
+        not_confirmed: No confirmado
+        partial: Parcial
+        student: Estudiante
+        created_at: Fecha de creación
     errors:
       models:
         course:

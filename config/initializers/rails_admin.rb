@@ -170,6 +170,7 @@ RailsAdmin.config do |config|
           )
           "<a href=#{path}>Payments</a>".html_safe
         end
+        label "Pagos a la factura"
       end
       field :student
       field :created_at
