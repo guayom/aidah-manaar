@@ -1,7 +1,8 @@
 ruby '2.3.1'
 
 source 'https://rubygems.org' do
-  gem 'aws-sdk', '< 2.0'
+  #gem 'aws-sdk', '< 2.0'
+  gem 'aws-sdk-v1'
   gem 'bootstrap-sass'
   gem 'cancancan'
   gem 'ckeditor'
