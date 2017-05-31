@@ -44,8 +44,6 @@ GEM
       execjs
     av (0.9.0)
       cocaine (~> 0.5.3)
-    aws-sdk (1.67.0)
-      aws-sdk-v1 (= 1.67.0)
     aws-sdk-v1 (1.67.0)
       json (~> 1.4)
       nokogiri (~> 1)
@@ -318,7 +316,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk (< 2.0)!
+  aws-sdk-v1!
   better_errors!
   binding_of_caller!
   bootstrap-sass!
