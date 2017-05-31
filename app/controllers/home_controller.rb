@@ -6,6 +6,6 @@ class HomeController < ApplicationController
   end
 
   def prices
-    @plans = DancePlan.all
+    @plans = DancePlan.all.sort_by &:position
   end
 end
