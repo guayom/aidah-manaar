@@ -18,19 +18,11 @@
 
 .DS_Store
 workspace.xml
+dataSources.local.xml
+public/system/videos
 
 public/ckeditor_assets/**/*
 
-app/assets/.DS_Store
-
-app/assets/images/.DS_Store
-
-config/.DS_Store
-
 # Ignore application configuration
 /config/application.yml
-
-public/.DS_Store
-
-public/.DS_Store
 
