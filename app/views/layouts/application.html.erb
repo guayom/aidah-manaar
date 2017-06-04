@@ -37,8 +37,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="80" class="<%= yield (:body_class) %>">
+  <%= render 'application/navigation' %>
     <%= yield :banner %>
-    <%= render 'application/navigation' %>
     <%= render 'application/flash' %>
     <%= yield :full_width %>
     <div class="container section-inner">

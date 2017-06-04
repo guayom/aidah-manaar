@@ -8,7 +8,7 @@
       <th></th>
       <th>Lecciones por semana</th>
       <th>Precio</th>
-      <th>Precio con descuento</th>
+      <th class="price-column">Precio con descuento</th>
       <th>Matrícula</th>
       <th>Nivelación</th>
     </tr>
@@ -28,7 +28,7 @@
         <% end %>
         <td><%= plan.lessons_per_week || 'Ilimitado' %></td>
         <td><%= number_to_currency(plan.price) %></td>
-        <td><%= number_to_currency(plan.price_with_discount) || 'N/A' %></td>
+        <td class="price-column"><%= number_to_currency(plan.price_with_discount) || 'N/A' %></td>
         <td><%= number_to_currency(plan.tuition) %></td>
         <td><%= number_to_currency(plan.leveling) || 'Gratis' %></td>
       </tr>

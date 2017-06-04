@@ -25,4 +25,3 @@ public/ckeditor_assets/**/*
 
 # Ignore application configuration
 /config/application.yml
-
