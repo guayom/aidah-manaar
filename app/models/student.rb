@@ -25,7 +25,7 @@ class Student < ActiveRecord::Base
 
   validates_presence_of :first_name, :last_name, :second_last_name, :id_number, :birthdate, :phone
   validates_uniqueness_of :id_number
-  validates_length_of :lessons, maximum: 3
+  validates_length_of :lessons, maximum: 4
 
   scope :with_pending_invoices, -> { joins(:invoices).where(invoices: { payed: false }) }
   scope :active_students, -> { active }
