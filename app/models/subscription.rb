@@ -48,6 +48,8 @@ class Subscription < ActiveRecord::Base
 
       invoice.update_attributes!(confirmed: true)
     end
+
+    student.process_status!
   end
 
   rails_admin do
