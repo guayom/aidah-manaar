@@ -28,7 +28,7 @@ source 'https://rubygems.org' do
   gem 'uglifier'
   gem 'videojs_rails'
   gem 'rails_admin_nestable', '~> 0.3.2'
-  gem 'rails_admin-i18n'
+  #`gem 'rails_admin-i18n'
 
 
   group :development do

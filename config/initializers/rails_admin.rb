@@ -362,6 +362,16 @@ RailsAdmin.config do |config|
     navigation_label 'Administración'
     label "Suscripción"
     label_plural "Suscripciones"
+
+    edit do
+      field :student
+      field :dance_plan
+      field :finished_at do
+
+        strftime_format '%Y-%m-%d'
+        #date_format :default
+      end
+    end
   end
 
   config.model Task do
