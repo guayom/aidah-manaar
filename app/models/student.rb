@@ -32,6 +32,18 @@ class Student < ActiveRecord::Base
   include PgSearch
   pg_search_scope :search_by_main_fields, against: [:first_name, :last_name]
 
+  def self.process_all_statuses
+    Student.all.each { |s| s.process_status! }
+  end
+
+  def process_status!
+    if student_is_active?
+      update!(status: 'active')
+    else
+      update!(status: 'inactive')
+    end
+  end
+
   def full_name
     "#{first_name} #{last_name}"
   end
@@ -84,16 +96,13 @@ class Student < ActiveRecord::Base
   #   end
   # end
 
-  def active?
+  def student_is_active?
     invoices.where(payed: false).empty? && active_subscriptions.any?
   end
+  alias_method :student_is_active, :student_is_active?
 
-  def inactive?
-    invoices.where(payed: false).any? || active_subscriptions.empty?
-  end
-
-  def student_is_active
-    active?
+  def student_is_inactive?
+    !student_is_active?
   end
 
   def dance_courses_for_next_semester
