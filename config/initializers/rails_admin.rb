@@ -209,7 +209,7 @@ RailsAdmin.config do |config|
       exclude_fields :courses_students, :student_is_active
     end
     list do
-      scopes [:all, :with_pending_invoices]
+      scopes [:all, :with_pending_invoices, :active_students, :inactive_students]
 
       field :student_is_active, :boolean do
         label 'Active'

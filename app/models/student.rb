@@ -28,6 +28,8 @@ class Student < ActiveRecord::Base
   validates_length_of :lessons, maximum: 4
 
   scope :with_pending_invoices, -> { joins(:invoices).where(invoices: { payed: false }) }
+  scope :active_students, -> { active }
+  scope :inactive_students, -> { inactive }
 
   include PgSearch
   pg_search_scope :search_by_main_fields, against: [:first_name, :last_name]
