@@ -158,10 +158,6 @@ es:
       model_name: Nombre del modelo
       records: Registros
       username: Usuario
-    scopes:
-      student:
-        active_students: Active
-        inactive_students: Inactive
   home:
     name: Inicio
   views:
