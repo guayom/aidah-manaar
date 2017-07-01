@@ -31,7 +31,5 @@ class Payment < ActiveRecord::Base
         NotifyPartialInvoiceJob.perform_later(invoice)
       end
     end
-
-    student.process_status!
   end
 end
