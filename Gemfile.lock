@@ -124,6 +124,7 @@ GEM
     heroku-api (0.4.2)
       excon (~> 0.45)
       multi_json (~> 1.8)
+    high_voltage (3.0.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -334,6 +335,7 @@ DEPENDENCIES
   figaro (~> 1.1, >= 1.1.1)!
   friendly_id!
   heroku!
+  high_voltage (~> 3.0.0)!
   jbuilder!
   jquery-rails!
   kaminari!
@@ -366,4 +368,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

@@ -28,6 +28,7 @@ source 'https://rubygems.org' do
   gem 'uglifier'
   gem 'videojs_rails'
   gem 'rails_admin_nestable', '~> 0.3.2'
+  gem 'high_voltage', '~> 3.0.0'
   #`gem 'rails_admin-i18n'
 
 
