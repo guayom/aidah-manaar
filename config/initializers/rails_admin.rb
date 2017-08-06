@@ -194,6 +194,18 @@ RailsAdmin.config do |config|
       field :comment
       field :created_at
     end
+
+    show do
+      field :id
+      field :accepted
+      field :student
+      field :invoice
+      field :sum
+      field :comment
+      field :created_at
+    end
+
+
   end
 
   config.model Student do
