@@ -219,6 +219,9 @@ RailsAdmin.config do |config|
     configure :student_is_active
     edit do
       exclude_fields :courses_students, :student_is_active
+      field :birthdate do
+        strftime_format '%Y-%m-%d'
+      end
     end
     list do
       scopes [:all, :with_pending_invoices, :active_students, :inactive_students]
