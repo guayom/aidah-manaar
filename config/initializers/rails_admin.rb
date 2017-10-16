@@ -229,9 +229,10 @@ RailsAdmin.config do |config|
       field :student_is_active, :boolean do
         label 'Al día'
       end
-      field :first_name
-      field :last_name
-      field :second_last_name
+      field :full_name do
+        label 'Nombre'
+        searchable [:first_name, :last_name, :second_last_name]
+      end
       field :branch_id
       field :beginner
     end
@@ -296,7 +297,16 @@ RailsAdmin.config do |config|
     label "Instructor"
     label_plural "Instructores"
     navigation_label 'Administración'
+    object_label_method :complete_name
     weight 8
+
+    list do
+      field :complete_name do
+        label 'Nombre'
+      end
+      field :email
+      field :lessons
+    end
   end
 
   config.model Admin do
