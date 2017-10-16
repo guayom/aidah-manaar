@@ -227,7 +227,7 @@ RailsAdmin.config do |config|
       scopes [:all, :with_pending_invoices, :active_students, :inactive_students]
 
       field :student_is_active, :boolean do
-        label 'Active'
+        label 'Al día'
       end
       field :first_name
       field :last_name
