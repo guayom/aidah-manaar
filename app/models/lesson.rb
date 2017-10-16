@@ -12,7 +12,7 @@ class Lesson < ActiveRecord::Base
   validates_presence_of :course, :branch, :start_time, :end_time
 
   def time_interval
-    "#{start_time.in_time_zone.strftime('%R')}–#{end_time.in_time_zone.strftime('%R')}"
+    "#{start_time.in_time_zone.strftime('%l %P ')}–#{end_time.in_time_zone.strftime('%l %P ')}"
   end
 
   def available_places

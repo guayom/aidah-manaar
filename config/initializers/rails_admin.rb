@@ -278,7 +278,9 @@ RailsAdmin.config do |config|
       field :branch
       field :course
       field :day_of_week
-      field :start_time
+      field :start_time do
+        strftime_format "%l %P"
+      end
       field :instructor
     end
   end
