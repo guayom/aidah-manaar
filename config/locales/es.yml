@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
+  branch_id: 'Sede'
   activerecord:
     models:
       lesson: 'Lección'
@@ -39,6 +40,7 @@ es:
         second_last_name: 'Segundo Apellido'
         phone: 'Número telefónico'
         branch: 'Sede'
+        branch_id: 'Sede'
         current_password: 'Password actual'
         beginner: Principiante
       invoice:
@@ -48,6 +50,11 @@ es:
         partial: Parcial
         student: Estudiante
         created_at: Fecha de creación
+      lesson:
+        branch: Sede
+        course: Curso
+        day_of_week: Día
+        start_time: Inicio
     errors:
       models:
         course:
