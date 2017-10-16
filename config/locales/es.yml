@@ -38,8 +38,9 @@ es:
         last_name: 'Primer Apellido'
         second_last_name: 'Segundo Apellido'
         phone: 'Número telefónico'
-        branch_id: 'Sede'
+        branch: 'Sede'
         current_password: 'Password actual'
+        beginner: Principiante
       invoice:
         payed: Pagado
         confirmed: Confirmado

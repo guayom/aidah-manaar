@@ -233,12 +233,8 @@ RailsAdmin.config do |config|
         label 'Nombre'
         searchable [:first_name, :last_name, :second_last_name]
       end
-      field :branch do
-        label 'Sede'
-      end
-      field :beginner do
-        label 'Principiante'
-      end
+      field :branch
+      field :beginner
       field :email
       field :phone
     end
