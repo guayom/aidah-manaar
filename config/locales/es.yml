@@ -67,8 +67,8 @@ es:
         text: 'Estamos muy felices de que formés parte de nuestra academia.'
     sign_in: 'Inicia sesión'
     sign_out: 'Cerrar Sesión'
-    sign_up: 'Pre-Matrícula en línea'
-    sign_up_description: "Pre-Matriculate en línea para nuestros cursos"
+    sign_up: 'Clase de cortesía'
+    sign_up_description: "Reserva tu espacio para tomar una clase <strong>completamente gratis</strong>, en la cual podrás conocer nuestra metodología de enseñanza, nuestros diferentes planes y los horarios que tenemos disponibles."
     failure:
       admin:
         unauthenticated: "No has iniciado sesión"
