@@ -233,8 +233,14 @@ RailsAdmin.config do |config|
         label 'Nombre'
         searchable [:first_name, :last_name, :second_last_name]
       end
-      field :branch_id
-      field :beginner
+      field :branch do
+        label 'Sede'
+      end
+      field :beginner do
+        label 'Principiante'
+      end
+      field :email
+      field :phone
     end
   end
 
@@ -290,6 +296,7 @@ RailsAdmin.config do |config|
     label "Sede"
     label_plural "Sedes"
     navigation_label 'Administración'
+    object_label_method :name
     weight 7
   end
 
@@ -394,9 +401,7 @@ RailsAdmin.config do |config|
       field :student
       field :dance_plan
       field :finished_at do
-
         strftime_format '%Y-%m-%d'
-        #date_format :default
       end
     end
   end
